@@ -134,6 +134,9 @@ body, html { overflow-x: hidden; }
 </div>
 <div class="exercise" id="exercise"></div>
 
+
+
+
 <!-- Textarea lớn đặt ngoài khối question để luôn hiển thị ở dưới cùng -->
 <textarea class="note-large" placeholder="Ghi chú chung cho toàn bài / phần này..."></textarea>
 
@@ -396,11 +399,11 @@ const exercises = {
 /* TEST 3*/
 
   3: [
-    { q: "301. Employees must arrive ------- time for meetings.",
+    { q: "101. Employees must arrive ------- time for meetings.",
       options: ["in","at","on","to"], correct: 2 },
   ],
   4: [
-    { q: "401. The CEO ------- a new policy this week.",
+    { q: "101. The CEO ------- a new policy this week.",
       options: ["announced","announcement","announce","announcing"], correct: 0 },
   ]
 };
@@ -428,10 +431,17 @@ function fireConfetti(){ confetti({ particleCount:200, spread:100, origin:{x:0.5
 
 <script>
 // =================== GLOBAL ===================
+// =================== GLOBAL ===================
 let currentIndex = 0;
 let currentTest = 1;
+let userAnswers = {};     // lưu đáp án: key = "test1_0" → value = index đáp án (0,1,2,3)
 
-// =================== LOAD TEST ===================
+// =================== HELPERS ===================
+function getAnswerKey() {
+  return `test${currentTest}_${currentIndex}`;
+}
+
+// =================== LOAD & RENDER ===================
 function loadExercise(testNumber) {
   currentTest = testNumber;
   currentIndex = 0;
@@ -441,19 +451,32 @@ function loadExercise(testNumber) {
 function renderQuestion() {
   const area = document.getElementById("exercise");
   const data = exercises[currentTest];
-  if (!data) {
-    area.innerHTML = "<p>Chưa có dữ liệu!</p>";
+  
+  if (!data || !data.length) {
+    area.innerHTML = "<p>Chưa có dữ liệu cho test này!</p>";
     return;
   }
+
+  if (currentIndex < 0 || currentIndex >= data.length) {
+    area.innerHTML = "<p style='color:#d32f2f;'>Vượt quá phạm vi câu hỏi!</p>";
+    return;
+  }
+
   const qObj = data[currentIndex];
+  const key = getAnswerKey();
+  const selectedValue = userAnswers[key];   // undefined nếu chưa chọn
 
   let html = `
     <div class="question-block">
       <div class="question-box">${qObj.q}</div>
       ${qObj.options.map((opt, i) => `
         <div class="option-row">
-          <input type="radio" name="q" value="${i}" id="opt${i}">
-          <label for="opt${i}">${opt}</label>
+          <input type="radio" 
+                 name="q" 
+                 value="${i}" 
+                 id="opt${currentIndex}_${i}"
+                 ${selectedValue === i ? 'checked' : ''}>
+          <label for="opt${currentIndex}_${i}">${opt}</label>
           <textarea class="note-small" placeholder="Ghi chú..."></textarea>
         </div>
       `).join("")}
@@ -461,48 +484,88 @@ function renderQuestion() {
       <div class="exercise-buttons">
         <button onclick="checkAnswer()">Check</button>
         <button onclick="nextQuestion()">Next</button>
+        <button onclick="prevQuestion()">Back</button>
       </div>
     </div>
   `;
   area.innerHTML = html;
+
+  // Nếu đã chọn đáp án trước đó → hiển thị kết quả ngay
+  if (selectedValue !== undefined) {
+    showResult(selectedValue, qObj.correct, qObj.explain);
+  }
 }
 
+function showResult(selected, correct, explain) {
+  const resultDiv = document.getElementById("result");
+  if (!resultDiv) return;
+
+  if (selected === correct) {
+    resultDiv.innerHTML = "Correct!";
+    resultDiv.style.color = "green";
+    // fireConfetti();   // bạn có thể bỏ comment nếu muốn pháo hoa mỗi lần quay lại
+  } else {
+    resultDiv.innerHTML = "Incorrect! → " + explain;
+    resultDiv.style.color = "red";
+  }
+}
+
+// =================== ACTIONS ===================
 function checkAnswer() {
   const data = exercises[currentTest];
   const qObj = data[currentIndex];
-  const checked = document.querySelector(`input[name="q"]:checked`);
-  const resultDiv = document.getElementById(`result`);
+  const checked = document.querySelector('input[name="q"]:checked');
+  const resultDiv = document.getElementById("result");
+
   if (!checked) {
     resultDiv.textContent = "Chưa chọn đáp án!";
     resultDiv.style.color = "orange";
     return;
   }
-  if (Number(checked.value) === qObj.correct) {
-    resultDiv.textContent = "Correct!";
-    resultDiv.style.color = "green";
+
+  const selected = Number(checked.value);
+  const key = getAnswerKey();
+  userAnswers[key] = selected;   // lưu đáp án
+
+  showResult(selected, qObj.correct, qObj.explain);
+
+  // Tùy chọn: pháo hoa chỉ khi check lần đầu và đúng
+  if (selected === qObj.correct) {
     fireConfetti();
-  } else {
-    resultDiv.textContent = "Incorrect! → " + qObj.explain;
-    resultDiv.style.color = "red";
   }
 }
 
 function nextQuestion() {
   const data = exercises[currentTest];
-  currentIndex++;
-  if (currentIndex >= data.length) {
-    document.getElementById("exercise").innerHTML =
-      `<p>🎉 Hết câu trong bộ này rồi! Chọn Test khác</p>`;
+  if (currentIndex + 1 >= data.length) {
+    document.getElementById("exercise").innerHTML = 
+      `<p style="font-size:24px; color:#388e3c;">🎉 Hết câu trong bộ này rồi! Chọn Test khác nhé!</p>`;
     return;
   }
+  currentIndex++;
   renderQuestion();
 }
 
-// ===== FIRST LOAD + LISTENER =====
+function prevQuestion() {
+  if (currentIndex <= 0) {
+    // alert("Đây là câu đầu tiên!");
+    return;
+  }
+  currentIndex--;
+  renderQuestion();
+}
+
+// ===== FIRST LOAD + EVENT LISTENERS =====
 loadExercise(Number(document.getElementById("exerciseList").value));
-document.getElementById("exerciseList").addEventListener("change", function(){
+
+document.getElementById("exerciseList").addEventListener("change", function() {
   loadExercise(Number(this.value));
+  resetTimer();   // nếu muốn reset đồng hồ khi đổi test
 });
+
 </script>
+
+
+
 </body>
 </html>

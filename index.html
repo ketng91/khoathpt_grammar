@@ -13,6 +13,30 @@ body {
   padding: 0;
   text-align: center;
 }
+
+
+.btn-check {
+  background-color: #FBEF76;
+}
+.btn-check:hover {
+  background-color: #3CB371;
+}
+
+.btn-next {
+  background-color: #FF7DB0;
+}
+.btn-next:hover {
+  background-color: #FFB347;
+}
+
+.btn-back {
+  background-color: #a0e7e5;
+}
+
+
+
+
+
 header {
   background-color: #ffd6ba;
   padding: 15px 20px;
@@ -53,9 +77,9 @@ select {
 }
 body, html { overflow-x: hidden; }
 .question-box {
-  width: 100%; min-height: 60px; border: 2px solid #a0e7e5;
+  width: 100%; min-height: 60px; 
   border-radius: 8px; padding: 10px; margin: 10px 0;
-  font-size: 25px; font-weight: bold; background-color: #e3fdfd;
+  font-size: 25px; font-weight: bold; background-color: #B7E5CD;
 }
 .option-row { 
   display: flex; 
@@ -89,7 +113,7 @@ body, html { overflow-x: hidden; }
 .exercise-buttons button {
   padding: 10px 18px; font-size: 20px;
   border-radius: 8px; border: none; margin-right: 15px;
-  cursor: pointer; background-color: #a0e7e5;
+  cursor: pointer;
 }
 .exercise-buttons button:hover { background-color: #ffb3ba; }
 
@@ -108,6 +132,8 @@ body, html { overflow-x: hidden; }
   font-family: Arial, sans-serif;
   box-sizing: border-box;
 }
+
+
 </style>
 </head>
 <body>
@@ -117,14 +143,35 @@ body, html { overflow-x: hidden; }
       <i class="fa-solid fa-house"></i> Lớp Anh thầy Kết
     </a>
   </div>
-  <div class="header-center">Practice</div>
+  <div class="header-center">Luyện thi Tiếng Anh THPT</div>
 </header>
 <div class="top-select">
   <select id="exerciseList">
-    <option value="1">Trắc nghiệm - Test 1</option>
-    <option value="2">Trắc nghiệm - Test 2</option>
-    <option value="3">Trắc nghiệm - Test 3</option>
-    <option value="4">Trắc nghiệm - Test 4</option>
+    <option value="1">Trắc nghiệm - Chia thì</option>
+    <option value="3">Trắc nghiệm - Sự hoà hợp S & Vc</option>
+    <option value="4">Trắc nghiệm - V, Ving, to V</option>
+    <option value="1">Trắc nghiệm - Động từ khiếm khyết</option>
+    <option value="1">Trắc nghiệm - Lượng từ</option>
+    <option value="1">Trắc nghiệm - Đại từ</option>
+    <option value="1">Trắc nghiệm - MĐ Quan hệ</option>
+    <option value="1">Trắc nghiệm - MĐ Danh ngữ</option>
+    <option value="1">Trắc nghiệm - MĐ Trạng ngữ</option>
+    <option value="1">Trắc nghiệm - Từ loại</option>
+    <option value="1">Trắc nghiệm - Trật tự từ</option>
+    <option value="1">Trắc nghiệm - Liên từ</option>
+    <option value="1">Trắc nghiệm - Adv liên kết</option>
+    <option value="1">Trắc nghiệm - Mạo từ</option>
+    <option value="2">Trắc nghiệm - Câu điều kiện</option>
+    <option value="1">Trắc nghiệm - Câu bị động</option>
+    <option value="1">Trắc nghiệm - So sánh</option>
+    <option value="1">Trắc nghiệm - Câu tường thuật</option>
+    <option value="1">Trắc nghiệm - Đảo ngữ</option>
+    <option value="1">Trắc nghiệm - Thức giả định</option>
+    <option value="1">Trắc nghiệm - Giới từ</option>
+    <option value="1">Trắc nghiệm - Cụm động từ</option>
+    <option value="1">Trắc nghiệm - Collocation</option>
+    <option value="1">Trắc nghiệm - Idiom</option>
+
   </select>
 </div>
 <div id="timerBox">
@@ -138,7 +185,7 @@ body, html { overflow-x: hidden; }
 
 
 <!-- Textarea lớn đặt ngoài khối question để luôn hiển thị ở dưới cùng -->
-<textarea class="note-large" placeholder="Ghi chú chung cho toàn bài / phần này..."></textarea>
+<textarea class="note-large" placeholder="Ghi chú chung ..."></textarea>
 
 <footer>Chăm chỉ thì đậu!</footer>
 
@@ -152,65 +199,1153 @@ const exercises = {
 /* TEST 1*/
   1: [
 {
-    q: "Câu 1. Ann, __________ for the safety of her child, ran to stop him playing with the electric socket.",
+    q: "Ann, __________ for the safety of her child, ran to stop him playing with the electric socket.",
     options: ["concerned", "concerning", "to concern", "to be concerned"],
     correct: 0,
     explain: "Dùng rút gọn mệnh đề quan hệ dạng bị động (Who was concerned -> concerned) để chỉ trạng thái cảm xúc của chủ ngữ."
   },
   {
-    q: "Câu 2. The police are searching the area __________ the boy was last seen.",
+    q: "The police are searching the area __________ the boy was last seen.",
     options: ["where", "which", "that", "how"],
     correct: 0,
     explain: "Dùng trạng từ quan hệ 'where' để thay thế cho danh từ chỉ nơi chốn 'the area'."
   },
   {
-    q: "Câu 3. As a retired person, the place in __________ my mother spends the most time is the garden.",
+    q: "As a retired person, the place in __________ my mother spends the most time is the garden.",
     options: ["which", "that", "what", "where"],
     correct: 0,
     explain: "Sau giới từ (in) chúng ta sử dụng đại từ quan hệ 'which'. Cụm 'in which' tương đương với 'where'."
   },
   {
-    q: "Câu 4. Everyone at the meeting yesterday, __________ proved very constructive, showed their support for the new stadium.",
+    q: "Everyone at the meeting yesterday, __________ proved very constructive, showed their support for the new stadium.",
     options: ["which", "where", "what", "when"],
     correct: 0,
     explain: "Dùng 'which' làm đại từ quan hệ thay thế cho toàn bộ mệnh đề hoặc sự việc (cuộc họp) đứng trước nó."
   },
   {
-    q: "Câu 5. Liquorice, __________ contains clycyrrhetic acid, was a favourite ingredient of ancient Egyptian medicines.",
+    q: "Liquorice, __________ contains clycyrrhetic acid, was a favourite ingredient of ancient Egyptian medicines.",
     options: ["which", "who", "when", "where"],
     correct: 0,
     explain: "Dùng 'which' làm chủ ngữ thay thế cho danh từ chỉ vật 'Liquorice' (cam thảo)."
   },
   {
-    q: "Câu 6. The reason __________ she gave us for not coming early made us disappointed.",
+    q: "The reason __________ she gave us for not coming early made us disappointed.",
     options: ["that", "why", "for which", "what"],
     correct: 0,
     explain: "Mặc dù có 'The reason' nhưng phía sau là tân ngữ của động từ 'gave', nên dùng 'that' hoặc 'which' thay vì 'why'."
   },
   {
-    q: "Câu 7. They would like a teacher __________ native language is English.",
+    q: "They would like a teacher __________ native language is English.",
     options: ["whose", "who", "from whom", "whom"],
     correct: 0,
     explain: "Dùng 'whose' để chỉ sự sở hữu: ngôn ngữ mẹ đẻ của giáo viên đó (teacher's native language)."
   },
   {
-    q: "Câu 8. His new job is near enough __________ he wants to live.",
+    q: "His new job is near enough __________ he wants to live.",
     options: ["to where", "where", "in which", "on which"],
     correct: 0,
     explain: "Cấu trúc 'near to + nơi chốn'. Ở đây 'where' đóng vai trò như một danh từ chỉ nơi chốn."
   },
   {
-    q: "Câu 9. This is Mrs. Belinda __________ book the chapters were prepared and edited perfectly.",
+    q: "This is Mrs. Belinda __________ book the chapters were prepared and edited perfectly.",
     options: ["in whose", "in which", "from whose", "whose"],
     correct: 0,
     explain: "Dùng 'in whose' vì các chương nằm TRONG (in) cuốn sách CỦA (whose) bà Belinda."
   },
   {
-    q: "Câu 10. Our course needs some requirements __________ are listed here.",
+    q: "Our course needs some requirements __________ are listed here.",
     options: ["which", "when", "what", "where"],
     correct: 0,
     explain: "Dùng 'which' làm chủ ngữ thay thế cho danh từ chỉ vật 'requirements'."
+  },
+  {
+    q: "The young man _____ was released after the court was found innocent of all the charges against him.",
+    options: ["who", "who he", "which", "whose"],
+    correct: 0,
+    explain: "Dùng đại từ quan hệ 'who' làm chủ ngữ thay thế cho danh từ chỉ người 'The young man'."
+  },
+  {
+    q: "Is that the same film _____ we watched last year?",
+    options: ["when", "which", "why", "who"],
+    correct: 1,
+    explain: "Dùng 'which' làm tân ngữ thay thế cho danh từ chỉ vật 'the same film'."
+  },
+  {
+    q: "The girl _____ I borrowed the dictionary asked me to use it carefully.",
+    options: ["whose", "from whom", "from whose", "whom"],
+    correct: 1,
+    explain: "Cấu trúc 'borrow something from someone'. Khi đưa giới từ lên trước đại từ quan hệ chỉ người, ta dùng 'from whom'."
+  },
+  {
+    q: "The first television picture _____ John Logie Baird transmitted on 25 November, 1905 was a boy _____ worked in the office next to Baird's workroom in London.",
+    options: ["which; whom", "who; which", "that; whose", "that; who"],
+    correct: 3,
+    explain: "Vị trí 1 dùng 'that' (thay cho vật có từ chỉ thứ tự 'the first'). Vị trí 2 dùng 'who' làm chủ ngữ thay cho 'a boy'."
+  },
+  {
+    q: "Joyce Bews, _____ was born and grew up in Portsmouth on the south coast of England.",
+    options: ["that", "where", "whose", "who"],
+    correct: 3,
+    explain: "Dùng 'who' thay thế cho danh từ chỉ người trong mệnh đề quan hệ không xác định (có dấu phẩy)."
+  },
+  {
+    q: "The pollution _____ they were talking is getting worse.",
+    options: ["that", "about which", "which", "whom"],
+    correct: 1,
+    explain: "Cấu trúc 'talk about something'. Đưa giới từ lên trước đại từ quan hệ chỉ vật dùng 'about which'."
+  },
+  {
+    q: "Robert Riva, an Italian player _____ used to play for Cremonese, now coaches the Reigate under 11’s football team.",
+    options: ["when", "which", "where", "who"],
+    correct: 3,
+    explain: "Dùng 'who' làm chủ ngữ thay thế cho danh từ chỉ người 'an Italian player'."
+  },
+  {
+    q: "When I was at school, there was a girl in my class _____ skin was so sensitive that she couldn't expose her skin to the sun even with cream on.",
+    options: ["where", "whose", "whom", "that"],
+    correct: 1,
+    explain: "Dùng 'whose' để chỉ sở hữu (làn da của cô gái)."
+  },
+  {
+    q: "Unfortunately, the friend with _____ I intended to go on holiday to Side is ill, so I'll have to cancel my trip.",
+    options: ["who", "whom", "where", "that"],
+    correct: 1,
+    explain: "Sau giới từ 'with' chỉ người, ta bắt buộc dùng 'whom'."
+  },
+  {
+    q: "The new stadium, _____ will be completed next year, will seat 30,000 spectators.",
+    options: ["what", "where", "when", "diet"],
+    correct: 3,
+    explain: "Dùng 'which' làm chủ ngữ thay cho vật 'The new stadium' trong mệnh đề quan hệ không xác định."
+  },
+  {
+    q: "Blenheim Palace, _____ Churchill was born, is now open to the public.",
+    options: ["when", "where", "which", "whose"],
+    correct: 1,
+    explain: "Dùng trạng từ quan hệ 'where' để thay thế cho địa điểm."
+  },
+  {
+    q: "The man _____ I introduced you to last night may be the next president of the university.",
+    options: ["which", "whom", "whose", "why"],
+    correct: 1,
+    explain: "Dùng 'whom' làm tân ngữ thay thế cho người 'The man'."
+  },
+  {
+    q: "Cathy is trustworthy. She's a person upon _____ you can always depend.",
+    options: ["who", "whom", "that", "∅"],
+    correct: 1,
+    explain: "Cấu trúc 'depend upon/on someone'. Sau giới từ 'upon' dùng 'whom'."
+  },
+  {
+    q: "Your career should focus on a field in _____ you are genuinely interested.",
+    options: ["which", "what", "that", "∅"],
+    correct: 0,
+    explain: "Cấu trúc 'be interested in something'. Sau giới từ 'in' chỉ vật dùng 'which'."
+  },
+  {
+    q: "People _____ outlook on life is optimistic are usually happy people.",
+    options: ["whose", "whom", "that", "which"],
+    correct: 0,
+    explain: "Dùng 'whose' chỉ sở hữu cho 'People' (quan điểm của con người)."
+  },
+  {
+    q: "The girl _____ dress you admire has been working for an export company since she left school.",
+    options: ["who", "what", "whose", "whom"],
+    correct: 2,
+    explain: "Dùng 'whose' chỉ sở hữu (chiếc váy của cô gái)."
+  },
+  {
+    q: "One of the people arrested was Mary Arundel, _____ is a member of the local council.",
+    options: ["that", "who", "whom", "∅"],
+    correct: 1,
+    explain: "Dùng 'who' làm chủ ngữ thay cho người. Lưu ý không dùng 'that' sau dấu phẩy."
+  },
+  {
+    q: "The Titanic, _____ sank in 1922, was supposed to be unsinkable.",
+    options: ["whose", "that", "which", "who"],
+    correct: 2,
+    explain: "Dùng 'which' thay cho vật 'The Titanic' trong mệnh đề không xác định."
+  },
+  {
+    q: "The Newspaper is owned by the Mearson Group, _____ chairman is Sir James Bex.",
+    options: ["which", "that", "who", "whose"],
+    correct: 3,
+    explain: "Dùng 'whose' chỉ sở hữu (chủ tịch của tập đoàn)."
+  },
+  {
+    q: "Genghis Khan, _____ name means 'very mighty ruler', was a Mongol emperor in the Middle Ages.",
+    options: ["whom", "whose", "who", "how"],
+    correct: 1,
+    explain: "Dùng 'whose' chỉ sở hữu (tên của Thành Cát Tư Hãn)."
+  },
+  {
+    q: "She has two brothers, _____ are engineer.",
+    options: ["whom both", "both who", "both of whom", "both whom"],
+    correct: 2,
+    explain: "Cấu trúc 'lượng từ + of + whom/which'. Ở đây dùng 'both of whom'."
+  },
+  {
+    q: "Extinction means a situation _____ a plant, an animal or a way of life stops existing.",
+    options: ["to which", "for which", "on which", "in which"],
+    correct: 3,
+    explain: "In a situation: trong một tình huống. Dùng 'in which' tương đương với 'where'."
+  },
+  {
+    q: "The party, _____ I was the guest of honor, was extremely enjoyable.",
+    options: ["at that", "at which", "to that", "to which"],
+    correct: 1,
+    explain: "At the party: tại bữa tiệc. Dùng giới từ 'at' đi với 'which'."
+  },
+  {
+    q: "Ann has a lot of books, _____ she has never read.",
+    options: ["most of that", "most of these", "most of which", "which most of them"],
+    correct: 2,
+    explain: "Cấu trúc 'most of + which' dùng để bổ nghĩa cho danh từ chỉ vật 'books' đứng trước."
+  },
+  {
+    q: "We have just visited disadvantaged children in an orphanage _____ in Bac Ninh Province.",
+    options: ["located", "locating", "which locates", "to locate"],
+    correct: 0,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which is located -> located)."
+  },
+  {
+    q: "An endangered species is a species _____ population is so small that it is in danger of becoming extinct.",
+    options: ["whose", "which", "what", "who"],
+    correct: 0,
+    explain: "Dùng 'whose' chỉ sở hữu (quần thể của loài đó)."
+  },
+  {
+    q: "Pumpkin seeds, _____ protein and iron, are a popular snack.",
+    options: ["that", "provide", "which", "which provide"],
+    correct: 3,
+    explain: "Dùng đại từ quan hệ 'which' làm chủ ngữ thay cho 'Pumpkin seeds' và động từ 'provide' chia theo số nhiều."
+  },
+  {
+    q: "He lives in a small town _____ ",
+    options: ["Where is called Taunton", "which is called Taunton", "is called Taunton", "that called Taunton"],
+    correct: 1,
+    explain: "Mệnh đề quan hệ đầy đủ 'which is called...' bổ nghĩa cho 'town'."
+  },
+  {
+    q: "The scientists _____ on this project try to find the solutions to air pollution.",
+    options: ["working", "worked", "are working", "who working"],
+    correct: 0,
+    explain: "Rút gọn mệnh đề quan hệ dạng chủ động (who work/who are working -> working)."
+  },
+  {
+    q: "The girl _____ is our neighbor.",
+    options: ["talks to the lady over there", "is talking to the lady over there", "was talking to the lady over there", "talking to the lady over there"],
+    correct: 3,
+    explain: "Rút gọn mệnh đề quan hệ dạng chủ động (who is talking -> talking)."
+  },
+  {
+    q: "She didn’t tell me the reason _____ she came late.",
+    options: ["when", "for which", "for why", "both B and C"],
+    correct: 1,
+    explain: "The reason for which = Why. Trong các phương án, 'for which' là cấu trúc chính xác."
+  },
+  {
+    q: "This is the best play _____ I have ever seen.",
+    options: ["which", "what", "whom", "that"],
+    correct: 3,
+    explain: "Dùng 'that' khi danh từ đứng trước có hình thức so sánh nhất (the best)."
+  },
+  {
+    q: "Taj Mahal, _____ by Shah Janhan for his wife, is thought to be one of the great architectural wonders of the world.",
+    options: ["building", "to build", "built", "to be built"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which was built -> built)."
+  },
+  {
+    q: "Mr.Jones, _____ I was working, was generous about overtime payments.",
+    options: ["he", "for whom", "for him", "whom"],
+    correct: 1,
+    explain: "Cấu trúc 'work for someone'. Đưa giới từ lên trước dùng 'for whom'."
+  },
+  {
+    q: "Is this the address to _____ you want the package sent?",
+    options: ["where", "which", "that", "whom"],
+    correct: 1,
+    explain: "Sau giới từ 'to' chỉ vật (address), dùng 'which'."
+  },
+  {
+    q: "He was the last man _____ the ship.",
+    options: ["who leave", "to leave", "leaving", "left"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề quan hệ dùng 'to V' sau các từ chỉ thứ tự (the last)."
+  },
+  {
+    q: "The nurse _____ from Japan can speaking English well.",
+    options: ["which comes", "who come", "coming", "came"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề quan hệ dạng chủ động (who comes -> coming)."
+  },
+  {
+    q: "More than a mile of roadway has been blocked with trees, stones and other debris, _____ the explosion.",
+    options: ["causing", "caused by", "which caused by", "which caused"],
+    correct: 1,
+    explain: "Dùng rút gọn mệnh đề bị động 'caused by' (được gây ra bởi)."
+  },
+  {
+    q: "I have a message for people _____ by the traffic chaos.",
+    options: ["to delay", "who delay", "delayed", "who delaying"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (who were delayed -> delayed)."
+  },
+  {
+    q: "Trang An Scenic Landscape Complex is the 8th World Heritage in Viet Nam _____ by UNESCO.",
+    options: ["to be recognised", "to recognise", "recognising", "recognised"],
+    correct: 0,
+    explain: "Dùng 'to be P2' để rút gọn mệnh đề bị động sau số thứ tự (the 8th)."
+  },
+  {
+    q: "Tom was the last _____ the classroom yesterday.",
+    options: ["to leave", "leaving", "left", "leaves"],
+    correct: 0,
+    explain: "Rút gọn mệnh đề quan hệ dùng 'to V' sau 'the last'."
+  },
+  {
+    q: "The palace _____ many centuries ago remains practically intact.",
+    options: ["building", "to build", "built", "people build"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which was built -> built)."
+  },
+  {
+    q: "Many of the pictures _____ from outer space are presently on display in the public library.",
+    options: ["sending", "sent", "which sent", "which is sending"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which were sent -> sent)."
+  },
+  {
+    q: "The house _____ in the storm has now been rebuilt.",
+    options: ["destroyed", "destroying", "which destroyed", "that is destroyed"],
+    correct: 0,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which was destroyed -> destroyed)."
+  },
+  {
+    q: "The man _____ at the blackboard is our teacher.",
+    options: ["stood", "stands", "standing", "to stand"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề quan hệ dạng chủ động (who is standing -> standing)."
+  },
+  {
+    q: "The theory of relativity, _____ by Albert Einstein in the early 20th century, revolutionized our understanding of time and space.",
+    options: ["proposing", "proposed", "which proposes", "to propose"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which was proposed -> proposed)."
+  },
+  {
+    q: "Photosynthesis is the process _____ green plants convert light energy into chemical energy.",
+    options: ["by which", "at which", "on which", "to which"],
+    correct: 0,
+    explain: "Cấu trúc 'process by which' (quá trình mà thông qua đó...)."
+  },
+  {
+    q: "Scholars _____ research focuses on sustainable development often collaborate with international NGOs.",
+    options: ["who", "whom", "whose", "that"],
+    correct: 2,
+    explain: "Dùng 'whose' để chỉ sở hữu (nghiên cứu của các học giả)."
+  },
+  {
+    q: "The laboratory _____ the experiment was conducted lacked the necessary safety equipment.",
+    options: ["which", "where", "on which", "that"],
+    correct: 1,
+    explain: "Dùng 'where' thay thế cho nơi chốn (phòng thí nghiệm)."
+  },
+  {
+    q: "The Renaissance was a period _____ European art and literature underwent a profound transformation.",
+    options: ["which", "where", "why", "when"],
+    correct: 3,
+    explain: "Dùng 'when' thay thế cho danh từ chỉ thời gian (a period)."
+  },
+  {
+    q: "The archaeological site, _____ centuries ago, yielded artifacts of immense historical value.",
+    options: ["abandoning", "to abandon", "abandoned", "which abandoned"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which was abandoned -> abandoned)."
+  },
+  {
+    q: "There are several reasons _____ the Roman Empire eventually collapsed in the 5th century.",
+    options: ["why", "for that", "which", "when"],
+    correct: 0,
+    explain: "Dùng 'why' sau danh từ 'reasons' để chỉ nguyên nhân."
+  },
+  {
+    q: "The university provides many scholarships, _____ are awarded to students from developing countries.",
+    options: ["most of them", "most of which", "which most", "that most"],
+    correct: 1,
+    explain: "Cấu trúc 'lượng từ + of + which' bổ nghĩa cho 'scholarships' trong mệnh đề không xác định."
+  },
+  {
+    q: "Genetic engineering is a field _____ many ethical concerns have been raised.",
+    options: ["about which", "at which", "for which", "to which"],
+    correct: 0,
+    explain: "Cấu trúc 'raise concerns about something' -> 'about which'."
+  },
+  {
+    q: "The Industrial Revolution, _____ started in Great Britain, quickly spread across Europe and North America.",
+    options: ["that", "where", "which", "who"],
+    correct: 2,
+    explain: "Dùng 'which' làm chủ ngữ cho vật. Không dùng 'that' sau dấu phẩy."
+  },
+  {
+    q: "Isaac Newton was the first scientist _____ the laws of universal gravitation.",
+    options: ["formulated", "to formulate", "formulating", "formulate"],
+    correct: 1,
+    explain: "Dùng 'to V' rút gọn mệnh đề quan hệ sau 'the first'."
+  },
+  {
+    q: "The species _____ habitat is being destroyed are at high risk of extinction.",
+    options: ["that", "whose", "which", "whom"],
+    correct: 1,
+    explain: "Dùng 'whose' chỉ sở hữu (môi trường sống của các loài đó)."
+  },
+  {
+    q: "The conference _____ the latest advancements in artificial intelligence was attended by experts worldwide.",
+    options: ["discussing", "discussed", "to discuss", "discussions"],
+    correct: 0,
+    explain: "Rút gọn mệnh đề quan hệ dạng chủ động (which discussed -> discussing)."
+  },
+  {
+    q: "The global economic crisis, _____ cause is still being debated, led to significant policy changes.",
+    options: ["its", "whose", "of which", "which"],
+    correct: 1,
+    explain: "Dùng 'whose' chỉ sở hữu (nguyên nhân của cuộc khủng hoảng)."
+  },
+  {
+    q: "The degree _____ she is studying is recognized by major international corporations.",
+    options: ["for which", "in which", "at which", "by which"],
+    correct: 0,
+    explain: "Cấu trúc 'study for a degree' -> 'for which'."
+  },
+  {
+    q: "Marine biology is the study of organisms _____ in the ocean.",
+    options: ["lived", "to live", "living", "which living"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề quan hệ dạng chủ động (which live -> living)."
+  },
+  {
+    q: "The philosopher _____ works we analyzed yesterday was known for his existentialist views.",
+    options: ["who", "whom", "that", "whose"],
+    correct: 3,
+    explain: "Dùng 'whose' chỉ sở hữu (tác phẩm của nhà triết học)."
+  },
+  {
+    q: "The greenhouse effect is the phenomenon _____ heat is trapped in the Earth's atmosphere.",
+    options: ["by which", "which", "when", "who"],
+    correct: 0,
+    explain: "Dùng 'by which' (bằng cách đó/nhờ đó) hoặc 'whereby'"
+  },
+  {
+    q: "Oxford University, _____ many world leaders were educated, is one of the oldest in the world.",
+    options: ["which", "where", "that", "when"],
+    correct: 1,
+    explain: "Dùng 'where' thay cho nơi chốn (Oxford University)."
+  },
+  {
+    q: "The substances _____ in the chemical reaction were highly flammable.",
+    options: ["involving", "involved", "to involve", "which involved"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which were involved -> involved)."
+  },
+  {
+    q: "Macroeconomics is the branch of economics _____ with the performance and behavior of an economy as a whole.",
+    options: ["dealing", "dealt", "to deal", "deals"],
+    correct: 0,
+    explain: "Rút gọn mệnh đề quan hệ dạng chủ động (which deals -> dealing)."
+  },
+  {
+    q: "The period _____ the Great Depression occurred saw a massive decline in global trade.",
+    options: ["which", "when", "where", "why"],
+    correct: 1,
+    explain: "Dùng 'when' thay cho thời gian (The period)."
+  },
+  {
+    q: "The author _____ I spoke at the seminar has won several literary awards.",
+    options: ["to whom", "who", "with who", "to that"],
+    correct: 0,
+    explain: "Cấu trúc 'speak to someone' -> 'to whom'."
+  },
+  {
+    q: "The laws _____ by the government last year aimed at reducing carbon emissions.",
+    options: ["passing", "passed", "to pass", "which passed"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which were passed -> passed)."
+  },
+  {
+    q: "The data _____ from the sensors was transmitted to the central server for analysis.",
+    options: ["collecting", "collected", "which collects", "to collect"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which was collected -> collected)."
+  },
+  {
+    q: "Digitalization is a trend _____ most businesses must adapt to survive.",
+    options: ["to which", "for which", "on which", "with which"],
+    correct: 0,
+    explain: "Cấu trúc 'adapt to something' -> 'to which'."
+  },
+  {
+    q: "The historian _____ specializes in ancient civilizations gave a fascinating lecture.",
+    options: ["who", "whom", "whose", "which"],
+    correct: 0,
+    explain: "Dùng 'who' làm chủ ngữ thay thế cho 'The historian'."
+  },
+  {
+    q: "Sustainable agriculture is a method _____ farmers focus on long-term soil health.",
+    options: ["which", "when", "in which", "why"],
+    correct: 2,
+    explain: "In a method -> 'in which' (trong phương pháp đó)."
+  },
+  {
+    q: "The invention of the internet, _____ has changed communication forever, was a turning point in history.",
+    options: ["that", "which", "where", "who"],
+    correct: 1,
+    explain: "Dùng 'which' bổ nghĩa cho sự vật trong mệnh đề không xác định."
+  },
+  {
+    q: "Students _____ all the requirements will be eligible for graduation.",
+    options: ["completed", "completing", "to complete", "complete"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề quan hệ dạng chủ động (who complete -> completing)."
+  },
+  {
+    q: "The experiment failed for several reasons, _____ were unforeseen by the research team.",
+    options: ["that", "which", "most of which", "both of them"],
+    correct: 2,
+    explain: "Sử dụng 'lượng từ + of + which' để bổ nghĩa cho 'reasons' trong mệnh đề không xác định."
+  },
+  {
+    q: "The criteria _____ the candidates are evaluated must be transparent and objective.",
+    options: ["by which", "on which", "at which", "for which"],
+    correct: 0,
+    explain: "Cấu trúc 'evaluate by criteria' (đánh giá dựa trên tiêu chí) -> 'by which'."
+  },
+  {
+    q: "Urbanization, _____ is the process of people moving to cities, creates both opportunities and challenges.",
+    options: ["that", "which", "where", "what"],
+    correct: 1,
+    explain: "Dùng 'which' để giải thích một thuật ngữ trong mệnh đề không xác định."
+  },
+  {
+    q: "The artist _____ masterpieces are exhibited in the Louvre lived a life of poverty.",
+    options: ["who", "whom", "whose", "that"],
+    correct: 2,
+    explain: "Dùng 'whose' chỉ sở hữu (tác phẩm của người nghệ sĩ)."
+  },
+  {
+    q: "The speed _____ light travels is a fundamental constant in physics.",
+    options: ["at which", "with which", "in which", "by which"],
+    correct: 0,
+    explain: "Cấu trúc 'at a speed' (ở một tốc độ) -> 'at which'."
+  },
+  {
+    q: "Evidence _____ from the crime scene suggests that there were two suspects involved.",
+    options: ["collecting", "collected", "which collects", "to collect"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which was collected -> collected)."
+  },
+  {
+    q: "The treaty, _____ in 1945, established the framework for modern international relations.",
+    options: ["signing", "to sign", "signed", "was signed"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which was signed -> signed)."
+  },
+  {
+    q: "There are instances _____ the law does not provide a clear solution to the problem.",
+    options: ["when", "where", "why", "which"],
+    correct: 1,
+    explain: "Trong tiếng Anh học thuật, 'where' thường dùng cho 'instances/cases/situations' (trường hợp mà tại đó...)."
+  },
+  {
+    q: "The researcher _____ I am collaborating is a leading expert in renewable energy.",
+    options: ["who", "whom", "with whom", "to whom"],
+    correct: 2,
+    explain: "Cấu trúc 'collaborate with someone' -> 'with whom'."
+  },
+  {
+    q: "Many students fail to cite their sources, _____ is considered plagiarism in academic writing.",
+    options: ["that", "which", "what", "who"],
+    correct: 1,
+    explain: "Dùng 'which' để thay thế cho cả mệnh đề đứng trước nó."
+  },
+  {
+    q: "The molecules _____ this compound are highly reactive under high temperature.",
+    options: ["comprising", "comprised", "to comprise", "comprising of"],
+    correct: 0,
+    explain: "Rút gọn mệnh đề chủ động (which comprise -> comprising). Lưu ý: 'comprise' không đi với 'of' ở dạng chủ động."
+  },
+  {
+    q: "The library contains rare manuscripts, _____ are over five hundred years old.",
+    options: ["some of that", "some of which", "which some", "some of them"],
+    correct: 1,
+    explain: "Cấu trúc 'lượng từ + of + which' bổ nghĩa cho 'manuscripts'."
+  },
+  {
+    q: "Genetic mutations, _____ occur during DNA replication, can lead to evolutionary changes.",
+    options: ["that", "which", "where", "who"],
+    correct: 1,
+    explain: "Mệnh đề không xác định bổ nghĩa cho 'Genetic mutations', dùng 'which'."
+  },
+  {
+    q: "The goal _____ the project was initiated was to reduce carbon footprints in manufacturing.",
+    options: ["for which", "at which", "by which", "to which"],
+    correct: 0,
+    explain: "Cấu trúc 'initiate for a goal/purpose' -> 'for which'."
+  },
+  {
+    q: "The Professor was the only person _____ the complex mathematical proof.",
+    options: ["understanding", "understood", "to understand", "who understanding"],
+    correct: 2,
+    explain: "Dùng 'to V' rút gọn sau 'the only/the first/the last'."
+  },
+  {
+    q: "The city _____ the headquarters are located is a major financial hub.",
+    options: ["which", "that", "where", "at which"],
+    correct: 2,
+    explain: "Dùng 'where' thay thế cho nơi chốn (The city)."
+  },
+  {
+    q: "The hypothesis _____ by the young scientist was initially met with skepticism.",
+    options: ["putting forward", "put forward", "which putting forward", "to put forward"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề bị động (which was put forward -> put forward)."
+  },
+  {
+    q: "The extent _____ the climate is changing has alarmed scientists worldwide.",
+    options: ["to which", "for which", "at which", "on which"],
+    correct: 0,
+    explain: "Cấu trúc cố định 'to the extent' (tới mức độ mà) -> 'to which'."
+  },
+  {
+    q: "Digital currencies, _____ value is highly volatile, are becoming more popular in global markets.",
+    options: ["which", "whose", "that", "of which"],
+    correct: 1,
+    explain: "Dùng 'whose' chỉ sở hữu (giá trị của tiền kỹ thuật số)."
+  },
+  {
+    q: "The students _____ the survey were asked to remain anonymous.",
+    options: ["completing", "completed", "complete", "who completing"],
+    correct: 0,
+    explain: "Rút gọn mệnh đề chủ động (who completed -> completing)."
+  },
+  {
+    q: "The participants, _____ the initial screening process, were invited to the second phase of the clinical trial.",
+    options: ["having passed", "passed", "to pass", "who passing"],
+    correct: 0,
+    explain: "Dùng phân từ hoàn thành (Having + P2) để nhấn mạnh hành động 'vượt qua vòng sàng lọc' đã xảy ra trước khi 'được mời'."
+  },
+  {
+    q: "The methodology _____ the researchers based their conclusions has been widely criticized.",
+    options: ["which", "on which", "where", "with which"],
+    correct: 1,
+    explain: "Cấu trúc 'base something on something' -> 'on which'."
+  },
+  {
+    q: "Quantum entanglement is a phenomenon _____ particles remain connected regardless of the distance between them.",
+    options: ["at which", "in which", "for which", "to which"],
+    correct: 1,
+    explain: "Dùng 'in which' (trong đó/tại đó) để mô tả tính chất của hiện tượng (phenomenon)."
+  },
+  {
+    q: "The fossils, _____ by a team of amateur geologists, date back to the Jurassic period.",
+    options: ["discovering", "discovered", "to discover", "which discovering"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which were discovered -> discovered)."
+  },
+  {
+    q: "The committee is composed of twelve members, _____ have extensive experience in international law.",
+    options: ["all of who", "all of whom", "that all", "whom all"],
+    correct: 1,
+    explain: "Cấu trúc 'lượng từ + of + whom' dùng cho người trong mệnh đề không xác định."
+  },
+  {
+    q: "The internet has created a global village _____ information is exchanged instantaneously.",
+    options: ["which", "where", "when", "why"],
+    correct: 1,
+    explain: "Dùng 'where' thay thế cho một địa điểm trừu tượng (global village)."
+  },
+  {
+    q: "The carbon tax is a policy _____ the government hopes to curb industrial pollution.",
+    options: ["by which", "at which", "on which", "to which"],
+    correct: 0,
+    explain: "Cấu trúc 'by which' (bằng cách đó/thông qua đó) chỉ phương thức đạt được mục tiêu."
+  },
+  {
+    q: "Students _____ English is not their first language are required to take an additional proficiency test.",
+    options: ["who", "whom", "whose", "that"],
+    correct: 2,
+    explain: "Dùng 'whose' chỉ sở hữu (ngôn ngữ của học sinh)."
+  },
+  {
+    q: "The ancient library of Alexandria, _____ was once the largest in the world, was destroyed by fire.",
+    options: ["that", "where", "which", "whose"],
+    correct: 2,
+    explain: "Dùng 'which' làm chủ ngữ thay thế cho sự vật trong mệnh đề không xác định."
+  },
+  {
+    q: "The conditions _____ the refugees are living are becoming increasingly dire.",
+    options: ["under which", "in which", "on which", "with which"],
+    correct: 0,
+    explain: "Cấu trúc 'live under conditions' (sống dưới những điều kiện...) -> 'under which'."
+  },
+  {
+    q: "The diplomat, _____ multiple warnings about the security situation, decided to stay in the country.",
+    options: ["giving", "given", "to give", "who giving"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề bị động (who was given -> given - được cho/nhận được cảnh báo)."
+  },
+  {
+    q: "Artificial Intelligence, _____ applications are found in almost every industry, is a rapidly evolving field.",
+    options: ["which", "whose", "that", "where"],
+    correct: 1,
+    explain: "Dùng 'whose' chỉ sở hữu (ứng dụng của trí tuệ nhân tạo)."
+  },
+  {
+    q: "The primary reason _____ the project was abandoned was the lack of sustainable funding.",
+    options: ["why", "for which", "which", "Both A and B are correct"],
+    correct: 3,
+    explain: "Cả 'why' và 'for which' đều dùng để chỉ lý do (The reason why = The reason for which)."
+  },
+  {
+    q: "The chemical reaction, _____ heat, is known as an exothermic process.",
+    options: ["released", "releasing", "to release", "which released"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề chủ động (which releases -> releasing - phản ứng giải phóng nhiệt)."
+  },
+  {
+    q: "The individuals _____ in the study were selected through a random sampling process.",
+    options: ["participated", "participating", "to participate", "participation"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề chủ động (who participated -> participating)."
+  },
+  {
+    q: "There are few environments _____ the bacteria cannot survive.",
+    options: ["which", "where", "that", "when"],
+    correct: 1,
+    explain: "Dùng 'where' thay thế cho nơi chốn/môi trường (environments)."
+  },
+  {
+    q: "The document, _____ its original form, is kept in a climate-controlled vault.",
+    options: ["preserving in", "preserved in", "to preserve", "which preserves"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề bị động (which is preserved in -> preserved in)."
+  },
+  {
+    q: "Social media is a double-edged sword _____ can spread both information and misinformation.",
+    options: ["which", "who", "where", "whose"],
+    correct: 0,
+    explain: "Dùng 'which' làm chủ ngữ thay thế cho vật (double-edged sword)."
+  },
+  {
+    q: "The manner _____ the problem was handled left much to be desired.",
+    options: ["in which", "at which", "by which", "with which"],
+    correct: 0,
+    explain: "Cấu trúc 'in a manner' (theo một cách thức nào đó) -> 'in which'."
+  },
+  {
+    q: "The Nobel Prize, _____ is awarded annually, recognizes significant contributions to humanity.",
+    options: ["what", "that", "which", "where"],
+    correct: 2,
+    explain: "Dùng 'which' thay cho sự vật trong mệnh đề quan hệ không xác định."
+  },
+  {
+    q: "The documents _____ on the desk for weeks belong to the legal department.",
+    options: ["lying", "laying", "laid", "lain"],
+    correct: 0,
+    explain: "Dùng 'lying' (nội động từ LIE - đang nằm) ở dạng chủ động để rút gọn cho 'which are lying'."
+  },
+  {
+    q: "The bricks _____ by the construction workers yesterday are already dry.",
+    options: ["lying", "laying", "laid", "lied"],
+    correct: 2,
+    explain: "Dùng 'laid' (ngoại động từ LAY - đặt/để) ở dạng bị động P2 để rút gọn cho 'which were laid'."
+  },
+  {
+    q: "The students _____ in the front row are the ones who won the scholarships.",
+    options: ["sitting", "setting", "sat", "set"],
+    correct: 0,
+    explain: "Dùng 'sitting' (nội động từ SIT - đang ngồi) ở dạng chủ động."
+  },
+  {
+    q: "The goals _____ by the management for this quarter are quite ambitious.",
+    options: ["sitting", "setting", "set", "sit"],
+    correct: 2,
+    explain: "Dùng 'set' (ngoại động từ SET - thiết lập) ở dạng bị động P2 (set-set-set)."
+  },
+  {
+    q: "The sun _____ over the horizon provided a perfect backdrop for the photos.",
+    options: ["rising", "raising", "rose", "raised"],
+    correct: 0,
+    explain: "Dùng 'rising' (nội động từ RISE - đang mọc/lên) ở dạng chủ động."
+  },
+  {
+    q: "The funds _____ by the charity last year were used to build a new school.",
+    options: ["rising", "raising", "risen", "raised"],
+    correct: 3,
+    explain: "Dùng 'raised' (ngoại động từ RAISE - gây quỹ/nâng lên) ở dạng bị động P2."
+  },
+  {
+    q: "Patients _____ from chronic back pain often find relief through physical therapy.",
+    options: ["suffering", "suffered", "to suffer", "be suffering"],
+    correct: 0,
+    explain: "Dùng 'suffering' (chủ động) để rút gọn cho 'who suffer/are suffering'."
+  },
+  {
+    q: "The building _____ during the earthquake had been built in the early 1920s.",
+    options: ["collapsing", "collapsed", "was collapsed", "to collapse"],
+    correct: 1,
+    explain: "Dùng 'collapsed' (quá khứ phân từ của nội động từ COLLAPSE) để chỉ trạng thái đã xảy ra."
+  },
+  {
+    q: "The organisms _____ in extreme environments like deep-sea vents are of great interest to biologists.",
+    options: ["existing", "existed", "existed", "to exist"],
+    correct: 0,
+    explain: "Dùng 'existing' (đang tồn tại) ở dạng chủ động."
+  },
+  {
+    q: "The floods _____ by heavy rainfall led to the evacuation of the entire village.",
+    options: ["causing", "caused", "which caused", "to cause"],
+    correct: 1,
+    explain: "Dùng 'caused' (bị gây ra bởi) ở dạng bị động P2."
+  },
+  {
+    q: "The products, _____ from organic vegetables to handmade soaps, are all locally sourced.",
+    options: ["ranging", "ranged", "range", "to range"],
+    correct: 0,
+    explain: "Dùng 'ranging from... to...' (có phạm vi từ... đến...) ở dạng chủ động."
+  },
+  {
+    q: "The jobs _____ by the new factory will boost the local economy significantly.",
+    options: ["creating", "created", "which creating", "create"],
+    correct: 1,
+    explain: "Dùng 'created' (được tạo ra) ở dạng bị động P2."
+  },
+  {
+    q: "The items _____ on the invoice do not match the goods we received.",
+    options: ["listing", "listed", "list", "to list"],
+    correct: 1,
+    explain: "Dùng 'listed' (được liệt kê) ở dạng bị động P2."
+  },
+  {
+    q: "The factory _____ in the industrial zone produces high-tech components.",
+    options: ["locating", "located", "which locates", "locate"],
+    correct: 1,
+    explain: "Dùng 'located' (được đặt tại/nằm ở) ở dạng bị động P2."
+  },
+  {
+    q: "The hotel _____ on the hillside offers a spectacular view of the ocean.",
+    options: ["situating", "situated", "situates", "which situating"],
+    correct: 1,
+    explain: "Dùng 'situated' (được tọa lạc tại) ở dạng bị động P2."
+  },
+  {
+    q: "The cat _____ on the rug is fast asleep.",
+    options: ["lying", "laying", "laid", "lain"],
+    correct: 0,
+    explain: "Tiếp tục phân biệt LIE/LAY: 'lying' (đang nằm) là nội động từ chủ động."
+  },
+  {
+    q: "The foundation _____ by the ancestors remains strong after a century.",
+    options: ["lying", "laying", "laid", "lain"],
+    correct: 2,
+    explain: "Dùng 'laid' (được đặt nền móng) là bị động của ngoại động từ LAY."
+  },
+  {
+    q: "The water levels _____ after the storm caused concern among the residents.",
+    options: ["rising", "raising", "risen", "raised"],
+    correct: 0,
+    explain: "Dùng 'rising' (đang dâng lên) là nội động từ."
+  },
+  {
+    q: "Any issues _____ during the software update should be reported to the IT desk.",
+    options: ["arising", "aroused", "arisen", "arose"],
+    correct: 0,
+    explain: "Dùng 'arising' (phát sinh) là nội động từ chủ động (tương tự RISE)."
+  },
+  {
+    q: "The mountains _____ to the north of the city are covered in snow all year round.",
+    options: ["situated", "situating", "lie", "lying"],
+    correct: 0,
+    explain: "Dùng 'situated' (được tọa lạc) là dạng phổ biến nhất cho vị trí địa lý."
+  },
+  {
+    q: "The researchers, _____ the data for over six months, finally published their findings in 'Nature'.",
+    options: ["having analyzed", "analyzing", "analyzed", "to analyze"],
+    correct: 0,
+    explain: "Dùng 'Having + P2' để nhấn mạnh hành động phân tích đã hoàn tất trong một khoảng thời gian dài trước khi công bố."
+  },
+  {
+    q: "The hypothesis _____ the entire experiment was built turned out to be flawed.",
+    options: ["on which", "at which", "for which", "to which"],
+    correct: 0,
+    explain: "Cấu trúc 'build something on a hypothesis' (xây dựng dựa trên giả thuyết) -> 'on which'."
+  },
+  {
+    q: "The city council implemented new regulations _____ to reduce carbon emissions by 30%.",
+    options: ["to aiming", "aimed", "having aimed", "which aiming"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề quan hệ bị động (which were aimed at -> aimed at) mang nghĩa 'nhằm mục đích'."
+  },
+{
+    q: "The hunters _____ at the deer stayed very still, waiting for the perfect moment to shoot.",
+    options: ["aiming", "aimed", "which aimed", "to aim"],
+    correct: 0,
+    explain: "Dùng 'aiming' vì nhấn mạnh hành động chủ động của con người (thợ săn đang thực hiện việc nhắm bắn)."
+  },
+  {
+    q: "The challenges _____ our healthcare system require immediate policy intervention.",
+    options: ["facing", "faced", "facing by", "to face"],
+    correct: 0,
+    explain: "Dùng 'facing' (chủ động) khi muốn nói vấn đề đang hiện hữu/đối mặt với chúng ta. Nếu dùng 'faced', phải có 'by' (faced by us)."
+  },
+  {
+    q: "The report _____ all the financial transactions of the last quarter is on your desk.",
+    options: ["including", "included", "includes", "to include"],
+    correct: 0,
+    explain: "Dùng 'including' (bao gồm) như một phân từ chủ động để liệt kê nội dung bên trong."
+  },
+  {
+    q: "The collection _____ of over 500 rare manuscripts was donated to the national library.",
+    options: ["consisting", "consisted", "to consist", "which consisting"],
+    correct: 0,
+    explain: "Động từ 'consist' là nội động từ, KHÔNG bao giờ dùng ở dạng bị động. Rút gọn luôn là 'consisting of'."
+  },
+  {
+    q: "The arguments _____ by the defense lawyer were not strong enough to convince the jury.",
+    options: ["presenting", "presented", "which presenting", "to present"],
+    correct: 1,
+    explain: "Lập luận 'được trình bày' (bị động) bởi luật sư."
+  },
+  {
+    q: "The virus _____ in the tropical rainforest has now spread to urban areas.",
+    options: ["originating", "originated", "is originated", "to originate"],
+    correct: 0,
+    explain: "'Originate' là nội động từ (bắt nguồn từ), rút gọn dùng 'originating'."
+  },
+  {
+    q: "The information _____ in this brochure is subject to change without notice.",
+    options: ["containing", "contained", "contains", "to contain"],
+    correct: 1,
+    explain: "Trong văn phong học thuật, 'contained in' (được chứa đựng trong) dùng để chỉ thông tin trong tài liệu."
+  },
+  {
+    q: "The research _____ by the university proves that the new drug is effective.",
+    options: ["conducting", "conducted", "conducts", "to conduct"],
+    correct: 1,
+    explain: "Nghiên cứu 'được thực hiện' (conducted) bởi ai đó."
+  },
+  {
+    q: "The price _____ tax is $50, but the total cost will be $55.",
+    options: ["excluding", "excluded", "excludes", "which excluding"],
+    correct: 0,
+    explain: "Dùng 'excluding' (ngoại trừ/không bao gồm) tương tự như một giới từ/phân từ chủ động."
+  },
+  {
+    q: "Most of the energy _____ by the sun reaches the Earth as light and heat.",
+    options: ["emitting", "emitted", "emits", "to emit"],
+    correct: 1,
+    explain: "Năng lượng 'được phát ra' (emitted) từ mặt trời."
+  },
+  {
+    q: "The people _____ the protest were peaceful and well-organized.",
+    options: ["joining", "joined", "joins", "to join"],
+    correct: 0,
+    explain: "Người 'tham gia' (joining) vào cuộc biểu tình - hành động chủ động."
+  },
+  {
+    q: "The criteria _____ for the scholarship are extremely rigorous.",
+    options: ["requiring", "required", "require", "to require"],
+    correct: 1,
+    explain: "Các tiêu chí 'được yêu cầu' (required) cho học bổng."
+  },
+  {
+    q: "The bridge _____ the two islands was built in 1995.",
+    options: ["connecting", "connected", "connects", "to connect"],
+    correct: 0,
+    explain: "Cây cầu 'kết nối' (connecting) hai hòn đảo - bản chất của cây cầu là thực hiện việc đó."
+  },
+{
+    q: "The movie _____ on a true story became a global phenomenon within a week of its release.",
+    options: ["basing", "based", "which basing", "to base"],
+    correct: 1,
+    explain: "Dù dịch là 'dựa trên', nhưng trong tiếng Anh 'base' là ngoại động từ (được căn cứ trên), nên rút gọn cho vật luôn dùng 'based on'."
+  },
+  {
+    q: "The spacecraft, _____ its mission to Mars, is now transmitting high-resolution images back to Earth.",
+    options: ["completing", "having completed", "completed", "to complete"],
+    correct: 1,
+    explain: "Phân từ hoàn thành 'Having completed' nhấn mạnh việc hoàn thành nhiệm vụ diễn ra trước khi truyền ảnh về."
+  },
+  {
+    q: "The paradigm _____ the scientists operated for decades was challenged by new quantum discoveries.",
+    options: ["under which", "in which", "with which", "by which"],
+    correct: 0,
+    explain: "Cấu trúc 'operate under a paradigm' (hoạt động dưới một hệ tư tưởng/mô hình) -> 'under which'."
+  },
+  {
+    q: "Many historical documents, _____ by the great fire, are now being digitally restored.",
+    options: ["damaging", "having damaged", "damaged", "which damaging"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề quan hệ bị động (which were damaged -> damaged)."
+  },
+  {
+    q: "The candidate, _____ the majority of the votes, was declared the winner of the election.",
+    options: ["securing", "having secured", "secured", "to secure"],
+    correct: 1,
+    explain: "Dùng 'Having secured' để nhấn mạnh việc giành được phiếu bầu đã xong trước khi được tuyên bố thắng cuộc."
+  },
+  {
+    q: "The speed _____ information travels across the globe has fundamentally changed human interaction.",
+    options: ["at which", "with which", "by which", "in which"],
+    correct: 0,
+    explain: "Cấu trúc 'at a speed' (ở một tốc độ) -> 'at which'."
+  },
+  {
+    q: "The theoretical framework, _____ in the first chapter, provides the basis for the entire study.",
+    options: ["discussing", "having discussed", "discussed", "to discuss"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề bị động (which was discussed -> discussed)."
+  },
+  {
+    q: "The volunteers, _____ the safety briefing, were allowed to enter the laboratory.",
+    options: ["having attended", "attending", "attended", "to attend"],
+    correct: 0,
+    explain: "Nhấn mạnh việc tham dự buổi hướng dẫn an toàn phải xong trước khi được vào phòng thí nghiệm."
+  },
+  {
+    q: "The degree _____ the climate is affected by human activity is still a subject of intense debate.",
+    options: ["to which", "for which", "at which", "in which"],
+    correct: 0,
+    explain: "Cấu trúc cố định 'the degree/extent to which' (mức độ mà tại đó...)."
+  },
+  {
+    q: "The ancient artifacts, _____ from the site, are currently on display at the national museum.",
+    options: ["excavating", "having excavated", "excavated", "which excavating"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề quan hệ bị động (which were excavated -> excavated)."
+  },
+  {
+    q: "The social phenomenon, _____ by various psychologists, remains difficult to define precisely.",
+    options: ["observing", "observed", "having observed", "to observe"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề bị động (which is/was observed -> observed)."
+  },
+  {
+    q: "The project, _____ of funding, had to be suspended indefinitely.",
+    options: ["running out", "having run out", "ran out", "to run out"],
+    correct: 1,
+    explain: "Dùng 'Having run out of' để chỉ lý do đã xảy ra dẫn đến hệ quả bị đình chỉ."
+  },
+  {
+    q: "The principles _____ the legal system is founded are meant to ensure justice for all.",
+    options: ["on which", "with which", "for which", "under which"],
+    correct: 0,
+    explain: "Cấu trúc 'found something on principles' (thành lập dựa trên các nguyên tắc) -> 'on which'."
+  },
+  {
+    q: "The software, _____ several times before its release, still contained a few minor bugs.",
+    options: ["testing", "having been tested", "tested", "to be tested"],
+    correct: 1,
+    explain: "Dùng 'Having been tested' (dạng bị động của phân từ hoàn thành) để nhấn mạnh việc đã được kiểm tra nhiều lần."
+  },
+  {
+    q: "The ocean floor, _____ by few humans, contains many undiscovered species.",
+    options: ["exploring", "having explored", "explored", "which exploring"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề bị động (which is explored -> explored)."
+  },
+  {
+    q: "The logic _____ the argument was based was eventually proven to be circular.",
+    options: ["on which", "at which", "by which", "to which"],
+    correct: 0,
+    explain: "Cấu trúc 'base an argument on logic' -> 'on which'."
+  },
+  {
+    q: "The refugees, _____ their homes due to the conflict, are in urgent need of aid.",
+    options: ["fleeing", "having fled", "fled", "to flee"],
+    correct: 1,
+    explain: "Dùng 'Having fled' (đã trốn chạy khỏi) để chỉ trạng thái hoàn thành dẫn đến tình cảnh hiện tại."
+  },
+  {
+    q: "The mechanism _____ the disease spreads is not yet fully understood by medical experts.",
+    options: ["by which", "at which", "for which", "to which"],
+    correct: 0,
+    explain: "Cấu trúc 'a mechanism by which' (cơ chế mà thông qua đó...)."
+  },
+  {
+    q: "The Great Pyramid of Giza was the only one of the Seven Wonders of the Ancient World _____ largely intact.",
+    options: ["to remain", "remaining", "remained", "to be remained"],
+    correct: 0,
+    explain: "Dùng 'to V' sau 'the only'. 'Remain' là nội động từ nên dùng dạng chủ động."
+  },
+  {
+    q: "Yuri Gagarin was the first human _____ into outer space, marking a milestone in the Space Race.",
+    options: ["traveling", "traveled", "to travel", "who travel"],
+    correct: 2,
+    explain: "Dùng 'to V' sau 'the first' để rút gọn mệnh đề quan hệ dạng chủ động."
+  },
+  {
+    q: "The final project is often the most difficult task _____ by students before graduation.",
+    options: ["completing", "to be completed", "to complete", "completed"],
+    correct: 1,
+    explain: "Dùng 'to be P2' sau so sánh nhất 'the most difficult' vì 'nhiệm vụ' phải 'được hoàn thành' (bị động)."
+  },
+  {
+    q: "In many cultures, the eldest son was the next in line _____ the family heritage.",
+    options: ["to inherit", "inheriting", "inherited", "to be inherited"],
+    correct: 0,
+    explain: "Dùng 'to V' sau cụm từ chỉ thứ tự 'the next' (người kế tiếp thừa kế)."
+  },
+  {
+    q: "Neil Armstrong was the first person _____ on the moon.",
+    options: ["walked", "walking", "to walk", "to be walked"],
+    correct: 2,
+    explain: "Rút gọn dùng 'to V' sau 'the first person'."
+  },
+  {
+    q: "This is the third laboratory _____ by the university to enhance biotechnology research.",
+    options: ["building", "built", "to be built", "to build"],
+    correct: 2,
+    explain: "Dùng 'to be P2' sau số thứ tự 'the third' vì phòng thí nghiệm phải 'được xây dựng' (bị động)."
+  },
+  {
+    q: "She was the last candidate _____ by the committee for the prestigious fellowship.",
+    options: ["interviewing", "to interview", "to be interviewed", "interviewed"],
+    correct: 2,
+    explain: "Dùng 'to be P2' sau 'the last' vì ứng viên 'được phỏng vấn' (bị động)."
+  },
+  {
+    q: "The Burj Khalifa is currently the tallest building _____ in the world.",
+    options: ["to construct", "constructing", "to be constructed", "constructed"],
+    correct: 2,
+    explain: "Dùng 'to be P2' sau so sánh nhất 'the tallest' để chỉ việc công trình được xây dựng."
+  },
+  {
+    q: "He was the only scientist _____ the Nobel Prize in two different scientific fields.",
+    options: ["awarding", "to be awarded", "to award", "awarded"],
+    correct: 1,
+    explain: "Dùng 'to be P2' sau 'the only' vì nhà khoa học 'được trao giải' (bị động)."
+  },
+  {
+    q: "The next flight _____ at Gate 4 will be bound for London Heathrow.",
+    options: ["arriving", "to arrive", "arrived", "to be arrived"],
+    correct: 1,
+    explain: "Dùng 'to V' sau 'the next' để rút gọn mệnh đề quan hệ chủ động."
+  },
+  {
+    q: "English is often considered the most important language _____ for global communication.",
+    options: ["mastering", "to master", "to be mastered", "mastered"],
+    correct: 2,
+    explain: "Dùng 'to be P2' sau so sánh nhất 'the most important' (ngôn ngữ cần được thông thạo)."
+  },
+  {
+    q: "The security guard was the last person _____ the building before the explosion.",
+    options: ["to leave", "leaving", "left", "to be left"],
+    correct: 0,
+    explain: "Dùng 'to V' sau 'the last person' (người cuối cùng rời khỏi - chủ động)."
   }
+
+
   ],
 
 /* TEST 2*/
@@ -395,6 +1530,7 @@ const exercises = {
     correct: 0,
     explain: "Cụm từ 'rigorous inspections' (kiểm tra nghiêm ngặt) là cách kết hợp từ chuyên dụng trong quản lý chất lượng."
   },
+
   ],
 /* TEST 3*/
 
@@ -431,7 +1567,6 @@ function fireConfetti(){ confetti({ particleCount:200, spread:100, origin:{x:0.5
 
 <script>
 // =================== GLOBAL ===================
-// =================== GLOBAL ===================
 let currentIndex = 0;
 let currentTest = 1;
 let userAnswers = {};     // lưu đáp án: key = "test1_0" → value = index đáp án (0,1,2,3)
@@ -441,13 +1576,28 @@ function getAnswerKey() {
   return `test${currentTest}_${currentIndex}`;
 }
 
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+
+
 // =================== LOAD & RENDER ===================
 function loadExercise(testNumber) {
   currentTest = testNumber;
   currentIndex = 0;
+
+  // TRỘN bộ câu hỏi mỗi lần chọn test
+  exercises[currentTest] = shuffle([...exercises[currentTest]]);
+
+  userAnswers = {};  // nếu muốn xoá đáp án cũ
   renderQuestion();
 }
-
 function renderQuestion() {
   const area = document.getElementById("exercise");
   const data = exercises[currentTest];
@@ -482,9 +1632,10 @@ function renderQuestion() {
       `).join("")}
       <div class="result" id="result"></div>
       <div class="exercise-buttons">
-        <button onclick="checkAnswer()">Check</button>
-        <button onclick="nextQuestion()">Next</button>
-        <button onclick="prevQuestion()">Back</button>
+	<button class="btn-check" onclick="checkAnswer()">Check</button>
+         <button class="btn-next" onclick="nextQuestion()">Next</button>
+        <button class="btn-back" onclick="prevQuestion()">Back</button>
+
       </div>
     </div>
   `;

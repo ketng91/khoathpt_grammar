@@ -152,30 +152,27 @@ body, html { overflow-x: hidden; }
 <div class="top-select">
   <select id="exerciseList">
     <option value="1">Trắc nghiệm - Chia thì</option>
-    <option value="3">Trắc nghiệm - Sự hoà hợp S & Vc</option>
-    <option value="4">Trắc nghiệm - V, Ving, to V</option>
-    <option value="1">Trắc nghiệm - Động từ khiếm khyết</option>
-    <option value="1">Trắc nghiệm - Lượng từ</option>
-    <option value="1">Trắc nghiệm - Đại từ</option>
-    <option value="1">Trắc nghiệm - MĐ Quan hệ</option>
-    <option value="1">Trắc nghiệm - MĐ Danh ngữ</option>
-    <option value="1">Trắc nghiệm - MĐ Trạng ngữ</option>
-    <option value="1">Trắc nghiệm - Từ loại</option>
-    <option value="1">Trắc nghiệm - Trật tự từ</option>
-    <option value="1">Trắc nghiệm - Liên từ</option>
-    <option value="1">Trắc nghiệm - Adv liên kết</option>
-    <option value="1">Trắc nghiệm - Mạo từ</option>
-    <option value="2">Trắc nghiệm - Câu điều kiện</option>
-    <option value="1">Trắc nghiệm - Câu bị động</option>
-    <option value="1">Trắc nghiệm - So sánh</option>
-    <option value="1">Trắc nghiệm - Câu tường thuật</option>
-    <option value="1">Trắc nghiệm - Đảo ngữ</option>
-    <option value="1">Trắc nghiệm - Thức giả định</option>
-    <option value="1">Trắc nghiệm - Giới từ</option>
-    <option value="1">Trắc nghiệm - Cụm động từ</option>
-    <option value="1">Trắc nghiệm - Collocation</option>
-    <option value="1">Trắc nghiệm - Idiom</option>
-
+    <option value="2">Trắc nghiệm - Sự hoà hợp S & Vc</option>
+    <option value="3">Trắc nghiệm - V, Ving, to V</option>
+    <option value="4">Trắc nghiệm - Lượng từ</option>
+    <option value="5">Trắc nghiệm - MĐ Quan hệ</option>
+    <option value="6">Trắc nghiệm - MĐ Danh ngữ</option>
+    <option value="7">Trắc nghiệm - MĐ Trạng ngữ</option>
+    <option value="8">Trắc nghiệm - Từ loại</option>
+    <option value="9">Trắc nghiệm - Trật tự từ</option>
+    <option value="10">Trắc nghiệm - Liên từ</option>
+    <option value="11">Trắc nghiệm - Adv liên kết</option>
+    <option value="12">Trắc nghiệm - Câu điều kiện</option>
+    <option value="13">Trắc nghiệm - Câu bị động</option>
+    <option value="14">Trắc nghiệm - So sánh</option>
+    <option value="15">Trắc nghiệm - Câu tường thuật</option>
+    <option value="16">Trắc nghiệm - Đảo ngữ</option>
+    <option value="17">Trắc nghiệm - Thức giả định</option>
+    <option value="18">Trắc nghiệm - Giới từ</option>
+    <option value="19">Trắc nghiệm - Cụm động từ</option>
+    <option value="20">Trắc nghiệm - Collocation</option>
+    <option value="21">Trắc nghiệm - Idiom</option>
+    <option value="22">Trắc nghiệm - Tổng hợp</option>
   </select>
 </div>
 <div id="timerBox">
@@ -200,8 +197,1228 @@ body, html { overflow-x: hidden; }
 <script>
 // ===== 1. exercises =====
 const exercises = {
+
 /* TEST 1*/
+
   1: [
+  {
+    q: "My father _____ coffee every morning before going to work.",
+    options: ["drink", "drinks", "is drinking", "has drunk"],
+    correct: 1,
+    explain: "Thì hiện tại đơn diễn tả thói quen hàng ngày, chủ ngữ số ít 'My father' động từ thêm 's'."
+  },
+  {
+    q: "Listen! Someone _____ at the door.",
+    options: ["knocks", "knocked", "is knocking", "has knocked"],
+    correct: 2,
+    explain: "Dấu hiệu 'Listen!' cho thấy hành động đang xảy ra tại thời điểm nói (Hiện tại tiếp diễn)."
+  },
+  {
+    q: "I _____ this movie three times already.",
+    options: ["saw", "have seen", "am seeing", "see"],
+    correct: 1,
+    explain: "Dấu hiệu 'already' và số lần lặp lại trải nghiệm dùng thì Hiện tại hoàn thành."
+  },
+  {
+    q: "Yesterday, she _____ home late because of the heavy rain.",
+    options: ["comes", "came", "has come", "was coming"],
+    correct: 1,
+    explain: "Dấu hiệu 'Yesterday' chỉ thời điểm xác định trong quá khứ, dùng thì Quá khứ đơn."
+  },
+  {
+    q: "While I _____ my homework, the lights went out.",
+    options: ["do", "did", "was doing", "have done"],
+    correct: 2,
+    explain: "Hành động đang xảy ra trong quá khứ (QK tiếp diễn) thì có hành động khác xen vào (QK đơn)."
+  },
+  {
+    q: "They _____ in this city for ten years now.",
+    options: ["lived", "are living", "have lived", "will live"],
+    correct: 2,
+    explain: "Dấu hiệu 'for + khoảng thời gian' dùng thì Hiện tại hoàn thành."
+  },
+  {
+    q: "Look at those dark clouds! It _____ rain soon.",
+    options: ["will", "is going to", "rains", "has rained"],
+    correct: 1,
+    explain: "Dự đoán có căn cứ ở hiện tại (mây đen) dùng 'be going to'."
+  },
+  {
+    q: "We _____ a picnic next Sunday. We've already bought the food.",
+    options: ["have", "will have", "are going to have", "had"],
+    correct: 2,
+    explain: "Kế hoạch đã có chuẩn bị trước (đã mua đồ ăn) dùng Tương lai gần."
+  },
+  {
+    q: "By the time we arrived at the station, the train _____.",
+    options: ["left", "has left", "had left", "was leaving"],
+    correct: 2,
+    explain: "Hành động xảy ra và hoàn thành trước một hành động khác trong quá khứ dùng Quá khứ hoàn thành."
+  },
+  {
+    q: "Water _____ at 100 degrees Celsius.",
+    options: ["boil", "boils", "is boiling", "boiled"],
+    correct: 1,
+    explain: "Diễn tả một sự thật hiển nhiên, chân lý dùng thì Hiện tại đơn."
+  },
+  {
+    q: "At 8 p.m. last night, we _____ a football match on TV.",
+    options: ["watched", "were watching", "have watched", "are watching"],
+    correct: 1,
+    explain: "Thời điểm xác định cụ thể trong quá khứ dùng Quá khứ tiếp diễn."
+  },
+  {
+    q: "I think people _____ to Mars in the future.",
+    options: ["travel", "will travel", "are going to travel", "have traveled"],
+    correct: 1,
+    explain: "Dự đoán không có căn cứ hoặc dựa trên quan điểm cá nhân (sau 'I think') dùng Tương lai đơn."
+  },
+  {
+    q: "She _____ her keys. She can't find them anywhere.",
+    options: ["lost", "has lost", "is losing", "had lost"],
+    correct: 1,
+    explain: "Hành động vừa xảy ra và để lại kết quả ở hiện tại dùng Hiện tại hoàn thành."
+  },
+  {
+    q: "The sun _____ in the East and sets in the West.",
+    options: ["rise", "rises", "rose", "is rising"],
+    correct: 1,
+    explain: "Sự thật hiển nhiên dùng Hiện tại đơn."
+  },
+  {
+    q: "My mother _____ the house at the moment.",
+    options: ["cleans", "is cleaning", "has cleaned", "cleaned"],
+    correct: 1,
+    explain: "Dấu hiệu 'at the moment' dùng Hiện tại tiếp diễn."
+  },
+  {
+    q: "We _____ each other since we were children.",
+    options: ["know", "knew", "have known", "are knowing"],
+    correct: 2,
+    explain: "Dấu hiệu 'since + mốc thời gian' dùng Hiện tại hoàn thành. Động từ 'know' không dùng tiếp diễn."
+  },
+  {
+    q: "Last week, I _____ to the zoo with my family.",
+    options: ["go", "went", "have gone", "was going"],
+    correct: 1,
+    explain: "Dấu hiệu 'Last week' dùng Quá khứ đơn."
+  },
+  {
+    q: "What _____ you _____ when I called you yesterday?",
+    options: ["do / do", "did / do", "were / doing", "are / doing"],
+    correct: 2,
+    explain: "Hỏi về hành động đang diễn ra tại một thời điểm trong quá khứ."
+  },
+  {
+    q: "I _____ to New York twice this year.",
+    options: ["go", "went", "have been", "am going"],
+    correct: 2,
+    explain: "Nói về trải nghiệm đi đâu đó tính đến hiện tại dùng Hiện tại hoàn thành."
+  },
+  {
+    q: "The earth _____ around the sun.",
+    options: ["move", "moves", "moved", "is moving"],
+    correct: 1,
+    explain: "Chân lý hiển nhiên dùng Hiện tại đơn."
+  },
+  {
+    q: "Hurry up! The bus _____.",
+    options: ["comes", "is coming", "has come", "will come"],
+    correct: 1,
+    explain: "Hành động đang tiến lại gần/xảy ra ngay lúc nói dùng Hiện tại tiếp diễn."
+  },
+  {
+    q: "When I was a child, I _____ up early every morning.",
+    options: ["get", "got", "have got", "was getting"],
+    correct: 1,
+    explain: "Thói quen trong quá khứ đã chấm dứt dùng Quá khứ đơn."
+  },
+  {
+    q: "She _____ her homework yet.",
+    options: ["doesn't finish", "hasn't finished", "didn't finish", "won't finish"],
+    correct: 1,
+    explain: "Dấu hiệu 'yet' dùng trong câu phủ định của thì Hiện tại hoàn thành."
+  },
+  {
+    q: "I _____ a new laptop tomorrow. I've saved enough money.",
+    options: ["buy", "will buy", "am going to buy", "bought"],
+    correct: 2,
+    explain: "Dự định tương lai có kế hoạch và chuẩn bị dùng Tương lai gần."
+  },
+  {
+    q: "They _____ lunch when the phone rang.",
+    options: ["have", "had", "were having", "are having"],
+    correct: 2,
+    explain: "Hành động đang diễn ra trong quá khứ thì bị hành động khác xen vào."
+  },
+  {
+    q: "I _____ never _____ such a beautiful girl before.",
+    options: ["did / see", "have / seen", "am / seeing", "had / seen"],
+    correct: 1,
+    explain: "Dấu hiệu 'never... before' dùng Hiện tại hoàn thành."
+  },
+  {
+    q: "The film _____ at 7:30 p.m. tonight.",
+    options: ["starts", "is starting", "will start", "started"],
+    correct: 0,
+    explain: "Lịch trình tàu xe, phim ảnh có giờ giấc cố định dùng Hiện tại đơn."
+  },
+  {
+    q: "Where _____ you _____ last night?",
+    options: ["do / go", "did / go", "have / gone", "were / go"],
+    correct: 1,
+    explain: "Câu hỏi ở thì quá khứ đơn với 'last night'."
+  },
+  {
+    q: "Look! The birds _____ in the sky.",
+    options: ["fly", "are flying", "flown", "flew"],
+    correct: 1,
+    explain: "Mệnh lệnh 'Look!' báo hiệu hành động đang diễn ra (Hiện tại tiếp diễn)."
+  },
+  {
+    q: "He _____ his car for 5 years before it broke down.",
+    options: ["has", "had", "had had", "was having"],
+    correct: 2,
+    explain: "Hành động xảy ra và kéo dài trước một sự việc quá khứ khác dùng Quá khứ hoàn thành."
+  },
+  {
+    q: "If it rains tomorrow, we _____ the match.",
+    options: ["cancel", "will cancel", "canceled", "have canceled"],
+    correct: 1,
+    explain: "Câu điều kiện loại 1, mệnh đề chính dùng thì Tương lai đơn."
+  },
+  {
+    q: "I _____ my old teacher yesterday morning.",
+    options: ["meet", "met", "have met", "was meeting"],
+    correct: 1,
+    explain: "Thời điểm xác định trong quá khứ dùng Quá khứ đơn."
+  },
+  {
+    q: "She _____ English since she was five years old.",
+    options: ["learns", "is learning", "has learned", "learned"],
+    correct: 2,
+    explain: "Cấu trúc: Hiện tại hoàn thành + since + Quá khứ đơn."
+  },
+  {
+    q: "They _____ their grandparents next weekend. They planned it.",
+    options: ["visit", "will visit", "are going to visit", "visited"],
+    correct: 2,
+    explain: "Kế hoạch cho tương lai đã định sẵn dùng Tương lai gần."
+  },
+  {
+    q: "While my mom was cooking, my dad _____ the garden.",
+    options: ["is watering", "watered", "was watering", "waters"],
+    correct: 2,
+    explain: "Hai hành động xảy ra song song đồng thời trong quá khứ dùng Quá khứ tiếp diễn."
+  },
+  {
+    q: "_____ you ever _____ to France?",
+    options: ["Do / go", "Did / go", "Have / been", "Are / going"],
+    correct: 2,
+    explain: "Hỏi về trải nghiệm dùng 'Have you ever been to...' (Hiện tại hoàn thành)."
+  },
+  {
+    q: "The train _____ at 6 a.m. every day.",
+    options: ["leave", "leaves", "is leaving", "left"],
+    correct: 1,
+    explain: "Thói quen, lịch trình lặp lại dùng Hiện tại đơn."
+  },
+  {
+    q: "Be quiet! The baby _____.",
+    options: ["sleeps", "is sleeping", "has slept", "slept"],
+    correct: 1,
+    explain: "Hành động đang diễn ra ngay lúc nói (Hiện tại tiếp diễn)."
+  },
+  {
+    q: "I _____ my key. Now I can't open the door.",
+    options: ["lose", "lost", "have lost", "was losing"],
+    correct: 2,
+    explain: "Sự việc vừa xảy ra ảnh hưởng trực tiếp đến hiện tại dùng Hiện tại hoàn thành."
+  },
+  {
+    q: "Ten years ago, people _____ much about the Internet.",
+    options: ["don't know", "didn't know", "haven't known", "weren't knowing"],
+    correct: 1,
+    explain: "Mốc thời gian 'Ten years ago' dùng Quá khứ đơn."
+  },
+  {
+    q: "What _____ you _____ this weekend?",
+    options: ["do / do", "are / going to do", "have / done", "did / do"],
+    correct: 1,
+    explain: "Hỏi về dự định tương lai dùng Tương lai gần."
+  },
+  {
+    q: "After he _____ his dinner, he went out for a walk.",
+    options: ["finishes", "finished", "had finished", "has finished"],
+    correct: 2,
+    explain: "Hành động xảy ra trước hành động khác trong quá khứ dùng Quá khứ hoàn thành."
+  },
+  {
+    q: "We _____ each other for a long time.",
+    options: ["didn't see", "haven't seen", "don't see", "aren't seeing"],
+    correct: 1,
+    explain: "Dấu hiệu 'for a long time' dùng Hiện tại hoàn thành."
+  },
+  {
+    q: "Wait! I _____ you with those heavy bags.",
+    options: ["help", "will help", "am going to help", "helped"],
+    correct: 1,
+    explain: "Quyết định giúp đỡ ngay tại thời điểm nói dùng Tương lai đơn."
+  },
+  {
+    q: "While I _____ to school, I met my friend.",
+    options: ["walk", "walked", "was walking", "have walked"],
+    correct: 2,
+    explain: "Hành động đang diễn ra (đi bộ) thì hành động khác (gặp bạn) xen vào."
+  },
+  {
+    q: "He usually _____ to school by bike.",
+    options: ["go", "goes", "is going", "went"],
+    correct: 1,
+    explain: "Trạng từ tần suất 'usually' đi với thì Hiện tại đơn."
+  },
+  {
+    q: "They _____ in that house since 2010.",
+    options: ["live", "lived", "have lived", "are living"],
+    correct: 2,
+    explain: "Dấu hiệu 'since + mốc thời gian' dùng Hiện tại hoàn thành."
+  },
+  {
+    q: "It's very cold. I _____ the window.",
+    options: ["close", "will close", "am going to close", "closed"],
+    correct: 1,
+    explain: "Quyết định tức thì trong lúc nói dùng Tương lai đơn."
+  },
+  {
+    q: "When we arrived, the party _____ already _____.",
+    options: ["has / started", "had / started", "was / starting", "is / starting"],
+    correct: 1,
+    explain: "Bữa tiệc bắt đầu trước khi chúng tôi đến (Quá khứ hoàn thành)."
+  },
+  {
+    q: "I _____ a doctor when I grow up.",
+    options: ["am", "will be", "am going to be", "was"],
+    correct: 2,
+    explain: "Ước mơ, dự định nghề nghiệp tương lai dùng Tương lai gần."
+  }
+  ],
+  2: [
+{
+    q: "Each of the students _____ responsible for their own desk.",
+    options: ["is", "are", "be", "were"],
+    correct: 0,
+    explain: "Cấu trúc 'Each of + N số nhiều' luôn đi với động từ chia số ít."
+  },
+  {
+    q: "Neither my parents nor my brother _____ to the party tonight.",
+    options: ["come", "comes", "are coming", "have come"],
+    correct: 1,
+    explain: "Với 'Neither... nor...', động từ chia theo chủ ngữ gần nhất (my brother - số ít)."
+  },
+  {
+    q: "The news about the accident _____ very shocking.",
+    options: ["be", "are", "was", "were"],
+    correct: 2,
+    explain: "'News' là danh từ không đếm được, luôn đi với động từ số ít."
+  },
+  {
+    q: "Ten dollars _____ all I have in my pocket.",
+    options: ["is", "are", "were", "be"],
+    correct: 0,
+    explain: "Các đơn vị tiền tệ, thời gian, khoảng cách được coi là một chỉnh thể nên chia số ít."
+  },
+  {
+    q: "The number of students in this class _____ 40.",
+    options: ["is", "are", "were", "have been"],
+    correct: 0,
+    explain: "'The number of + N số nhiều' chia động từ số ít (chỉ số lượng cụ thể)."
+  },
+  {
+    q: "A number of people _____ waiting for the bus now.",
+    options: ["is", "are", "was", "has been"],
+    correct: 1,
+    explain: "'A number of + N số nhiều' chia động từ số nhiều (nghĩa là 'nhiều người')."
+  },
+  {
+    q: "Physics _____ my favorite subject when I was at school.",
+    options: ["is", "are", "was", "were"],
+    correct: 2,
+    explain: "Các môn học kết thúc bằng 's' (Physics, Maths...) vẫn chia động từ số ít."
+  },
+  {
+    q: "The cattle _____ grazing in the field.",
+    options: ["is", "are", "was", "has been"],
+    correct: 1,
+    explain: "'Cattle' (gia súc) là danh từ tập hợp luôn chia số nhiều."
+  },
+  {
+    q: "Not only the teacher but also the students _____ excited about the trip.",
+    options: ["is", "are", "was", "has been"],
+    correct: 1,
+    explain: "Cấu trúc 'Not only... but also...', động từ chia theo chủ ngữ gần nhất (the students)."
+  },
+  {
+    q: "Either you or I _____ going to clean the room.",
+    options: ["am", "is", "are", "be"],
+    correct: 0,
+    explain: "Với 'Either... or...', động từ chia theo chủ ngữ gần nhất (I đi với am)."
+  },
+  {
+    q: "The flock of birds _____ flying to the south.",
+    options: ["is", "are", "were", "have been"],
+    correct: 0,
+    explain: "Danh từ tập hợp chỉ một nhóm (a flock of, a group of...) thường chia số ít."
+  },
+  {
+    q: "Both Lan and Hoa _____ good at English.",
+    options: ["is", "are", "was", "has been"],
+    correct: 1,
+    explain: "'Both A and B' luôn chia động từ số nhiều."
+  },
+  {
+    q: "Everything _____ ready for the wedding.",
+    options: ["is", "are", "were", "have been"],
+    correct: 0,
+    explain: "Các đại từ bất định (everything, anything, someone...) luôn chia số ít."
+  },
+  {
+    q: "None of the milk _____ left in the fridge.",
+    options: ["is", "are", "were", "have been"],
+    correct: 0,
+    explain: "'None of + danh từ không đếm được' chia động từ số ít."
+  },
+  {
+    q: "Two miles _____ too far for her to walk.",
+    options: ["is", "are", "were", "be"],
+    correct: 0,
+    explain: "Khoảng cách (Two miles) được coi là một đơn vị đo lường, chia số ít."
+  },
+  {
+    q: "The rich _____ not always happy.",
+    options: ["is", "are", "was", "has been"],
+    correct: 1,
+    explain: "'The + Adj' dùng để chỉ một nhóm người, luôn chia động từ số nhiều."
+  },
+  {
+    q: "My pair of trousers _____ torn.",
+    options: ["is", "are", "were", "have been"],
+    correct: 0,
+    explain: "Mặc dù 'trousers' số nhiều, nhưng có 'pair of' đứng trước nên chia theo 'pair' (số ít)."
+  },
+  {
+    q: "Bread and butter _____ what they usually have for breakfast.",
+    options: ["is", "are", "were", "be"],
+    correct: 0,
+    explain: "Khi hai danh từ nối bằng 'and' chỉ cùng một món ăn hoặc một ý tưởng, chia số ít."
+  },
+  {
+    q: "The stairs _____ very steep, so be careful.",
+    options: ["is", "are", "was", "has been"],
+    correct: 1,
+    explain: "'Stairs' (cầu thang) luôn được coi là danh từ số nhiều."
+  },
+  {
+    q: "Every boy and girl _____ to wear a uniform.",
+    options: ["has", "have", "are having", "were having"],
+    correct: 0,
+    explain: "Chủ ngữ có 'Every' hoặc 'Each' thì động từ luôn chia số ít bất kể có bao nhiêu danh từ nối bằng 'and'."
+  },
+  {
+    q: "Someone _____ knocking at the door.",
+    options: ["is", "are", "were", "be"],
+    correct: 0,
+    explain: "Đại từ bất định 'Someone' chia số ít."
+  },
+  {
+    q: "The pollution in big cities _____ getting worse.",
+    options: ["is", "are", "were", "have been"],
+    correct: 0,
+    explain: "Chủ ngữ chính là 'pollution' (không đếm được), chia số ít."
+  },
+  {
+    q: "Collecting stamps _____ my brother's hobby.",
+    options: ["is", "are", "were", "be"],
+    correct: 0,
+    explain: "Ving đóng vai trò chủ ngữ (danh động từ) chia động từ số ít."
+  },
+  {
+    q: "A lot of students _____ to play soccer.",
+    options: ["like", "likes", "is liking", "has liked"],
+    correct: 0,
+    explain: "'A lot of + N số nhiều' chia động từ số nhiều."
+  },
+  {
+    q: "Most of the water _____ polluted.",
+    options: ["is", "are", "were", "have been"],
+    correct: 0,
+    explain: "'Most of + danh từ không đếm được' chia động từ số ít."
+  },
+  {
+    q: "There _____ some books on the table.",
+    options: ["is", "are", "was", "be"],
+    correct: 1,
+    explain: "Trong cấu trúc 'There + be', động từ chia theo danh từ đứng ngay sau nó (books - số nhiều)."
+  },
+  {
+    q: "The pilot along with his passengers _____ saved.",
+    options: ["was", "were", "are", "have been"],
+    correct: 0,
+    explain: "Chủ ngữ nối bằng 'along with', 'as well as', 'with' thì chia theo chủ ngữ thứ nhất (the pilot)."
+  },
+  {
+    q: "Many a student _____ failed the exam.",
+    options: ["has", "have", "are", "were"],
+    correct: 0,
+    explain: "Cấu trúc 'Many a + N số ít' đi với động từ số ít (nghĩa là nhiều nhưng nhấn mạnh từng cá nhân)."
+  },
+  {
+    q: "The scissors _____ on the table.",
+    options: ["is", "are", "was", "be"],
+    correct: 1,
+    explain: "Các vật có hai phần (scissors, glasses, pliers...) luôn chia số nhiều."
+  },
+  {
+    q: "To study English _____ not easy.",
+    options: ["is", "are", "were", "be"],
+    correct: 0,
+    explain: "To-infinitive đóng vai trò chủ ngữ chia động từ số ít."
+  },
+  {
+    q: "The jury _____ divided in their opinions.",
+    options: ["is", "are", "was", "has been"],
+    correct: 1,
+    explain: "Khi danh từ tập hợp (jury, family, team) chỉ từng cá nhân đang hành động riêng lẻ, chia số nhiều."
+  },
+  {
+    q: "Mathematics _____ difficult for some people.",
+    options: ["is", "are", "were", "be"],
+    correct: 0,
+    explain: "Tên môn học chia số ít."
+  },
+  {
+    q: "The United States _____ a large country.",
+    options: ["is", "are", "were", "be"],
+    correct: 0,
+    explain: "Tên một quốc gia (dù có 's') vẫn chia số ít."
+  },
+  {
+    q: "No news _____ good news.",
+    options: ["is", "are", "were", "be"],
+    correct: 0,
+    explain: "'News' luôn chia số ít."
+  },
+  {
+    q: "Three years _____ a long time to wait.",
+    options: ["is", "are", "were", "be"],
+    correct: 0,
+    explain: "Khoảng thời gian chia số ít."
+  },
+  {
+    q: "Neither of the answers _____ correct.",
+    options: ["is", "are", "were", "be"],
+    correct: 0,
+    explain: "'Neither of + N số nhiều' chia động từ số ít."
+  },
+  {
+    q: "The team _____ practicing for the final match now.",
+    options: ["is", "are", "was", "were"],
+    correct: 0,
+    explain: "Team hành động như một đơn vị thống nhất, chia số ít."
+  },
+  {
+    q: "Mumps _____ a common childhood disease.",
+    options: ["is", "are", "were", "be"],
+    correct: 0,
+    explain: "Tên một số căn bệnh có đuôi 's' (mumps - quai bị, measles - sởi) chia số ít."
+  },
+  {
+    q: "All of the pie _____ gone.",
+    options: ["is", "are", "were", "have been"],
+    correct: 0,
+    explain: "'All of + danh từ số ít/không đếm được' chia số ít."
+  },
+  {
+    q: "All of the pies _____ gone.",
+    options: ["is", "are", "were", "has been"],
+    correct: 2,
+    explain: "'All of + danh từ số nhiều' chia số nhiều."
+  },
+  {
+    q: "Fifty percent of the apples _____ rotten.",
+    options: ["is", "are", "was", "has been"],
+    correct: 1,
+    explain: "Phần trăm (%) chia theo danh từ đi sau giới từ 'of' (apples - số nhiều)."
+  },
+  {
+    q: "What I need _____ a good rest.",
+    options: ["is", "are", "were", "be"],
+    correct: 0,
+    explain: "Mệnh đề danh từ làm chủ ngữ chia động từ số ít."
+  },
+  {
+    q: "My family _____ very large.",
+    options: ["is", "are", "were", "be"],
+    correct: 0,
+    explain: "Gia đình được coi là một đơn vị, chia số ít."
+  },
+  {
+    q: "The books I bought yesterday _____ on the shelf.",
+    options: ["is", "are", "was", "has been"],
+    correct: 1,
+    explain: "Chủ ngữ chính là 'The books', mệnh đề 'I bought yesterday' chỉ bổ nghĩa."
+  },
+  {
+    q: "Economics _____ his major at university.",
+    options: ["is", "are", "were", "be"],
+    correct: 0,
+    explain: "Môn kinh tế học chia số ít."
+  },
+  {
+    q: "Either the students or their teacher _____ going to the zoo.",
+    options: ["is", "are", "am", "be"],
+    correct: 0,
+    explain: "Chia theo 'teacher' (chủ ngữ gần nhất - số ít)."
+  },
+  {
+    q: "The information he gave me _____ very useful.",
+    options: ["is", "are", "were", "be"],
+    correct: 0,
+    explain: "'Information' là danh từ không đếm được, chia số ít."
+  },
+  {
+    q: "A pair of glasses _____ lying on the floor.",
+    options: ["is", "are", "were", "be"],
+    correct: 0,
+    explain: "Chia theo 'A pair' (số ít)."
+  },
+  {
+    q: "The quality of the fruits _____ excellent.",
+    options: ["is", "are", "were", "have been"],
+    correct: 0,
+    explain: "Chủ ngữ là 'The quality', không phải 'fruits', nên chia số ít."
+  },
+  {
+    q: "Statistics _____ a difficult subject.",
+    options: ["is", "are", "were", "be"],
+    correct: 0,
+    explain: "Môn thống kê học chia số ít."
+  }
+  ],
+/*⭐⭐ Topic: V, Ving, to V ⭐⭐*/
+
+ 3: [
+  {
+    q: "I enjoy _____ to classical music when I am stressed.",
+    options: ["listen", "to listen", "listening", "listened"],
+    correct: 2,
+    explain: "Sau 'enjoy' luôn là một Gerund (V-ing)."
+  },
+  {
+    q: "He promised _____ his homework before going out.",
+    options: ["finish", "to finish", "finishing", "finished"],
+    correct: 1,
+    explain: "Sau 'promise' là một To-infinitive (To-V)."
+  },
+  {
+    q: "We decided _____ a new car next month.",
+    options: ["buy", "buying", "to buy", "bought"],
+    correct: 2,
+    explain: "Sau 'decide' là một To-infinitive (To-V)."
+  },
+  {
+    q: "Do you mind _____ the window? It's cold in here.",
+    options: ["close", "to close", "closing", "closed"],
+    correct: 2,
+    explain: "Cấu trúc 'Do you mind + V-ing?' dùng để yêu cầu lịch sự."
+  },
+  {
+    q: "My parents let me _____ to the cinema with my friends.",
+    options: ["go", "to go", "going", "gone"],
+    correct: 0,
+    explain: "Cấu trúc 'let someone + V (nguyên mẫu)'."
+  },
+  {
+    q: "I am looking forward to _____ you again soon.",
+    options: ["see", "seeing", "to see", "saw"],
+    correct: 1,
+    explain: "Cụm 'look forward to' đi với V-ing (ở đây 'to' là giới từ)."
+  },
+  {
+    q: "She stopped _____ because it was bad for her health.",
+    options: ["smoke", "to smoke", "smoking", "smoked"],
+    correct: 2,
+    explain: "Stop + V-ing: dừng hẳn việc đang làm. Stop + To-V: dừng để làm việc khác."
+  },
+  {
+    q: "He forgot _____ the door, so the cat got out.",
+    options: ["lock", "to lock", "locking", "locked"],
+    correct: 1,
+    explain: "Forget + To-V: quên phải làm gì (chưa làm). Forget + V-ing: quên đã làm gì."
+  },
+  {
+    q: "It's no use _____ about the past.",
+    options: ["worry", "to worry", "worrying", "worried"],
+    correct: 2,
+    explain: "Cấu trúc 'It's no use + V-ing' (Chẳng ích gì khi làm gì)."
+  },
+  {
+    q: "They suggest _____ to the beach this weekend.",
+    options: ["go", "going", "to go", "went"],
+    correct: 1,
+    explain: "Sau 'suggest' là một Gerund (V-ing)."
+  },
+  {
+    q: "I can't help _____ when I watch that funny movie.",
+    options: ["laugh", "to laugh", "laughing", "laughed"],
+    correct: 2,
+    explain: "Cấu trúc 'can't help + V-ing' (không thể nhịn được/không thể không)."
+  },
+  {
+    q: "My teacher made us _____ very hard for the exam.",
+    options: ["study", "to study", "studying", "studied"],
+    correct: 0,
+    explain: "Cấu trúc 'make someone + V (nguyên mẫu)'."
+  },
+  {
+    q: "Would you like _____ a cup of coffee?",
+    options: ["drink", "drinking", "to drink", "drank"],
+    correct: 2,
+    explain: "Sau 'Would you like' là một To-infinitive."
+  },
+  {
+    q: "I practiced _____ the piano for two hours yesterday.",
+    options: ["play", "playing", "to play", "played"],
+    correct: 1,
+    explain: "Sau 'practice' là một Gerund (V-ing)."
+  },
+  {
+    q: "He avoids _____ to loud music late at night.",
+    options: ["listen", "to listen", "listening", "listened"],
+    correct: 2,
+    explain: "Sau 'avoid' (tránh) là một Gerund (V-ing)."
+  },
+  {
+    q: "She tried _____ the heavy box, but she couldn't.",
+    options: ["lift", "to lift", "lifting", "lifted"],
+    correct: 1,
+    explain: "Try + To-V: cố gắng làm gì. Try + V-ing: thử làm gì."
+  },
+  {
+    q: "It's difficult _____ English grammar.",
+    options: ["learn", "to learn", "learning", "learned"],
+    correct: 1,
+    explain: "Cấu trúc 'It + be + Adj + To-V'."
+  },
+  {
+    q: "They are interested in _____ stamp collections.",
+    options: ["collect", "collecting", "to collect", "collected"],
+    correct: 1,
+    explain: "Sau giới từ (in, on, at, of, about...) là một Gerund (V-ing)."
+  },
+  {
+    q: "You should _____ more vegetables for better health.",
+    options: ["eat", "to eat", "eating", "ate"],
+    correct: 0,
+    explain: "Sau động từ khuyết thiếu (should, can, must...) là động từ nguyên mẫu không 'to'."
+  },
+  {
+    q: "I remember _____ him somewhere before, but I can't recall his name.",
+    options: ["see", "to see", "seeing", "saw"],
+    correct: 2,
+    explain: "Remember + V-ing: nhớ đã làm gì trong quá khứ."
+  },
+  {
+    q: "The doctor advised him _____ up smoking.",
+    options: ["give", "giving", "to give", "gave"],
+    correct: 2,
+    explain: "Cấu trúc 'advise someone + To-V'."
+  },
+  {
+    q: "I don't mind _____ you with your project.",
+    options: ["help", "helping", "to help", "helped"],
+    correct: 1,
+    explain: "Sau 'mind' là một Gerund (V-ing)."
+  },
+  {
+    q: "We hope _____ the competition next week.",
+    options: ["win", "winning", "to win", "won"],
+    correct: 2,
+    explain: "Sau 'hope' là một To-infinitive."
+  },
+  {
+    q: "It takes me 30 minutes _____ to school every day.",
+    options: ["walk", "walking", "to walk", "walked"],
+    correct: 2,
+    explain: "Cấu trúc 'It takes + someone + time + To-V'."
+  },
+  {
+    q: "He denied _____ the window.",
+    options: ["break", "breaking", "to break", "broken"],
+    correct: 1,
+    explain: "Sau 'deny' (phủ nhận) là một Gerund (V-ing)."
+  },
+  {
+    q: "They spend a lot of time _____ video games.",
+    options: ["play", "playing", "to play", "played"],
+    correct: 1,
+    explain: "Cấu trúc 'spend + time + V-ing'."
+  },
+  {
+    q: "I am used to _____ up early in the morning.",
+    options: ["get", "getting", "to get", "got"],
+    correct: 1,
+    explain: "Cấu trúc 'be used to + V-ing' (quen với việc gì)."
+  },
+  {
+    q: "You had better _____ to bed early.",
+    options: ["go", "to go", "going", "went"],
+    correct: 0,
+    explain: "Sau 'had better' là động từ nguyên mẫu không 'to'."
+  },
+  {
+    q: "She postponed _____ the meeting until next week.",
+    options: ["hold", "holding", "to hold", "held"],
+    correct: 1,
+    explain: "Sau 'postpone' (trì hoãn) là một Gerund (V-ing)."
+  },
+  {
+    q: "I managed _____ the work on time.",
+    options: ["finish", "finishing", "to finish", "finished"],
+    correct: 2,
+    explain: "Sau 'manage' (xoay xở/thành công làm gì) là một To-V."
+  },
+  {
+    q: "I saw her _____ across the street.",
+    options: ["walk", "to walk", "walked", "walks"],
+    correct: 0,
+    explain: "Cấu trúc 'see someone + V' (thấy toàn bộ hành động) hoặc 'see someone + Ving' (thấy một phần)."
+  },
+  {
+    q: "It's worth _____ that museum.",
+    options: ["visit", "visiting", "to visit", "visited"],
+    correct: 1,
+    explain: "Cấu trúc 'be worth + V-ing' (đáng để làm gì)."
+  },
+  {
+    q: "I prefer _____ to driving.",
+    options: ["walk", "to walk", "walking", "walked"],
+    correct: 2,
+    explain: "Cấu trúc 'prefer V-ing to V-ing'."
+  },
+  {
+    q: "He went to the shop _____ some milk.",
+    options: ["buy", "buying", "to buy", "bought"],
+    correct: 2,
+    explain: "To-V dùng để chỉ mục đích (để làm gì)."
+  },
+  {
+    q: "Please keep _____ until I tell you to stop.",
+    options: ["work", "working", "to work", "worked"],
+    correct: 1,
+    explain: "Sau 'keep' (tiếp tục) là một Gerund (V-ing)."
+  },
+  {
+    q: "I can't afford _____ a new laptop.",
+    options: ["buy", "buying", "to buy", "bought"],
+    correct: 2,
+    explain: "Sau 'afford' (đủ khả năng chi trả) là một To-V."
+  },
+  {
+    q: "She refused _____ his invitation.",
+    options: ["accept", "accepting", "to accept", "accepted"],
+    correct: 2,
+    explain: "Sau 'refuse' (từ chối) là một To-V."
+  },
+  {
+    q: "I'm busy _____ for the final exam.",
+    options: ["prepare", "preparing", "to prepare", "prepared"],
+    correct: 1,
+    explain: "Cấu trúc 'be busy + V-ing'."
+  },
+  {
+    q: "He failed _____ the entrance exam.",
+    options: ["pass", "passing", "to pass", "passed"],
+    correct: 2,
+    explain: "Sau 'fail' (thất bại/trượt) là một To-V."
+  },
+  {
+    q: "Would you mind _____ me a hand?",
+    options: ["give", "giving", "to give", "given"],
+    correct: 1,
+    explain: "Cấu trúc 'mind + V-ing'."
+  },
+  {
+    q: "They agreed _____ the contract.",
+    options: ["sign", "signing", "to sign", "signed"],
+    correct: 2,
+    explain: "Sau 'agree' là một To-V."
+  },
+  {
+    q: "I hate _____ in the rain.",
+    options: ["walk", "walking", "to walk", "walked"],
+    correct: 1,
+    explain: "Sau 'hate' thường dùng V-ing để chỉ sở thích/ghét lâu dài."
+  },
+  {
+    q: "She went out without _____ an umbrella.",
+    options: ["take", "taking", "to take", "took"],
+    correct: 1,
+    explain: "Sau giới từ 'without' là một Gerund (V-ing)."
+  },
+  {
+    q: "The government encourages people _____ trees.",
+    options: ["plant", "planting", "to plant", "planted"],
+    correct: 2,
+    explain: "Cấu trúc 'encourage someone + To-V'."
+  },
+  {
+    q: "I'm not used to _____ so much coffee.",
+    options: ["drink", "drinking", "to drink", "drank"],
+    correct: 1,
+    explain: "Cấu trúc 'be used to + V-ing'."
+  },
+  {
+    q: "He urged us _____ faster.",
+    options: ["run", "running", "to run", "ran"],
+    correct: 2,
+    explain: "Cấu trúc 'urge someone + To-V' (thúc giục ai làm gì)."
+  },
+  {
+    q: "I'll never forget _____ the Queen in 2010.",
+    options: ["meet", "to meet", "meeting", "met"],
+    correct: 2,
+    explain: "Forget + V-ing: quên đã làm gì (ở đây là trải nghiệm trong quá khứ)."
+  },
+  {
+    q: "You need _____ your room. It's very messy.",
+    options: ["clean", "cleaning", "to clean", "cleaned"],
+    correct: 2,
+    explain: "Need + To-V (chủ động): cần phải làm gì."
+  },
+  {
+    q: "My hair needs _____.",
+    options: ["cut", "cutting", "to cut", "to be cut"],
+    correct: 1,
+    explain: "Need + V-ing = Need + to be V3/ed (nghĩa bị động)."
+  },
+  {
+    q: "I want _____ to the beach this summer.",
+    options: ["go", "going", "to go", "went"],
+    correct: 2,
+    explain: "Sau 'want' là một To-V."
+  }
+  ],
+
+
+
+/*⭐⭐Lượng từ*/
+     4: [
+{
+    q: "I have _____ money left, so I can buy you a drink.",
+    options: ["a little", "little", "a few", "few"],
+    correct: 0,
+    explain: "'Money' không đếm được. 'A little' nghĩa là có một chút (đủ dùng), 'little' là gần như không có."
+  },
+  {
+    q: "There are _____ apples in the basket. We need to buy more.",
+    options: ["a few", "few", "a little", "little"],
+    correct: 1,
+    explain: "'Apples' đếm được số nhiều. 'Few' nghĩa là rất ít, không đủ (mang nghĩa tiêu cực)."
+  },
+  {
+    q: "She has _____ friends because she is very shy.",
+    options: ["few", "a few", "little", "a little"],
+    correct: 0,
+    explain: "Dựa vào ngữ cảnh 'rất nhút nhát' nên cô ấy có 'rất ít' (few) bạn."
+  },
+  {
+    q: "We have _____ time before the movie starts. Let's grab a coffee.",
+    options: ["a little", "little", "few", "a few"],
+    correct: 0,
+    explain: "'Time' không đếm được. 'A little' là có một chút thời gian (đủ để làm việc gì đó)."
+  },
+  {
+    q: "How _____ sugar do you want in your tea?",
+    options: ["many", "much", "few", "little"],
+    correct: 1,
+    explain: "'Sugar' không đếm được nên dùng 'How much'."
+  },
+  {
+    q: "How _____ people are there in your family?",
+    options: ["much", "many", "lots", "few"],
+    correct: 1,
+    explain: "'People' đếm được số nhiều nên dùng 'How many'."
+  },
+  {
+    q: "I don't have _____ free time these days.",
+    options: ["many", "much", "a few", "any"],
+    correct: 1,
+    explain: "Câu phủ định với danh từ không đếm được 'time' dùng 'much'."
+  },
+  {
+    q: "Do you have _____ brothers or sisters?",
+    options: ["some", "any", "much", "a little"],
+    correct: 1,
+    explain: "Dùng 'any' trong câu hỏi nghi vấn."
+  },
+  {
+    q: "I would like _____ water, please.",
+    options: ["any", "some", "many", "few"],
+    correct: 1,
+    explain: "Dùng 'some' trong câu mời hoặc yêu cầu lịch sự mặc dù là câu hỏi."
+  },
+  {
+    q: "There is _____ milk in the fridge. It's enough for breakfast.",
+    options: ["a little", "little", "few", "a few"],
+    correct: 0,
+    explain: "'Milk' không đếm được. 'A little' là có một ít (đủ dùng)."
+  },
+  {
+    q: "Very _____ students attended the lecture yesterday.",
+    options: ["few", "a few", "little", "a little"],
+    correct: 0,
+    explain: "'Students' đếm được. Cấu trúc 'Very few' (rất ít)."
+  },
+  {
+    q: "He has _____ knowledge about this subject.",
+    options: ["many", "much", "few", "a few"],
+    correct: 1,
+    explain: "'Knowledge' không đếm được nên dùng 'much' (hoặc 'a lot of')."
+  },
+  {
+    q: "I have _____ news for you. You will be happy!",
+    options: ["some", "any", "many", "few"],
+    correct: 0,
+    explain: "'News' không đếm được, dùng 'some' trong câu khẳng định."
+  },
+  {
+    q: "Are there _____ books on the shelf?",
+    options: ["much", "any", "little", "a little"],
+    correct: 1,
+    explain: "Câu hỏi với danh từ đếm được dùng 'any'."
+  },
+  {
+    q: "There isn't _____ bread left. We should go to the bakery.",
+    options: ["some", "any", "many", "few"],
+    correct: 1,
+    explain: "Câu phủ định dùng 'any'."
+  },
+  {
+    q: "She spent _____ money on that handbag.",
+    options: ["a lot of", "many", "few", "a few"],
+    correct: 0,
+    explain: "'A lot of' dùng được cho cả danh từ đếm được và không đếm được."
+  },
+  {
+    q: "There are _____ cars on the street today.",
+    options: ["too much", "too many", "a little", "little"],
+    correct: 1,
+    explain: "'Cars' đếm được số nhiều dùng 'too many'."
+  },
+  {
+    q: "I've got _____ homework to do tonight.",
+    options: ["many", "much", "a few", "few"],
+    correct: 1,
+    explain: "'Homework' là danh từ không đếm được."
+  },
+  {
+    q: "Can you give me _____ information about the tour?",
+    options: ["some", "any", "many", "few"],
+    correct: 0,
+    explain: "Lời yêu cầu lịch sự dùng 'some'."
+  },
+  {
+    q: "He drinks too _____ coffee.",
+    options: ["many", "much", "few", "a few"],
+    correct: 1,
+    explain: "'Coffee' không đếm được dùng 'much'."
+  },
+  {
+    q: "I have _____ work to do today.",
+    options: ["many", "a lot of", "few", "a few"],
+    correct: 1,
+    explain: "'Work' không đếm được, dùng 'a lot of'."
+  },
+  {
+    q: "There were _____ people at the concert than last year.",
+    options: ["fewer", "less", "lesser", "few"],
+    correct: 0,
+    explain: "So sánh hơn của 'few' là 'fewer' (dùng cho danh từ đếm được)."
+  },
+  {
+    q: "We have _____ salt. Can you buy some?",
+    options: ["a little", "little", "a few", "few"],
+    correct: 1,
+    explain: "'Salt' không đếm được. 'Little' mang nghĩa tiêu cực (không đủ)."
+  },
+  {
+    q: "Did you take _____ photos during your vacation?",
+    options: ["much", "many", "a little", "little"],
+    correct: 1,
+    explain: "'Photos' đếm được số nhiều dùng 'many'."
+  },
+  {
+    q: "I eat _____ vegetables every day.",
+    options: ["plenty of", "much", "a little", "little"],
+    correct: 0,
+    explain: "'Pleny of' (nhiều) dùng được cho danh từ đếm được số nhiều."
+  },
+  {
+    q: "Only _____ people know the truth.",
+    options: ["a few", "few", "a little", "little"],
+    correct: 0,
+    explain: "Cấu trúc 'Only a few' (chỉ một vài người)."
+  },
+  {
+    q: "I need _____ help with this heavy box.",
+    options: ["some", "any", "many", "few"],
+    correct: 0,
+    explain: "'Help' không đếm được, dùng 'some' trong câu khẳng định."
+  },
+  {
+    q: "We need _____ more chairs for the guests.",
+    options: ["a few", "a little", "much", "any"],
+    correct: 0,
+    explain: "'Chairs' đếm được dùng 'a few'."
+  },
+  {
+    q: "The teacher gave us _____ advice.",
+    options: ["many", "some", "a few", "few"],
+    correct: 1,
+    explain: "'Advice' là danh từ không đếm được, dùng 'some'."
+  },
+  {
+    q: "There is _____ hope that he will recover soon.",
+    options: ["a few", "few", "little", "a little"],
+    correct: 2,
+    explain: "'Hope' không đếm được. Dùng 'little' để chỉ sự hy vọng mong manh."
+  },
+  {
+    q: "You should drink _____ water every day.",
+    options: ["many", "more", "few", "fewer"],
+    correct: 1,
+    explain: "Dùng 'more' (nhiều hơn) phù hợp với lời khuyên sức khỏe."
+  },
+  {
+    q: "Is there _____ orange juice left?",
+    options: ["many", "any", "few", "a few"],
+    correct: 1,
+    explain: "Câu hỏi dùng 'any'."
+  },
+  {
+    q: "He has _____ interest in music.",
+    options: ["many", "few", "little", "a few"],
+    correct: 2,
+    explain: "'Interest' không đếm được dùng 'little'."
+  },
+  {
+    q: "There aren't _____ shops open at this hour.",
+    options: ["much", "many", "little", "a little"],
+    correct: 1,
+    explain: "'Shops' đếm được số nhiều dùng 'many'."
+  },
+  {
+    q: "Could you lend me _____ pens?",
+    options: ["some", "any", "much", "little"],
+    correct: 0,
+    explain: "Lời yêu cầu lịch sự dùng 'some'."
+  },
+  {
+    q: "I have _____ patience with noisy children.",
+    options: ["few", "a few", "little", "many"],
+    correct: 2,
+    explain: "'Patience' (sự kiên nhẫn) không đếm được dùng 'little'."
+  },
+  {
+    q: "There are _____ reasons why I can't go.",
+    options: ["much", "several", "a little", "little"],
+    correct: 1,
+    explain: "'Several' (một vài) dùng cho danh từ đếm được số nhiều."
+  },
+  {
+    q: "I put too _____ salt in the soup.",
+    options: ["many", "much", "few", "a few"],
+    correct: 1,
+    explain: "'Salt' không đếm được dùng 'much'."
+  },
+  {
+    q: "She has _____ work to finish before 5 PM.",
+    options: ["much", "many", "few", "a few"],
+    correct: 0,
+    explain: "'Work' không đếm được dùng 'much'."
+  },
+  {
+    q: "_____ of the children were tired after the trip.",
+    options: ["Most", "Much", "Every", "Each"],
+    correct: 0,
+    explain: "'Most of + the + N số nhiều'."
+  },
+  {
+    q: "He knows _____ about computer programming.",
+    options: ["many", "a lot", "few", "a few"],
+    correct: 1,
+    explain: "Dùng 'a lot' như một trạng từ chỉ mức độ."
+  },
+  {
+    q: "There are _____ eggs in the fridge, so we can make an omelet.",
+    options: ["a few", "few", "a little", "little"],
+    correct: 0,
+    explain: "'Eggs' đếm được. 'A few' nghĩa là có một ít (đủ làm món trứng)."
+  },
+  {
+    q: "I spent _____ time studying for the exam.",
+    options: ["many", "a great deal of", "a few", "few"],
+    correct: 1,
+    explain: "'A great deal of' đi với danh từ không đếm được (time)."
+  },
+  {
+    q: "Do you have _____ luggage?",
+    options: ["many", "much", "few", "a few"],
+    correct: 1,
+    explain: "'Luggage' (hành lý) là danh từ không đếm được."
+  },
+  {
+    q: "We saw _____ beautiful birds in the park.",
+    options: ["much", "many", "little", "a little"],
+    correct: 1,
+    explain: "'Birds' đếm được số nhiều dùng 'many'."
+  },
+  {
+    q: "Please give me _____ more minutes.",
+    options: ["a few", "few", "a little", "little"],
+    correct: 0,
+    explain: "'Minutes' đếm được dùng 'a few'."
+  },
+  {
+    q: "I have _____ idea what he is talking about.",
+    options: ["any", "no", "many", "few"],
+    correct: 1,
+    explain: "Cấu trúc 'have no idea' (không biết tí gì)."
+  },
+  {
+    q: "There is _____ furniture in this room.",
+    options: ["many", "few", "too much", "too many"],
+    correct: 2,
+    explain: "'Furniture' (nội thất) không đếm được dùng 'too much'."
+  },
+  {
+    q: "He has very _____ patience.",
+    options: ["few", "little", "a few", "many"],
+    correct: 1,
+    explain: "'Patience' không đếm được dùng 'little'."
+  },
+  {
+    q: "_____ of my friends live in this city.",
+    options: ["Each", "Every", "Some", "Much"],
+    correct: 2,
+    explain: "'Some of + N số nhiều'."
+  }
+
+],
+
+
+/* ⭐⭐TEST 1⭐⭐*/
+  5: [
   {
     q: "Ann, __________ for the safety of her child, ran to stop him playing with the electric socket.",
     options: ["concerning", "to concern", "concerned", "to be concerned"],
@@ -258,7 +1475,7 @@ const exercises = {
   },
   {
     q: "This is the third laboratory _____ by the university to enhance biotechnology research.",
-    options: ["building", "built", "to be built", "to build"],
+    options: ["building", "which built", "to be built", "to build"],
     correct: 2,
     explain: "Dùng 'to be P2' sau số thứ tự 'the third' vì phòng thí nghiệm phải 'được xây dựng' (bị động)."
   },
@@ -370,6 +1587,7 @@ const exercises = {
     correct: 2,
     explain: "Rút gọn mệnh đề quan hệ dạng bị động (which was abandoned -> abandoned)."
   },
+
   {
     q: "Cathy is trustworthy. She's a person upon _____ you can always depend.",
     options: ["who", "whom", "that", "which"],
@@ -517,10 +1735,2680 @@ const exercises = {
 
 
 
+
+  {
+    q: "Macroeconomics is the branch of economics _____ with the performance and behavior of an economy as a whole.",
+    options: ["dealing", "dealt", "to deal", "deals"],
+    correct: 0,
+    explain: "Rút gọn mệnh đề quan hệ dạng chủ động (which deals -> dealing)."
+  },
+  {
+    q: "She was the last candidate _____ by the committee for the prestigious fellowship.",
+    options: ["interviewing", "to interview", "to be interviewed", "who interviewed"],
+    correct: 2,
+    explain: "Dùng 'to be P2' sau 'the last' vì ứng viên 'được phỏng vấn' (bị động)."
+  },
+  {
+    q: "The Burj Khalifa is currently the tallest building _____ in the world.",
+    options: ["to construct", "constructing", "to be constructed", "constructed"],
+    correct: 2,
+    explain: "Dùng 'to be P2' sau so sánh nhất 'the tallest' để chỉ việc công trình được xây dựng."
+  },
+  {
+    q: "He was the only scientist _____ the Nobel Prize in two different scientific fields.",
+    options: ["awarding", "to be awarded", "to award", "awarded"],
+    correct: 1,
+    explain: "Dùng 'to be P2' sau 'the only' vì nhà khoa học 'được trao giải' (bị động)."
+  },
+
+  {
+    q: "She has two brothers, _____ are engineer.",
+    options: ["whom both", "both who", "both of whom", "both whom"],
+    correct: 2,
+    explain: "Cấu trúc 'lượng từ + of + whom/which'. Ở đây dùng 'both of whom'."
+  },
+  {
+    q: "The reason __________ she gave us for not coming early made us disappointed.",
+    options: ["why", "that", "for which", "what"],
+    correct: 1,
+    explain: "Mặc dù có 'The reason' nhưng phía sau là tân ngữ của động từ 'gave', nên dùng 'that' hoặc 'which' thay vì 'why'."
+  },
+  {
+    q: "We have just visited disadvantaged children in an orphanage _____ in Bac Ninh Province.",
+    options: ["located", "locating", "which locates", "to locate"],
+    correct: 0,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which is located -> located)."
+  },
+  {
+    q: "An endangered species is a species _____ population is so small that it is in danger of becoming extinct.",
+    options: ["whose", "which", "what", "who"],
+    correct: 0,
+    explain: "Dùng 'whose' chỉ sở hữu (quần thể của loài đó)."
+  },
+  {
+    q: "Pumpkin seeds, _____ protein and iron, are a popular snack.",
+    options: ["that", "provide", "which", "which provide"],
+    correct: 3,
+    explain: "Dùng đại từ quan hệ 'which' làm chủ ngữ thay cho 'Pumpkin seeds' và động từ 'provide' chia theo số nhiều."
+  },
+  {
+    q: "He lives in a small town _____ Taunton.",
+    options: ["Where is called", "which is called", "is called", "that called"],
+    correct: 1,
+    explain: "Mệnh đề quan hệ đầy đủ 'which is called...' bổ nghĩa cho 'town'."
+  },
+  {
+    q: "The scientists _____ on this project try to find the solutions to air pollution.",
+    options: ["working", "worked", "are working", "who working"],
+    correct: 0,
+    explain: "Rút gọn mệnh đề quan hệ dạng chủ động (who work/who are working -> working)."
+  },
+  {
+    q: "The girl _____ to the lady over there is our neighbor.",
+    options: ["talks", "is talking", "was talking", "talking"],
+    correct: 3,
+    explain: "Rút gọn mệnh đề quan hệ dạng chủ động (who is talking -> talking)."
+  },
+  {
+    q: "She didn’t tell me the reason _____ she came late.",
+    options: ["when", "for which", "for why", "both B and C"],
+    correct: 1,
+    explain: "The reason for which = Why. Trong các phương án, 'for which' là cấu trúc chính xác."
+  },
+  {
+    q: "This is the best play _____ I have ever seen.",
+    options: ["which", "what", "whom", "that"],
+    correct: 3,
+    explain: "Dùng 'that' khi danh từ đứng trước có hình thức so sánh nhất (the best)."
+  },
+  {
+    q: "Taj Mahal, _____ by Shah Janhan for his wife, is thought to be one of the great architectural wonders of the world.",
+    options: ["building", "to build", "built", "to be built"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which was built -> built)."
+  },
+  {
+    q: "Mr.Jones, _____ I was working, was generous about overtime payments.",
+    options: ["he", "for whom", "for him", "whom"],
+    correct: 1,
+    explain: "Cấu trúc 'work for someone'. Đưa giới từ lên trước dùng 'for whom'."
+  },
+  {
+    q: "Is this the address to _____ you want the package sent?",
+    options: ["where", "which", "that", "whom"],
+    correct: 1,
+    explain: "Sau giới từ 'to' chỉ vật (address), dùng 'which'."
+  },
+  {
+    q: "He was the last man _____ the ship.",
+    options: ["who leave", "to leave", "leaving", "left"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề quan hệ dùng 'to V' sau các từ chỉ thứ tự (the last)."
+  },
+  {
+    q: "The nurse _____ from Japan can speaking English well.",
+    options: ["which comes", "who come", "coming", "came"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề quan hệ dạng chủ động (who comes -> coming)."
+  },
+  {
+    q: "More than a mile of roadway has been blocked with trees, stones and other debris, _____ the explosion.",
+    options: ["causing", "caused by", "which caused by", "which caused"],
+    correct: 1,
+    explain: "Dùng rút gọn mệnh đề bị động 'caused by' (được gây ra bởi)."
+  },
+  {
+    q: "I have a message for people _____ by the traffic chaos.",
+    options: ["to delay", "who delay", "delayed", "who delaying"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (who were delayed -> delayed)."
+  },
+  {
+    q: "Trang An Scenic Landscape Complex is the 8th World Heritage in Viet Nam _____ by UNESCO.",
+    options: ["to be recognised", "to recognise", "recognising", "recognised"],
+    correct: 0,
+    explain: "Dùng 'to be P2' để rút gọn mệnh đề bị động sau số thứ tự (the 8th)."
+  },
+  {
+    q: "Tom was the last _____ the classroom yesterday.",
+    options: ["to leave", "leaving", "left", "leaves"],
+    correct: 0,
+    explain: "Rút gọn mệnh đề quan hệ dùng 'to V' sau 'the last'."
+  },
+  {
+    q: "The palace _____ many centuries ago remains practically intact.",
+    options: ["building", "to build", "built", "people build"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which was built -> built)."
+  },
+  {
+    q: "Many of the pictures _____ from outer space are presently on display in the public library.",
+    options: ["sending", "sent", "which sent", "which is sending"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which were sent -> sent)."
+  },
+  {
+    q: "The house _____ in the storm has now been rebuilt.",
+    options: ["destroyed", "destroying", "which destroyed", "that is destroyed"],
+    correct: 0,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which was destroyed -> destroyed)."
+  },
+  {
+    q: "The man _____ at the blackboard is our teacher.",
+    options: ["stood", "stands", "standing", "to stand"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề quan hệ dạng chủ động (who is standing -> standing)."
+  },
+  {
+    q: "The theory of relativity, _____ by Albert Einstein in the early 20th century, revolutionized our understanding of time and space.",
+    options: ["proposing", "proposed", "which proposes", "to propose"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which was proposed -> proposed)."
+  },
+  {
+    q: "Photosynthesis is the process _____ green plants convert light energy into chemical energy.",
+    options: ["by which", "at which", "on which", "to which"],
+    correct: 0,
+    explain: "Cấu trúc 'process by which' (quá trình mà thông qua đó...)."
+  },
+  {
+    q: "There are several reasons _____ the Roman Empire eventually collapsed in the 5th century.",
+    options: ["why", "for that", "which", "when"],
+    correct: 0,
+    explain: "Dùng 'why' sau danh từ 'reasons' để chỉ nguyên nhân."
+  },
+  {
+    q: "The university provides many scholarships, _____ are awarded to students from developing countries.",
+    options: ["most of them", "most of which", "which most", "that most"],
+    correct: 1,
+    explain: "Cấu trúc 'lượng từ + of + which' bổ nghĩa cho 'scholarships' trong mệnh đề không xác định."
+  },
+  {
+    q: "Genetic engineering is a field _____ many ethical concerns have been raised.",
+    options: ["about which", "at which", "for which", "to which"],
+    correct: 0,
+    explain: "Cấu trúc 'raise concerns about something' -> 'about which'."
+  },
+  {
+    q: "The Industrial Revolution, _____ started in Great Britain, quickly spread across Europe and North America.",
+    options: ["that", "where", "which", "who"],
+    correct: 2,
+    explain: "Dùng 'which' làm chủ ngữ cho vật. Không dùng 'that' sau dấu phẩy."
+  },
+  {
+    q: "Isaac Newton was the first scientist _____ the laws of universal gravitation.",
+    options: ["formulated", "to formulate", "who was formulated", "formulate"],
+    correct: 1,
+    explain: "Dùng 'to V' rút gọn mệnh đề quan hệ sau 'the first'."
+  },
+  {
+    q: "The species _____ habitat is being destroyed are at high risk of extinction.",
+    options: ["that", "whose", "which", "whom"],
+    correct: 1,
+    explain: "Dùng 'whose' chỉ sở hữu (môi trường sống của các loài đó)."
+  },
+  {
+    q: "The conference _____ the latest advancements in artificial intelligence was attended by experts worldwide.",
+    options: ["discussing", "discussed", "to discuss", "discussions"],
+    correct: 0,
+    explain: "Rút gọn mệnh đề quan hệ dạng chủ động (which discussed -> discussing)."
+  },
+  {
+    q: "The global economic crisis, _____ cause is still being debated, led to significant policy changes.",
+    options: ["its", "whose", "of which", "which"],
+    correct: 1,
+    explain: "Dùng 'whose' chỉ sở hữu (nguyên nhân của cuộc khủng hoảng)."
+  },
+  {
+    q: "The degree _____ she is studying is recognized by major international corporations.",
+    options: ["for which", "in which", "at which", "by which"],
+    correct: 0,
+    explain: "Cấu trúc 'study for a degree' -> 'for which'."
+  },
+  {
+    q: "Marine biology is the study of organisms _____ in the ocean.",
+    options: ["lived", "to live", "living", "which living"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề quan hệ dạng chủ động (which live -> living)."
+  },
+  {
+    q: "The philosopher _____ works we analyzed yesterday was known for his existentialist views.",
+    options: ["who", "whom", "that", "whose"],
+    correct: 3,
+    explain: "Dùng 'whose' chỉ sở hữu (tác phẩm của nhà triết học)."
+  },
+  {
+    q: "The greenhouse effect is the phenomenon _____ heat is trapped in the Earth's atmosphere.",
+    options: ["by which", "which", "when", "who"],
+    correct: 0,
+    explain: "Dùng 'by which' (bằng cách đó/nhờ đó) hoặc 'whereby'"
+  },
+  {
+    q: "Oxford University, _____ many world leaders were educated, is one of the oldest in the world.",
+    options: ["which", "where", "that", "when"],
+    correct: 1,
+    explain: "Dùng 'where' thay cho nơi chốn (Oxford University)."
+  },
+  {
+    q: "The historian _____ specializes in ancient civilizations gave a fascinating lecture.",
+    options: ["who", "whom", "whose", "which"],
+    correct: 0,
+    explain: "Dùng 'who' làm chủ ngữ thay thế cho 'The historian'."
+  },
+  {
+    q: "Sustainable agriculture is a method _____ farmers focus on long-term soil health.",
+    options: ["which", "when", "in which", "why"],
+    correct: 2,
+    explain: "In a method -> 'in which' (trong phương pháp đó)."
+  },
+  {
+    q: "The invention of the internet, _____ has changed communication forever, was a turning point in history.",
+    options: ["that", "which", "where", "who"],
+    correct: 1,
+    explain: "Dùng 'which' bổ nghĩa cho sự vật trong mệnh đề không xác định."
+  },
+  {
+    q: "Students _____ all the requirements will be eligible for graduation.",
+    options: ["completed", "completing", "to complete", "complete"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề quan hệ dạng chủ động (who complete -> completing)."
+  },
+  {
+    q: "The experiment failed for several reasons, _____ were unforeseen by the research team.",
+    options: ["that", "which", "most of which", "both of them"],
+    correct: 2,
+    explain: "Sử dụng 'lượng từ + of + which' để bổ nghĩa cho 'reasons' trong mệnh đề không xác định."
+  },
+  {
+    q: "The criteria _____ the candidates are evaluated must be transparent and objective.",
+    options: ["by which", "on which", "at which", "for which"],
+    correct: 0,
+    explain: "Cấu trúc 'evaluate by criteria' (đánh giá dựa trên tiêu chí) -> 'by which'."
+  },
+  {
+    q: "Urbanization, _____ is the process of people moving to cities, creates both opportunities and challenges.",
+    options: ["that", "which", "where", "what"],
+    correct: 1,
+    explain: "Dùng 'which' để giải thích một thuật ngữ trong mệnh đề không xác định."
+  },
+  {
+    q: "The artist _____ masterpieces are exhibited in the Louvre lived a life of poverty.",
+    options: ["who", "whom", "whose", "that"],
+    correct: 2,
+    explain: "Dùng 'whose' chỉ sở hữu (tác phẩm của người nghệ sĩ)."
+  },
+  {
+    q: "The speed _____ light travels is a fundamental constant in physics.",
+    options: ["at which", "with which", "in which", "by which"],
+    correct: 0,
+    explain: "Cấu trúc 'at a speed' (ở một tốc độ) -> 'at which'."
+  },
+  {
+    q: "Evidence _____ from the crime scene suggests that there were two suspects involved.",
+    options: ["collecting", "collected", "which collects", "to collect"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which was collected -> collected)."
+  },
+  {
+    q: "The treaty, _____ in 1945, established the framework for modern international relations.",
+    options: ["signing", "to sign", "signed", "was signed"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which was signed -> signed)."
+  },
+  {
+    q: "There are instances _____ the law does not provide a clear solution to the problem.",
+    options: ["when", "where", "why", "which"],
+    correct: 1,
+    explain: "Trong tiếng Anh học thuật, 'where' thường dùng cho 'instances/cases/situations' (trường hợp mà tại đó...)."
+  },
+  {
+    q: "The researcher _____ I am collaborating is a leading expert in renewable energy.",
+    options: ["who", "whom", "with whom", "to whom"],
+    correct: 2,
+    explain: "Cấu trúc 'collaborate with someone' -> 'with whom'."
+  },
+  {
+    q: "Many students fail to cite their sources, _____ is considered plagiarism in academic writing.",
+    options: ["that", "which", "what", "who"],
+    correct: 1,
+    explain: "Dùng 'which' để thay thế cho cả mệnh đề đứng trước nó."
+  },
+  {
+    q: "The molecules _____ this compound are highly reactive under high temperature.",
+    options: ["comprising", "comprised", "to comprise", "comprising of"],
+    correct: 0,
+    explain: "Rút gọn mệnh đề chủ động (which comprise -> comprising). Lưu ý: 'comprise' không đi với 'of' ở dạng chủ động."
+  },
+  {
+    q: "The library contains rare manuscripts, _____ are over five hundred years old.",
+    options: ["some of that", "some of which", "which some", "some of them"],
+    correct: 1,
+    explain: "Cấu trúc 'lượng từ + of + which' bổ nghĩa cho 'manuscripts'."
+  },
+  {
+    q: "Genetic mutations, _____ occur during DNA replication, can lead to evolutionary changes.",
+    options: ["that", "which", "where", "who"],
+    correct: 1,
+    explain: "Mệnh đề không xác định bổ nghĩa cho 'Genetic mutations', dùng 'which'."
+  },
+  {
+    q: "The goal _____ the project was initiated was to reduce carbon footprints in manufacturing.",
+    options: ["for which", "at which", "by which", "to which"],
+    correct: 0,
+    explain: "Cấu trúc 'initiate for a goal/purpose' -> 'for which'."
+  },
+  {
+    q: "The Professor was the only person _____ the complex mathematical proof.",
+    options: ["understanding", "understood", "to understand", "who understanding"],
+    correct: 2,
+    explain: "Dùng 'to V' rút gọn sau 'the only/the first/the last'."
+  },
+  {
+    q: "The city _____ the headquarters are located is a major financial hub.",
+    options: ["which", "that", "where", "at which"],
+    correct: 2,
+    explain: "Dùng 'where' thay thế cho nơi chốn (The city)."
+  },
+  {
+    q: "The hypothesis _____ by the young scientist was initially met with skepticism.",
+    options: ["putting forward", "put forward", "which putting forward", "to put forward"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề bị động (which was put forward -> put forward)."
+  },
+  {
+    q: "The extent _____ the climate is changing has alarmed scientists worldwide.",
+    options: ["to which", "for which", "at which", "on which"],
+    correct: 0,
+    explain: "Cấu trúc cố định 'to the extent' (tới mức độ mà) -> 'to which'."
+  },
+  {
+    q: "Digital currencies, _____ value is highly volatile, are becoming more popular in global markets.",
+    options: ["which", "whose", "that", "of which"],
+    correct: 1,
+    explain: "Dùng 'whose' chỉ sở hữu (giá trị của tiền kỹ thuật số)."
+  },
+  {
+    q: "The students _____ the survey were asked to remain anonymous.",
+    options: ["completing", "completed", "complete", "who completing"],
+    correct: 0,
+    explain: "Rút gọn mệnh đề chủ động (who completed -> completing)."
+  },
+  {
+    q: "The participants, _____ the initial screening process, were invited to the second phase of the clinical trial.",
+    options: ["having passed", "passed", "to pass", "who passing"],
+    correct: 0,
+    explain: "Dùng phân từ hoàn thành (Having + P2) để nhấn mạnh hành động 'vượt qua vòng sàng lọc' đã xảy ra trước khi 'được mời'."
+  },
+  {
+    q: "The methodology _____ the researchers based their conclusions has been widely criticized.",
+    options: ["which", "on which", "where", "with which"],
+    correct: 1,
+    explain: "Cấu trúc 'base something on something' -> 'on which'."
+  },
+  {
+    q: "Quantum entanglement is a phenomenon _____ particles remain connected regardless of the distance between them.",
+    options: ["at which", "in which", "for which", "to which"],
+    correct: 1,
+    explain: "Dùng 'in which' (trong đó/tại đó) để mô tả tính chất của hiện tượng (phenomenon)."
+  },
+  {
+    q: "The fossils, _____ by a team of amateur geologists, date back to the Jurassic period.",
+    options: ["discovering", "discovered", "to discover", "which discovering"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề quan hệ dạng bị động (which were discovered -> discovered)."
+  },
+  {
+    q: "The committee is composed of twelve members, _____ have extensive experience in international law.",
+    options: ["all of who", "all of whom", "that all", "whom all"],
+    correct: 1,
+    explain: "Cấu trúc 'lượng từ + of + whom' dùng cho người trong mệnh đề không xác định."
+  },
+  {
+    q: "The internet has created a global village _____ information is exchanged instantaneously.",
+    options: ["which", "where", "when", "why"],
+    correct: 1,
+    explain: "Dùng 'where' thay thế cho một địa điểm trừu tượng (global village)."
+  },
+  {
+    q: "The carbon tax is a policy _____ the government hopes to curb industrial pollution.",
+    options: ["by which", "at which", "on which", "to which"],
+    correct: 0,
+    explain: "Cấu trúc 'by which' (bằng cách đó/thông qua đó) chỉ phương thức đạt được mục tiêu."
+  },
+  {
+    q: "Students _____ English is not their first language are required to take an additional proficiency test.",
+    options: ["who", "whom", "whose", "that"],
+    correct: 2,
+    explain: "Dùng 'whose' chỉ sở hữu (ngôn ngữ của học sinh)."
+  },
+  {
+    q: "The ancient library of Alexandria, _____ was once the largest in the world, was destroyed by fire.",
+    options: ["that", "where", "which", "whose"],
+    correct: 2,
+    explain: "Dùng 'which' làm chủ ngữ thay thế cho sự vật trong mệnh đề không xác định."
+  },
+  {
+    q: "The conditions _____ the refugees are living are becoming increasingly dire.",
+    options: ["under which", "in which", "on which", "with which"],
+    correct: 0,
+    explain: "Cấu trúc 'live under conditions' (sống dưới những điều kiện...) -> 'under which'."
+  },
+  {
+    q: "The manner _____ the problem was handled left much to be desired.",
+    options: ["in which", "at which", "by which", "with which"],
+    correct: 0,
+    explain: "Cấu trúc 'in a manner' (theo một cách thức nào đó) -> 'in which'."
+  },
+  {
+    q: "The Nobel Prize, _____ is awarded annually, recognizes significant contributions to humanity.",
+    options: ["what", "that", "which", "where"],
+    correct: 2,
+    explain: "Dùng 'which' thay cho sự vật trong mệnh đề quan hệ không xác định."
+  },
+  {
+    q: "The documents _____ on the desk for weeks belong to the legal department.",
+    options: ["lying", "laying", "laid", "lain"],
+    correct: 0,
+    explain: "Dùng 'lying' (nội động từ LIE - đang nằm) ở dạng chủ động để rút gọn cho 'which are lying'."
+  },
+  {
+    q: "The bricks _____ by the construction workers yesterday are already dry.",
+    options: ["lying", "laying", "laid", "lied"],
+    correct: 2,
+    explain: "Dùng 'laid' (ngoại động từ LAY - đặt/để) ở dạng bị động P2 để rút gọn cho 'which were laid'."
+  },
+  {
+    q: "The students _____ in the front row are the ones who won the scholarships.",
+    options: ["sitting", "setting", "sat", "set"],
+    correct: 0,
+    explain: "Dùng 'sitting' (nội động từ SIT - đang ngồi) ở dạng chủ động."
+  },
+  {
+    q: "The goals _____ by the management for this quarter are quite ambitious.",
+    options: ["sitting", "setting", "set", "sit"],
+    correct: 2,
+    explain: "Dùng 'set' (ngoại động từ SET - thiết lập) ở dạng bị động P2 (set-set-set)."
+  },
+  {
+    q: "The sun _____ over the horizon provided a perfect backdrop for the photos.",
+    options: ["rising", "raising", "rose", "raised"],
+    correct: 0,
+    explain: "Dùng 'rising' (nội động từ RISE - đang mọc/lên) ở dạng chủ động."
+  },
+  {
+    q: "The funds _____ by the charity last year were used to build a new school.",
+    options: ["rising", "raising", "risen", "raised"],
+    correct: 3,
+    explain: "Dùng 'raised' (ngoại động từ RAISE - gây quỹ/nâng lên) ở dạng bị động P2."
+  },
+  {
+    q: "Patients _____ from chronic back pain often find relief through physical therapy.",
+    options: ["suffering", "suffered", "to suffer", "be suffering"],
+    correct: 0,
+    explain: "Dùng 'suffering' (chủ động) để rút gọn cho 'who suffer/are suffering'."
+  },
+  {
+    q: "The building _____ during the earthquake had been built in the early 1920s.",
+    options: ["collapsing", "collapsed", "was collapsed", "to collapse"],
+    correct: 1,
+    explain: "Dùng 'collapsed' (quá khứ phân từ của nội động từ COLLAPSE) để chỉ trạng thái đã xảy ra."
+  },
+  {
+    q: "The organisms _____ in extreme environments like deep-sea vents are of great interest to biologists.",
+    options: ["existing", "existed", "existed", "to exist"],
+    correct: 0,
+    explain: "Dùng 'existing' (đang tồn tại) ở dạng chủ động."
+  },
+  {
+    q: "The floods _____ by heavy rainfall led to the evacuation of the entire village.",
+    options: ["causing", "caused", "which caused", "to cause"],
+    correct: 1,
+    explain: "Dùng 'caused' (bị gây ra bởi) ở dạng bị động P2."
+  },
+  {
+    q: "The products, _____ from organic vegetables to handmade soaps, are all locally sourced.",
+    options: ["ranging", "ranged", "range", "to range"],
+    correct: 0,
+    explain: "Dùng 'ranging from... to...' (có phạm vi từ... đến...) ở dạng chủ động."
+  },
+  {
+    q: "The jobs _____ by the new factory will boost the local economy significantly.",
+    options: ["creating", "created", "which creating", "create"],
+    correct: 1,
+    explain: "Dùng 'created' (được tạo ra) ở dạng bị động P2."
+  },
+  {
+    q: "The items _____ on the invoice do not match the goods we received.",
+    options: ["listing", "listed", "list", "to list"],
+    correct: 1,
+    explain: "Dùng 'listed' (được liệt kê) ở dạng bị động P2."
+  },
+  {
+    q: "The factory _____ in the industrial zone produces high-tech components.",
+    options: ["locating", "located", "which locates", "locate"],
+    correct: 1,
+    explain: "Dùng 'located' (được đặt tại/nằm ở) ở dạng bị động P2."
+  },
+  {
+    q: "The hotel _____ on the hillside offers a spectacular view of the ocean.",
+    options: ["situating", "situated", "situates", "which situating"],
+    correct: 1,
+    explain: "Dùng 'situated' (được tọa lạc tại) ở dạng bị động P2."
+  },
+  {
+    q: "The cat _____ on the rug is fast asleep.",
+    options: ["lying", "laying", "laid", "lain"],
+    correct: 0,
+    explain: "Tiếp tục phân biệt LIE/LAY: 'lying' (đang nằm) là nội động từ chủ động."
+  },
+  {
+    q: "The foundation _____ by the ancestors remains strong after a century.",
+    options: ["lying", "laying", "laid", "lain"],
+    correct: 2,
+    explain: "Dùng 'laid' (được đặt nền móng) là bị động của ngoại động từ LAY."
+  },
+  {
+    q: "The water levels _____ after the storm caused concern among the residents.",
+    options: ["rising", "raising", "risen", "raised"],
+    correct: 0,
+    explain: "Dùng 'rising' (đang dâng lên) là nội động từ."
+  },
+  {
+    q: "Any issues _____ during the software update should be reported to the IT desk.",
+    options: ["arising", "aroused", "arisen", "arose"],
+    correct: 0,
+    explain: "Dùng 'arising' (phát sinh) là nội động từ chủ động (tương tự RISE)."
+  },
+  {
+    q: "The mountains _____ to the north of the city are covered in snow all year round.",
+    options: ["situated", "situating", "lie", "lying"],
+    correct: 0,
+    explain: "Dùng 'situated' (được tọa lạc) là dạng phổ biến nhất cho vị trí địa lý."
+  },
+  {
+    q: "The researchers, _____ the data for over six months, finally published their findings in 'Nature'.",
+    options: ["having analyzed", "analyzing", "analyzed", "to analyze"],
+    correct: 0,
+    explain: "Dùng 'Having + P2' để nhấn mạnh hành động phân tích đã hoàn tất trong một khoảng thời gian dài trước khi công bố."
+  },
+  {
+    q: "The hypothesis _____ the entire experiment was built turned out to be flawed.",
+    options: ["on which", "at which", "for which", "to which"],
+    correct: 0,
+    explain: "Cấu trúc 'build something on a hypothesis' (xây dựng dựa trên giả thuyết) -> 'on which'."
+  },
+  {
+    q: "The city council implemented new regulations _____ to reduce carbon emissions by 30%.",
+    options: ["to aiming", "aimed", "having aimed", "which aiming"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề quan hệ bị động (which were aimed at -> aimed at) mang nghĩa 'nhằm mục đích'."
+  },
+{
+    q: "The hunters _____ at the deer stayed very still, waiting for the perfect moment to shoot.",
+    options: ["aiming", "aimed", "which aimed", "to aim"],
+    correct: 0,
+    explain: "Dùng 'aiming' vì nhấn mạnh hành động chủ động của con người (thợ săn đang thực hiện việc nhắm bắn)."
+  },
+  {
+    q: "The challenges _____ our healthcare system require immediate policy intervention.",
+    options: ["facing", "faced", "facing by", "to face"],
+    correct: 0,
+    explain: "Dùng 'facing' (chủ động) khi muốn nói vấn đề đang hiện hữu/đối mặt với chúng ta. Nếu dùng 'faced', phải có 'by' (faced by us)."
+  },
+  {
+    q: "The report _____ all the financial transactions of the last quarter is on your desk.",
+    options: ["including", "included", "includes", "to include"],
+    correct: 0,
+    explain: "Dùng 'including' (bao gồm) như một phân từ chủ động để liệt kê nội dung bên trong."
+  },
+  {
+    q: "The collection _____ of over 500 rare manuscripts was donated to the national library.",
+    options: ["consisting", "consisted", "to consist", "which consisting"],
+    correct: 0,
+    explain: "Động từ 'consist' là nội động từ, KHÔNG bao giờ dùng ở dạng bị động. Rút gọn luôn là 'consisting of'."
+  },
+  {
+    q: "The arguments _____ by the defense lawyer were not strong enough to convince the jury.",
+    options: ["presenting", "presented", "which presenting", "to present"],
+    correct: 1,
+    explain: "Lập luận 'được trình bày' (bị động) bởi luật sư."
+  },
+  {
+    q: "The virus _____ in the tropical rainforest has now spread to urban areas.",
+    options: ["originating", "originated", "is originated", "to originate"],
+    correct: 0,
+    explain: "'Originate' là nội động từ (bắt nguồn từ), rút gọn dùng 'originating'."
+  },
+  {
+    q: "The information _____ in this brochure is subject to change without notice.",
+    options: ["containing", "contained", "contains", "to contain"],
+    correct: 1,
+    explain: "Trong văn phong học thuật, 'contained in' (được chứa đựng trong) dùng để chỉ thông tin trong tài liệu."
+  },
+  {
+    q: "The research _____ by the university proves that the new drug is effective.",
+    options: ["conducting", "conducted", "conducts", "to conduct"],
+    correct: 1,
+    explain: "Nghiên cứu 'được thực hiện' (conducted) bởi ai đó."
+  },
+  {
+    q: "The price _____ tax is $50, but the total cost will be $55.",
+    options: ["excluding", "excluded", "excludes", "which excluding"],
+    correct: 0,
+    explain: "Dùng 'excluding' (ngoại trừ/không bao gồm) tương tự như một giới từ/phân từ chủ động."
+  },
+  {
+    q: "Most of the energy _____ by the sun reaches the Earth as light and heat.",
+    options: ["emitting", "emitted", "emits", "to emit"],
+    correct: 1,
+    explain: "Năng lượng 'được phát ra' (emitted) từ mặt trời."
+  },
+  {
+    q: "The people _____ the protest were peaceful and well-organized.",
+    options: ["joining", "joined", "joins", "to join"],
+    correct: 0,
+    explain: "Người 'tham gia' (joining) vào cuộc biểu tình - hành động chủ động."
+  },
+  {
+    q: "The criteria _____ for the scholarship are extremely rigorous.",
+    options: ["requiring", "required", "require", "to require"],
+    correct: 1,
+    explain: "Các tiêu chí 'được yêu cầu' (required) cho học bổng."
+  },
+  {
+    q: "The bridge _____ the two islands was built in 1995.",
+    options: ["connecting", "connected", "connects", "to connect"],
+    correct: 0,
+    explain: "Cây cầu 'kết nối' (connecting) hai hòn đảo - bản chất của cây cầu là thực hiện việc đó."
+  },
+{
+    q: "The movie _____ on a true story became a global phenomenon within a week of its release.",
+    options: ["basing", "based", "which basing", "to base"],
+    correct: 1,
+    explain: "Dù dịch là 'dựa trên', nhưng trong tiếng Anh 'base' là ngoại động từ (được căn cứ trên), nên rút gọn cho vật luôn dùng 'based on'."
+  },
+  {
+    q: "The spacecraft, _____ its mission to Mars, is now transmitting high-resolution images back to Earth.",
+    options: ["completing", "having completed", "completed", "to complete"],
+    correct: 1,
+    explain: "Phân từ hoàn thành 'Having completed' nhấn mạnh việc hoàn thành nhiệm vụ diễn ra trước khi truyền ảnh về."
+  },
+  {
+    q: "The paradigm _____ the scientists operated for decades was challenged by new quantum discoveries.",
+    options: ["under which", "in which", "with which", "by which"],
+    correct: 0,
+    explain: "Cấu trúc 'operate under a paradigm' (hoạt động dưới một hệ tư tưởng/mô hình) -> 'under which'."
+  },
+  {
+    q: "Many historical documents, _____ by the great fire, are now being digitally restored.",
+    options: ["damaging", "having damaged", "damaged", "which damaging"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề quan hệ bị động (which were damaged -> damaged)."
+  },
+  {
+    q: "The candidate, _____ the majority of the votes, was declared the winner of the election.",
+    options: ["securing", "having secured", "secured", "to secure"],
+    correct: 1,
+    explain: "Dùng 'Having secured' để nhấn mạnh việc giành được phiếu bầu đã xong trước khi được tuyên bố thắng cuộc."
+  },
+  {
+    q: "The speed _____ information travels across the globe has fundamentally changed human interaction.",
+    options: ["at which", "with which", "by which", "in which"],
+    correct: 0,
+    explain: "Cấu trúc 'at a speed' (ở một tốc độ) -> 'at which'."
+  },
+  {
+    q: "The theoretical framework, _____ in the first chapter, provides the basis for the entire study.",
+    options: ["discussing", "having discussed", "discussed", "to discuss"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề bị động (which was discussed -> discussed)."
+  },
+  {
+    q: "The volunteers, _____ the safety briefing, were allowed to enter the laboratory.",
+    options: ["having attended", "attending", "attended", "to attend"],
+    correct: 0,
+    explain: "Nhấn mạnh việc tham dự buổi hướng dẫn an toàn phải xong trước khi được vào phòng thí nghiệm."
+  },
+  {
+    q: "The degree _____ the climate is affected by human activity is still a subject of intense debate.",
+    options: ["to which", "for which", "at which", "in which"],
+    correct: 0,
+    explain: "Cấu trúc cố định 'the degree/extent to which' (mức độ mà tại đó...)."
+  },
+  {
+    q: "The ancient artifacts, _____ from the site, are currently on display at the national museum.",
+    options: ["excavating", "having excavated", "excavated", "which excavating"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề quan hệ bị động (which were excavated -> excavated)."
+  },
+  {
+    q: "The social phenomenon, _____ by various psychologists, remains difficult to define precisely.",
+    options: ["observing", "observed", "having observed", "to observe"],
+    correct: 1,
+    explain: "Rút gọn mệnh đề bị động (which is/was observed -> observed)."
+  },
+  {
+    q: "The project, _____ of funding, had to be suspended indefinitely.",
+    options: ["running out", "having run out", "ran out", "to run out"],
+    correct: 1,
+    explain: "Dùng 'Having run out of' để chỉ lý do đã xảy ra dẫn đến hệ quả bị đình chỉ."
+  },
+  {
+    q: "The principles _____ the legal system is founded are meant to ensure justice for all.",
+    options: ["on which", "with which", "for which", "under which"],
+    correct: 0,
+    explain: "Cấu trúc 'found something on principles' (thành lập dựa trên các nguyên tắc) -> 'on which'."
+  },
+  {
+    q: "The software, _____ several times before its release, still contained a few minor bugs.",
+    options: ["testing", "having been tested", "tested", "to be tested"],
+    correct: 1,
+    explain: "Dùng 'Having been tested' (dạng bị động của phân từ hoàn thành) để nhấn mạnh việc đã được kiểm tra nhiều lần."
+  },
+  {
+    q: "The ocean floor, _____ by few humans, contains many undiscovered species.",
+    options: ["exploring", "having explored", "explored", "which exploring"],
+    correct: 2,
+    explain: "Rút gọn mệnh đề bị động (which is explored -> explored)."
+  },
+  {
+    q: "The logic _____ the argument was based was eventually proven to be circular.",
+    options: ["on which", "at which", "by which", "to which"],
+    correct: 0,
+    explain: "Cấu trúc 'base an argument on logic' -> 'on which'."
+  },
+  {
+    q: "The refugees, _____ their homes due to the conflict, are in urgent need of aid.",
+    options: ["fleeing", "having fled", "fled", "to flee"],
+    correct: 1,
+    explain: "Dùng 'Having fled' (đã trốn chạy khỏi) để chỉ trạng thái hoàn thành dẫn đến tình cảnh hiện tại."
+  },
+  {
+    q: "The mechanism _____ the disease spreads is not yet fully understood by medical experts.",
+    options: ["by which", "at which", "for which", "to which"],
+    correct: 0,
+    explain: "Cấu trúc 'a mechanism by which' (cơ chế mà thông qua đó...)."
+  },
+  {
+    q: "The Great Pyramid of Giza was the only one of the Seven Wonders of the Ancient World _____ largely intact.",
+    options: ["to remain", "remaining", "remained", "to be remained"],
+    correct: 0,
+    explain: "Dùng 'to V' sau 'the only'. 'Remain' là nội động từ nên dùng dạng chủ động."
+  },
+  {
+    q: "Yuri Gagarin was the first human _____ into outer space, marking a milestone in the Space Race.",
+    options: ["traveling", "traveled", "to travel", "who travel"],
+    correct: 2,
+    explain: "Dùng 'to V' sau 'the first' để rút gọn mệnh đề quan hệ dạng chủ động."
+  },
+  {
+    q: "The final project is often the most difficult task _____ by students before graduation.",
+    options: ["completing", "to be completed", "to complete", "completed"],
+    correct: 1,
+    explain: "Dùng 'to be P2' sau so sánh nhất 'the most difficult' vì 'nhiệm vụ' phải 'được hoàn thành' (bị động)."
+  },
+  {
+    q: "In many cultures, the eldest son was the next in line _____ the family heritage.",
+    options: ["to inherit", "inheriting", "inherited", "to be inherited"],
+    correct: 0,
+    explain: "Dùng 'to V' sau cụm từ chỉ thứ tự 'the next' (người kế tiếp thừa kế)."
+  },
+  {
+    q: "The next flight _____ at Gate 4 will be bound for London Heathrow.",
+    options: ["arriving", "to arrive", "arrived", "to be arrived"],
+    correct: 1,
+    explain: "Dùng 'to V' sau 'the next' để rút gọn mệnh đề quan hệ chủ động."
+  },
+  {
+    q: "English is often considered the most important language _____ for global communication.",
+    options: ["mastering", "to master", "to be mastered", "mastered"],
+    correct: 2,
+    explain: "Dùng 'to be P2' sau so sánh nhất 'the most important' (ngôn ngữ cần được thông thạo)."
+  },
+  {
+    q: "The security guard was the last person _____ the building before the explosion.",
+    options: ["to leave", "leaving", "left", "to be left"],
+    correct: 0,
+    explain: "Dùng 'to V' sau 'the last person' (người cuối cùng rời khỏi - chủ động)."
+  }
   ],
 
-/* TEST 2*/
-  2: [
+
+/*⭐⭐ Topic: Từ loại ⭐⭐*/
+
+ 8: [
+{
+    q: "The Internet has _____ developed in every field.",
+    options: ["increase", "increasing", "increased", "increasingly"],
+    correct: 3,
+    explain: "Vị trí giữa trợ động từ 'has' và động từ chính 'developed' cần một Trạng từ (Adv) để bổ nghĩa."
+  },
+  {
+    q: "She was _____ disappointed that she failed the exam.",
+    options: ["extreme", "extremely", "extremity", "extremism"],
+    correct: 1,
+    explain: "Cần một Trạng từ (Adv) để bổ nghĩa cho tính từ 'disappointed'."
+  },
+  {
+    q: "We should use solar energy to save _____ resources.",
+    options: ["nature", "natural", "naturally", "naturalize"],
+    correct: 1,
+    explain: "Trước danh từ 'resources' cần một Tính từ (Adj) để bổ nghĩa."
+  },
+  {
+    q: "The _____ of the experiment made us very happy.",
+    options: ["succeed", "successful", "success", "successfully"],
+    correct: 2,
+    explain: "Sau mạo từ 'The' và trước giới từ 'of' cần một Danh từ (N)."
+  },
+  {
+    q: "Ao Dai is the _____ dress of Vietnamese women.",
+    options: ["tradition", "traditional", "traditionally", "traditionalize"],
+    correct: 1,
+    explain: "Trước danh từ 'dress' cần một Tính từ (Adj)."
+  },
+  {
+    q: "He is a _____ driver. He always has accidents.",
+    options: ["careful", "careless", "carefully", "carelessly"],
+    correct: 1,
+    explain: "Trước danh từ 'driver' cần tính từ. Dựa vào nghĩa 'luôn gặp tai nạn' nên chọn 'careless' (bất cẩn)."
+  },
+  {
+    q: "Environment _____ is everyone's responsibility.",
+    options: ["protect", "protection", "protective", "protectively"],
+    correct: 1,
+    explain: "Đứng đầu câu làm chủ ngữ, sau danh từ 'Environment' tạo thành cụm danh từ, cần một Danh từ (N)."
+  },
+  {
+    q: "Air _____ is a serious problem in big cities.",
+    options: ["pollute", "polluted", "polluting", "pollution"],
+    correct: 3,
+    explain: "Cụm danh từ 'Air pollution' (ô nhiễm không khí) đóng vai trò chủ ngữ."
+  },
+  {
+    q: "The children are playing _____ in the garden.",
+    options: ["happy", "happily", "happiness", "unhappy"],
+    correct: 1,
+    explain: "Sau động từ thường 'playing' cần một Trạng từ (Adv) để mô tả cách thức."
+  },
+  {
+    q: "They are _____ about the upcoming trip to Sapa.",
+    options: ["excite", "exciting", "excited", "excitement"],
+    correct: 2,
+    explain: "Cấu trúc 'be + excited about' (hào hứng về...) dùng để chỉ cảm xúc của con người."
+  },
+  {
+    q: "The gas from the factory is extremely _____.",
+    options: ["harm", "harmless", "harmful", "harmfully"],
+    correct: 2,
+    explain: "Sau trạng từ chỉ mức độ 'extremely' và động từ 'is' cần một Tính từ (Adj). Khói gas thì 'có hại' (harmful)."
+  },
+  {
+    q: "I am _____ that you passed your driving test.",
+    options: ["amaze", "amazing", "amazed", "amazement"],
+    correct: 2,
+    explain: "Cảm xúc của người nói (chủ ngữ 'I') dùng tính từ đuôi -ed (amazed)."
+  },
+  {
+    q: "The movie was so _____ that I fell asleep.",
+    options: ["bore", "boring", "bored", "boredom"],
+    correct: 1,
+    explain: "Tính chất của sự vật (bộ phim) dùng tính từ đuôi -ing (boring)."
+  },
+  {
+    q: "We need to _____ the city's environment.",
+    options: ["beauty", "beautiful", "beautify", "beautifully"],
+    correct: 2,
+    explain: "Sau 'need to' cần một Động từ (V) nguyên thể."
+  },
+  {
+    q: "_____ , she won the first prize in the competition.",
+    options: ["Lucky", "Luck", "Luckily", "Unlucky"],
+    correct: 2,
+    explain: "Đứng đầu câu và ngăn cách bằng dấu phẩy, dùng Trạng từ (Adv) để bổ nghĩa cho cả câu."
+  },
+  {
+    q: "What is the _____ of this river?",
+    options: ["long", "lengthen", "length", "longly"],
+    correct: 2,
+    explain: "Sau mạo từ 'the' cần một Danh từ (N). 'Length' là danh từ của 'long'."
+  },
+  {
+    q: "Computers are _____ used in schools and offices.",
+    options: ["wide", "widely", "width", "widen"],
+    correct: 1,
+    explain: "Trạng từ 'widely' (rộng rãi) bổ nghĩa cho động từ 'used'."
+  },
+  {
+    q: "The _____ was very friendly and helpful.",
+    options: ["assist", "assistant", "assistance", "assisted"],
+    correct: 1,
+    explain: "Dựa vào nghĩa 'thân thiện và giúp ích', vị trí này cần danh từ chỉ người 'assistant' (trợ lý/người giúp việc)."
+  },
+  {
+    q: "He is a world-famous _____.",
+    options: ["science", "scientific", "scientifically", "scientist"],
+    correct: 3,
+    explain: "Sau tính từ 'world-famous' cần danh từ chỉ người 'scientist' (nhà khoa học)."
+  },
+  {
+    q: "This book is very _____ for beginners.",
+    options: ["use", "useful", "useless", "usefully"],
+    correct: 1,
+    explain: "Sau 'very' và 'is' cần tính từ. 'Useful' (có ích) phù hợp nghĩa của câu."
+  },
+  {
+    q: "There is no _____ between the two pictures.",
+    options: ["differ", "different", "difference", "differently"],
+    correct: 2,
+    explain: "Sau 'no' cần một Danh từ (N)."
+  },
+  {
+    q: "English is an _____ language to learn.",
+    options: ["interest", "interesting", "interested", "interestingly"],
+    correct: 1,
+    explain: "Trước danh từ 'language' cần tính từ chỉ tính chất (đuôi -ing)."
+  },
+  {
+    q: "You should drive more _____ during the rush hour.",
+    options: ["care", "careful", "carefully", "carelessness"],
+    correct: 2,
+    explain: "Sau động từ 'drive' cần một Trạng từ (Adv) để bổ nghĩa."
+  },
+  {
+    q: "The garden is _____ in the spring.",
+    options: ["beauty", "beautiful", "beautifully", "beautify"],
+    correct: 1,
+    explain: "Sau động từ 'is' cần một Tính từ (Adj)."
+  },
+  {
+    q: "The singer performed _____ on the stage.",
+    options: ["wonderful", "wonderfully", "wonder", "wondering"],
+    correct: 1,
+    explain: "Bổ nghĩa cho động từ 'performed' cần một Trạng từ (Adv)."
+  },
+  {
+    q: "I enjoy the _____ atmosphere in the countryside.",
+    options: ["peace", "peaceful", "peacefully", "peacemaker"],
+    correct: 1,
+    explain: "Trước danh từ 'atmosphere' cần một Tính từ (Adj)."
+  },
+  {
+    q: "She has a large _____ of stamps.",
+    options: ["collect", "collection", "collector", "collective"],
+    correct: 1,
+    explain: "Sau mạo từ 'a' và tính từ 'large' cần danh từ 'collection' (bộ sưu tập)."
+  },
+  {
+    q: "We must learn how to keep the environment _____.",
+    options: ["pollute", "polluted", "unpolluted", "pollution"],
+    correct: 2,
+    explain: "Cấu trúc 'keep something + Adj'. 'Unpolluted' (không bị ô nhiễm) phù hợp nghĩa."
+  },
+  {
+    q: "The _____ of his father made him very sad.",
+    options: ["die", "dead", "death", "deadly"],
+    correct: 2,
+    explain: "Sau 'The' cần một Danh từ (N). 'Death' (sự ra đi/cái chết) là danh từ của 'die'."
+  },
+  {
+    q: "He is very _____ in playing computer games.",
+    options: ["interest", "interesting", "interested", "interestingly"],
+    correct: 2,
+    explain: "Cấu trúc 'be interested in' (quan tâm/thích thú cái gì)."
+  },
+  {
+    q: "They live _____ in a small house.",
+    options: ["happy", "happiness", "happily", "unhappy"],
+    correct: 2,
+    explain: "Bổ nghĩa cho động từ 'live' cần một Trạng từ (Adv)."
+  },
+  {
+    q: "The city is _____ with tourists in summer.",
+    options: ["crowd", "crowded", "crowding", "crowdly"],
+    correct: 1,
+    explain: "Tính từ 'crowded' (đông đúc) đi với giới từ 'with'."
+  },
+  {
+    q: "She sang so _____ that everyone cheered.",
+    options: ["beautiful", "beauty", "beautifully", "beautify"],
+    correct: 2,
+    explain: "Cấu trúc 'so + Adv + that' vì 'sang' là động từ thường."
+  },
+  {
+    q: "The _____ of water is essential for life.",
+    options: ["pure", "purify", "purity", "purely"],
+    correct: 2,
+    explain: "Sau 'The' cần danh từ. 'Purity' (sự tinh khiết)."
+  },
+  {
+    q: "Is he _____ enough to lift this box?",
+    options: ["strong", "strength", "strongly", "strengthen"],
+    correct: 0,
+    explain: "Cấu trúc 'Adj + enough' để chỉ khả năng."
+  },
+  {
+    q: "The teacher gave us some _____ instructions.",
+    options: ["clear", "clearly", "clearness", "clarify"],
+    correct: 0,
+    explain: "Trước danh từ 'instructions' cần tính từ 'clear' (rõ ràng)."
+  },
+  {
+    q: "We are looking for a _____ to this problem.",
+    options: ["solve", "solution", "soluble", "solved"],
+    correct: 1,
+    explain: "Sau mạo từ 'a' cần danh từ 'solution' (giải pháp)."
+  },
+  {
+    q: "The film was _____ . I didn't like it at all.",
+    options: ["disappoint", "disappointed", "disappointing", "disappointedly"],
+    correct: 2,
+    explain: "Tính chất của bộ phim dùng tính từ đuôi -ing."
+  },
+  {
+    q: "The villagers are very _____.",
+    options: ["hospitable", "hospitality", "hospitably", "hospital"],
+    correct: 0,
+    explain: "Sau 'very' và 'are' cần tính từ 'hospitable' (hiếu khách)."
+  },
+  {
+    q: "He answered all the questions _____.",
+    options: ["easy", "easily", "easiness", "ease"],
+    correct: 1,
+    explain: "Bổ nghĩa cho động từ 'answered' cần Trạng từ (Adv)."
+  },
+  {
+    q: "She is a _____ girl with a lovely smile.",
+    options: ["attract", "attractive", "attractively", "attraction"],
+    correct: 1,
+    explain: "Trước danh từ 'girl' cần tính từ 'attractive' (quyến rũ/thu hút)."
+  },
+  {
+    q: "The weather was _____ , so we stayed at home.",
+    options: ["pleasant", "unpleasant", "pleasantly", "pleasure"],
+    correct: 1,
+    explain: "Dựa vào vế sau 'nên ở nhà', thời tiết phải 'không dễ chịu' (unpleasant)."
+  },
+  {
+    q: "This knife is _____ . It can't cut anything.",
+    options: ["use", "useful", "useless", "usefully"],
+    correct: 2,
+    explain: "Dựa vào nghĩa 'không cắt được gì', chọn 'useless' (vô dụng)."
+  },
+  {
+    q: "There are many _____ festivals in Vietnam.",
+    options: ["celebrate", "celebration", "celebrated", "cultural"],
+    correct: 3,
+    explain: "Trước danh từ 'festivals' cần tính từ 'cultural' (thuộc về văn hóa)."
+  },
+  {
+    q: "They have _____ the price of gasoline again.",
+    options: ["high", "height", "heighten", "increased"],
+    correct: 3,
+    explain: "Cần một động từ ở dạng quá khứ phân từ sau 'have'. 'Increased' (tăng) phù hợp nhất."
+  },
+  {
+    q: "The internet is a very useful _____ of information.",
+    options: ["source", "resource", "origin", "foundation"],
+    correct: 0,
+    explain: "Cụm từ thông dụng: 'source of information' (nguồn thông tin)."
+  },
+  {
+    q: "We need more _____ to finish the project.",
+    options: ["equip", "equipment", "equipped", "equipping"],
+    correct: 1,
+    explain: "Sau 'more' cần danh từ 'equipment' (thiết bị/trang thiết bị)."
+  },
+  {
+    q: "Linh is the most _____ student in my class.",
+    options: ["intelligence", "intelligent", "intelligently", "unintelligent"],
+    correct: 1,
+    explain: "Trong cấu trúc so sánh nhất 'the most + Adj', cần tính từ 'intelligent'."
+  },
+  {
+    q: "The accident happened because of his _____.",
+    options: ["careless", "carelessness", "carefully", "care"],
+    correct: 1,
+    explain: "Sau tính từ sở hữu 'his' cần danh từ 'carelessness' (sự bất cẩn)."
+  },
+  {
+    q: "This shirt is _____ for you to wear.",
+    options: ["comfort", "comfortable", "comfortably", "discomfort"],
+    correct: 1,
+    explain: "Sau động từ 'is' cần tính từ 'comfortable' (thoải mái)."
+  }
+  ],
+/*⭐⭐ Topic: Liên từ ⭐⭐*/
+
+ 10: [
+  {
+    q: "We stayed at home _____ it rained heavily.",
+    options: ["because", "because of", "although", "but"],
+    correct: 0,
+    explain: "Sau chỗ trống là một mệnh đề (S+V) chỉ nguyên nhân, nên dùng 'because'."
+  },
+  {
+    q: "_____ she was tired, she finished all her homework.",
+    options: ["Because", "Although", "In spite of", "So"],
+    correct: 1,
+    explain: "Mối quan hệ đối lập giữa 'mệt' và 'vẫn làm bài xong', dùng 'Although' trước mệnh đề."
+  },
+  {
+    q: "I was very tired, _____ I went to bed early.",
+    options: ["but", "or", "so", "yet"],
+    correct: 2,
+    explain: "Liên từ 'so' dùng để nối vế chỉ nguyên nhân và vế chỉ kết quả."
+  },
+  {
+    q: "He failed the exam _____ his laziness.",
+    options: ["because", "because of", "despite", "although"],
+    correct: 1,
+    explain: "Sau chỗ trống là một cụm danh từ (his laziness), dùng 'because of' để chỉ nguyên nhân."
+  },
+  {
+    q: "It was raining; _____ , we went out for a walk.",
+    options: ["however", "therefore", "so", "but"],
+    correct: 0,
+    explain: "Dùng 'however' (tuy nhiên) sau dấu chấm phẩy để chỉ sự đối lập."
+  },
+  {
+    q: "_____ the heavy traffic, I arrived at the meeting on time.",
+    options: ["Although", "Despite", "Because of", "Since"],
+    correct: 1,
+    explain: "Sau chỗ trống là cụm danh từ (the heavy traffic), 'Despite' dùng cho sự đối lập."
+  },
+  {
+    q: "You can have _____ tea or coffee.",
+    options: ["both", "neither", "either", "not only"],
+    correct: 2,
+    explain: "Cấu trúc 'Either... or' (Hoặc cái này hoặc cái kia)."
+  },
+  {
+    q: "He is not only talented _____ very hardworking.",
+    options: ["but also", "and", "or", "as well"],
+    correct: 0,
+    explain: "Cấu trúc 'Not only... but also' (Không những... mà còn)."
+  },
+  {
+    q: "I like English _____ I want to study abroad.",
+    options: ["so", "because", "but", "however"],
+    correct: 1,
+    explain: "Vế sau giải thích lý do cho vế trước, dùng 'because'."
+  },
+  {
+    q: "They went on a picnic _____ the cold weather.",
+    options: ["even though", "in spite of", "because", "because of"],
+    correct: 1,
+    explain: "Sự đối lập đi kèm với một cụm danh từ, dùng 'in spite of'."
+  },
+  {
+    q: "She is very rich. _____ , she is not happy.",
+    options: ["Therefore", "However", "So", "But"],
+    correct: 1,
+    explain: "'However' đứng ở đầu câu thứ hai để chỉ sự đối lập với câu trước."
+  },
+  {
+    q: "You should study harder, _____ you will fail the exam.",
+    options: ["and", "but", "or", "so"],
+    correct: 2,
+    explain: "Liên từ 'or' trong trường hợp này mang nghĩa là 'nếu không thì'."
+  },
+  {
+    q: "I haven't seen him _____ he moved to another city.",
+    options: ["when", "since", "while", "until"],
+    correct: 1,
+    explain: "Dùng 'since' để nối thì Hiện tại hoàn thành và Quá khứ đơn."
+  },
+  {
+    q: "_____ my father was young, he used to play football very well.",
+    options: ["When", "While", "During", "Since"],
+    correct: 0,
+    explain: "Dùng 'When' để chỉ một mốc thời gian trong quá khứ."
+  },
+  {
+    q: "He didn't go to school _____ he was sick.",
+    options: ["because", "although", "but", "so"],
+    correct: 0,
+    explain: "Chỉ nguyên nhân bằng một mệnh đề."
+  },
+  {
+    q: "_____ he has a car, he often goes to work by bus.",
+    options: ["Because", "Since", "Even though", "As"],
+    correct: 2,
+    explain: "Mối quan hệ nhượng bộ (có xe nhưng vẫn đi bus)."
+  },
+  {
+    q: "_____ her illness, she couldn't come to the party.",
+    options: ["Because of", "Because", "Despite", "Although"],
+    correct: 0,
+    explain: "Nguyên nhân + cụm danh từ."
+  },
+  {
+    q: "I will call you _____ I arrive at the airport.",
+    options: ["as soon as", "until", "while", "since"],
+    correct: 0,
+    explain: "'As soon as' (Ngay khi) chỉ hành động xảy ra liền sau hành động khác."
+  },
+  {
+    q: "Neither Lan _____ her friends like that movie.",
+    options: ["or", "nor", "and", "but"],
+    correct: 1,
+    explain: "Cấu trúc 'Neither... nor' (Cả hai đều không)."
+  },
+  {
+    q: "The test was very difficult; _____ , many students got good marks.",
+    options: ["consequently", "nevertheless", "therefore", "so"],
+    correct: 1,
+    explain: "'Nevertheless' (Tuy nhiên) mang nghĩa trang trọng hơn 'However'."
+  },
+  {
+    q: "I'll stay here _____ you come back.",
+    options: ["until", "since", "while", "during"],
+    correct: 0,
+    explain: "'Until' (Cho đến khi)."
+  },
+  {
+    q: "You should bring an umbrella _____ it rains.",
+    options: ["in case", "if", "unless", "so that"],
+    correct: 0,
+    explain: "'In case' (Phòng khi/Trong trường hợp) chỉ mục đích chuẩn bị."
+  },
+  {
+    q: "He didn't study hard, _____ he failed the exam.",
+    options: ["because", "so", "but", "although"],
+    correct: 1,
+    explain: "Nối nguyên nhân và kết quả."
+  },
+  {
+    q: "I am learning English _____ I can talk to foreigners.",
+    options: ["so that", "because", "in order to", "as"],
+    correct: 0,
+    explain: "Cấu trúc 'so that + mệnh đề' chỉ mục đích (để mà)."
+  },
+  {
+    q: "We decided to go out _____ the weather was bad.",
+    options: ["although", "despite", "because", "since"],
+    correct: 0,
+    explain: "Nhượng bộ + mệnh đề."
+  },
+  {
+    q: "_____ had I finished my work than the phone rang.",
+    options: ["Hardly", "Scarcely", "No sooner", "Barely"],
+    correct: 2,
+    explain: "Cấu trúc 'No sooner... than' (Vừa mới... thì)."
+  },
+  {
+    q: "Both my brother _____ I are students.",
+    options: ["and", "as well as", "or", "with"],
+    correct: 0,
+    explain: "Cấu trúc 'Both... and'."
+  },
+  {
+    q: "_____ you study hard, you won't pass the exam.",
+    options: ["If", "Unless", "As long as", "Provided"],
+    correct: 1,
+    explain: "'Unless' = 'If not' (Trừ khi/Nếu không)."
+  },
+  {
+    q: "I stayed up late _____ I had a lot of work to do.",
+    options: ["so", "as", "but", "although"],
+    correct: 1,
+    explain: "Trong trường hợp này 'as' = 'because' (vì)."
+  },
+  {
+    q: "He speaks English _____ it were his native language.",
+    options: ["as if", "like", "as", "although"],
+    correct: 0,
+    explain: "Cấu trúc 'As if / As though' (Cứ như thể là)."
+  },
+  {
+    q: "I was reading a book _____ my sister was watching TV.",
+    options: ["when", "while", "during", "since"],
+    correct: 1,
+    explain: "'While' dùng cho hai hành động song song."
+  },
+  {
+    q: "The children went to bed _____ they finished their dinner.",
+    options: ["after", "before", "while", "until"],
+    correct: 0,
+    explain: "Thứ tự thời gian (Sau khi)."
+  },
+  {
+    q: "He is tired _____ he has worked all day.",
+    options: ["for", "so", "but", "although"],
+    correct: 0,
+    explain: "Trong văn viết, 'for' có thể dùng để chỉ lý do (tương tự because)."
+  },
+  {
+    q: "_____ he is old, he still works very hard.",
+    options: ["Despite", "Even though", "Because", "Since"],
+    correct: 1,
+    explain: "Nhượng bộ + mệnh đề."
+  },
+  {
+    q: "You can go out _____ you finish your homework.",
+    options: ["as long as", "unless", "until", "although"],
+    correct: 0,
+    explain: "'As long as' (Miễn là) chỉ điều kiện."
+  },
+  {
+    q: "The shirt is _____ expensive for me to buy.",
+    options: ["too", "so", "such", "enough"],
+    correct: 0,
+    explain: "Cấu trúc 'too + adj + (for sb) + to V'."
+  },
+  {
+    q: "It was _____ a boring movie that I fell asleep.",
+    options: ["so", "such", "too", "very"],
+    correct: 1,
+    explain: "Cấu trúc 'such + (a/an) + adj + N + that'."
+  },
+  {
+    q: "The music was _____ loud that I couldn't sleep.",
+    options: ["so", "such", "too", "very"],
+    correct: 0,
+    explain: "Cấu trúc 'so + adj + that'."
+  },
+  {
+    q: "I didn't go out _____ the heavy rain.",
+    options: ["because of", "because", "despite", "although"],
+    correct: 0,
+    explain: "Nguyên nhân + cụm danh từ."
+  },
+  {
+    q: "_____ it was midnight, the streets were still crowded.",
+    options: ["Although", "Because", "So", "Therefore"],
+    correct: 0,
+    explain: "Dù đã nửa đêm (nhượng bộ)."
+  },
+  {
+    q: "He is not only a doctor _____ a musician.",
+    options: ["and also", "but also", "as well", "but"],
+    correct: 1,
+    explain: "Cấu trúc 'Not only... but also'."
+  },
+  {
+    q: "I'll give you a map _____ you get lost.",
+    options: ["if", "in case", "unless", "so"],
+    correct: 1,
+    explain: "Phòng trường hợp bạn bị lạc."
+  },
+  {
+    q: "_____ you are here, let's start the meeting.",
+    options: ["Now that", "Since", "As", "All are correct"],
+    correct: 3,
+    explain: "Cả 3 từ này đều có thể dùng với nghĩa 'Vì giờ đây / Bởi vì'."
+  },
+  {
+    q: "He is very intelligent. _____ , he is very humble.",
+    options: ["Moreover", "However", "Therefore", "Consequently"],
+    correct: 1,
+    explain: "Tuy nhiên (đối lập)."
+  },
+  {
+    q: "The task was difficult, _____ he managed to finish it.",
+    options: ["and", "but", "so", "or"],
+    correct: 1,
+    explain: "Đối lập giữa khó khăn và kết quả."
+  },
+  {
+    q: "We need to work harder; _____ , we will fail.",
+    options: ["otherwise", "therefore", "however", "moreover"],
+    correct: 0,
+    explain: "'Otherwise' (Nếu không thì)."
+  },
+  {
+    q: "_____ the weather was cold, we went swimming.",
+    options: ["Despite", "Although", "Because", "Since"],
+    correct: 1,
+    explain: "Mệnh đề nhượng bộ."
+  },
+  {
+    q: "I have known her _____ we were at university.",
+    options: ["when", "since", "while", "until"],
+    correct: 1,
+    explain: "Mốc thời gian bắt đầu từ quá khứ."
+  },
+  {
+    q: "He went to bed _____ he had finished his work.",
+    options: ["as soon as", "while", "until", "since"],
+    correct: 0,
+    explain: "Ngay khi (chỉ trình tự)."
+  },
+  {
+    q: "She can play _____ the guitar and the violin.",
+    options: ["either", "both", "neither", "not only"],
+    correct: 1,
+    explain: "Cấu trúc 'Both... and'."
+  }
+  ],
+
+
+/*⭐⭐ Topic: Adv liên kết ⭐⭐*/
+
+ 11: [
+  {
+    q: "The weather was terrible. _____ , the football match was still held.",
+    options: ["Therefore", "However", "Moreover", "Consequently"],
+    correct: 1,
+    explain: "Dùng 'However' (Tuy nhiên) để chỉ sự đối lập giữa hai câu riêng biệt."
+  },
+  {
+    q: "He didn't study hard for the exam; _____ , he failed it.",
+    options: ["nevertheless", "otherwise", "therefore", "however"],
+    correct: 2,
+    explain: "Dùng 'therefore' (Vì vậy) sau dấu chấm phẩy để chỉ kết quả của vế trước."
+  },
+  {
+    q: "You must finish your homework now. _____ , you won't be allowed to watch TV.",
+    options: ["Moreover", "Otherwise", "Therefore", "However"],
+    correct: 1,
+    explain: "'Otherwise' (Nếu không thì) dùng để chỉ hậu quả nếu điều kiện trước đó không được thực hiện."
+  },
+  {
+    q: "Linh is very intelligent. _____ , she is a very kind-hearted girl.",
+    options: ["Moreover", "However", "Otherwise", "Consequently"],
+    correct: 0,
+    explain: "Dùng 'Moreover' (Hơn nữa/Ngoài ra) để bổ sung thêm thông tin tích cực."
+  },
+  {
+    q: "The car was very expensive; _____ , he decided to buy it.",
+    options: ["therefore", "consequently", "nevertheless", "moreover"],
+    correct: 2,
+    explain: "'Nevertheless' (Tuy nhiên/Mặc dù vậy) dùng để chỉ sự đối lập, trang trọng hơn 'however'."
+  },
+  {
+    q: "She is a talented singer. _____ , she can play several musical instruments.",
+    options: ["In addition", "However", "Therefore", "Otherwise"],
+    correct: 0,
+    explain: "'In addition' (Ngoài ra) dùng để thêm thông tin bổ trợ."
+  },
+  {
+    q: "The pollution in the city is increasing. _____ , more people are getting respiratory diseases.",
+    options: ["However", "Consequently", "Otherwise", "Nevertheless"],
+    correct: 1,
+    explain: "'Consequently' (Hệ quả là) dùng để chỉ kết quả của một thực trạng."
+  },
+  {
+    q: "We should protect the environment; _____ , our health will be affected.",
+    options: ["therefore", "otherwise", "moreover", "however"],
+    correct: 1,
+    explain: "Dùng 'otherwise' sau dấu chấm phẩy để chỉ hậu quả."
+  },
+  {
+    q: "He was very tired after a long walk. _____ , he helped his mother with the housework.",
+    options: ["Therefore", "Moreover", "Nevertheless", "Otherwise"],
+    correct: 2,
+    explain: "Dùng 'Nevertheless' để chỉ hành động vượt qua trở ngại (mệt nhưng vẫn giúp)."
+  },
+  {
+    q: "The internet is very useful. _____ , it can be dangerous if we use it incorrectly.",
+    options: ["However", "Therefore", "Moreover", "In addition"],
+    correct: 0,
+    explain: "Chỉ mặt trái của vấn đề dùng 'However'."
+  },
+  {
+    q: "He is too young to drive a car. _____ , he doesn't have a driving license.",
+    options: ["However", "Furthermore", "Nevertheless", "Otherwise"],
+    correct: 1,
+    explain: "'Furthermore' (Hơn nữa) dùng để bổ sung lý do cho câu trước."
+  },
+  {
+    q: "The flight was delayed. _____ , we had to wait at the airport for three hours.",
+    options: ["However", "Moreover", "Thus", "Otherwise"],
+    correct: 2,
+    explain: "'Thus' (Vì vậy/Do đó) chỉ kết quả, thường dùng trong văn viết trang trọng."
+  },
+  {
+    q: "English is very important for our future careers; _____ , we should practice it every day.",
+    options: ["however", "otherwise", "hence", "nevertheless"],
+    correct: 2,
+    explain: "'Hence' (Vì thế nên) dùng để chỉ kết quả."
+  },
+  {
+    q: "The film was very long. _____ , it was very boring.",
+    options: ["Moreover", "However", "Nevertheless", "Otherwise"],
+    correct: 0,
+    explain: "Thêm một đặc điểm tiêu cực nữa nên dùng 'Moreover'."
+  },
+  {
+    q: "He didn't have enough money. _____ , he couldn't buy that house.",
+    options: ["However", "Therefore", "Moreover", "Otherwise"],
+    correct: 1,
+    explain: "Câu chỉ nguyên nhân - kết quả."
+  },
+  {
+    q: "You must drive carefully. _____ , you might have an accident.",
+    options: ["Otherwise", "Moreover", "Therefore", "However"],
+    correct: 0,
+    explain: "Hậu quả nếu không làm theo lời khuyên."
+  },
+  {
+    q: "The restaurant has great food. _____ , the service is excellent.",
+    options: ["However", "Besides", "Consequently", "Nevertheless"],
+    correct: 1,
+    explain: "'Besides' (Bên cạnh đó) dùng để bổ sung thông tin."
+  },
+  {
+    q: "She was very sick; _____ , she still went to work.",
+    options: ["therefore", "nevertheless", "moreover", "otherwise"],
+    correct: 1,
+    explain: "Dùng 'nevertheless' để chỉ sự đối lập."
+  },
+  {
+    q: "He passed the exam with high marks. _____ , his parents were very proud of him.",
+    options: ["However", "As a result", "Moreover", "Otherwise"],
+    correct: 1,
+    explain: "'As a result' (Kết quả là) chỉ kết quả từ việc thi đỗ."
+  },
+  {
+    q: "I forgot my umbrella. _____ , I got wet in the rain.",
+    options: ["Consequently", "However", "In addition", "Otherwise"],
+    correct: 0,
+    explain: "Hệ quả của việc quên ô."
+  },
+  {
+    q: "She studied very hard. _____ , she didn't pass the exam.",
+    options: ["Therefore", "Furthermore", "However", "Otherwise"],
+    correct: 2,
+    explain: "Sự đối lập bất ngờ."
+  },
+  {
+    q: "We should save water. _____ , we should also save electricity.",
+    options: ["However", "In addition", "Therefore", "Otherwise"],
+    correct: 1,
+    explain: "Bổ sung thông tin cùng hướng."
+  },
+  {
+    q: "He is very busy; _____ , he always spends time with his children.",
+    options: ["moreover", "therefore", "nonetheless", "otherwise"],
+    correct: 2,
+    explain: "'Nonetheless' đồng nghĩa với 'Nevertheless' (Tuy nhiên/Mặc dù vậy)."
+  },
+  {
+    q: "The task was quite difficult. _____ , we managed to finish it on time.",
+    options: ["Consequently", "Moreover", "However", "Thus"],
+    correct: 2,
+    explain: "Chỉ sự đối lập."
+  },
+  {
+    q: "Smoking is harmful to your health. _____ , it is very expensive.",
+    options: ["However", "Furthermore", "Therefore", "Otherwise"],
+    correct: 1,
+    explain: "Thêm một lý do nữa để không hút thuốc."
+  },
+  {
+    q: "It's late. _____ , I'm too tired to go out.",
+    options: ["Besides", "However", "Therefore", "Otherwise"],
+    correct: 0,
+    explain: "'Besides' dùng để đưa ra thêm một lý do nữa."
+  },
+  {
+    q: "He has no experience; _____ , they decided to hire him.",
+    options: ["therefore", "consequently", "nevertheless", "moreover"],
+    correct: 2,
+    explain: "Mặc dù không có kinh nghiệm nhưng vẫn được thuê."
+  },
+  {
+    q: "The price of gas is rising. _____ , the cost of living is increasing.",
+    options: ["However", "Accordingly", "Nevertheless", "Otherwise"],
+    correct: 1,
+    explain: "'Accordingly' (Theo đó/Vì vậy) chỉ kết quả tương ứng."
+  },
+  {
+    q: "You need to bring your passport. _____ , you cannot board the plane.",
+    options: ["Moreover", "Therefore", "Otherwise", "However"],
+    correct: 2,
+    explain: "Nếu không có hộ chiếu thì không lên được máy bay."
+  },
+  {
+    q: "He is a good student. _____ , he is a great athlete.",
+    options: ["Furthermore", "However", "Consequently", "Nevertheless"],
+    correct: 0,
+    explain: "Bổ sung ưu điểm."
+  },
+  {
+    q: "The hotel was very dirty. _____ , the staff were very rude.",
+    options: ["However", "Moreover", "Therefore", "Otherwise"],
+    correct: 1,
+    explain: "Thêm thông tin tiêu cực."
+  },
+  {
+    q: "They were lost in the woods. _____ , it began to rain.",
+    options: ["Furthermore", "However", "Nevertheless", "Otherwise"],
+    correct: 0,
+    explain: "Bổ sung thêm tình huống xấu."
+  },
+  {
+    q: "The team played very well; _____ , they lost the match.",
+    options: ["therefore", "moreover", "nonetheless", "consequently"],
+    correct: 2,
+    explain: "Mặc dù chơi tốt nhưng vẫn thua."
+  },
+  {
+    q: "He is very rich. _____ , he lives in a very small house.",
+    options: ["Therefore", "However", "Moreover", "Furthermore"],
+    correct: 1,
+    explain: "Sự đối lập giữa giàu có và cách sống."
+  },
+  {
+    q: "I have a lot of work to do. _____ , I will stay at the office late tonight.",
+    options: ["However", "Accordingly", "Nevertheless", "Otherwise"],
+    correct: 1,
+    explain: "Hành động phù hợp với hoàn cảnh."
+  },
+  {
+    q: "She can speak four languages fluently. _____ , she knows a lot about different cultures.",
+    options: ["Moreover", "However", "Therefore", "Otherwise"],
+    correct: 0,
+    explain: "Bổ sung thông tin."
+  },
+  {
+    q: "We must hurry up; _____ , we will miss the train.",
+    options: ["moreover", "otherwise", "consequently", "however"],
+    correct: 1,
+    explain: "Nếu không nhanh sẽ nhỡ tàu."
+  },
+  {
+    q: "The concert was cancelled. _____ , we went to the cinema instead.",
+    options: ["However", "Therefore", "Moreover", "Otherwise"],
+    correct: 1,
+    explain: "Hành động thay thế do kết quả của việc hủy show."
+  },
+  {
+    q: "He is not very friendly. _____ , he has very few friends.",
+    options: ["However", "Consequently", "Moreover", "Nevertheless"],
+    correct: 1,
+    explain: "Hệ quả của việc không thân thiện."
+  },
+  {
+    q: "The question was very hard; _____ , Lan could answer it.",
+    options: ["therefore", "moreover", "however", "consequently"],
+    correct: 2,
+    explain: "Đối lập (Câu khó nhưng vẫn làm được)."
+  },
+  {
+    q: "We need to plant more trees. _____ , we should reduce plastic waste.",
+    options: ["However", "Besides", "Therefore", "Otherwise"],
+    correct: 1,
+    explain: "Thêm một giải pháp bảo vệ môi trường."
+  },
+  {
+    q: "He didn't wear a coat. _____ , he caught a cold.",
+    options: ["However", "Thus", "Nevertheless", "Moreover"],
+    correct: 1,
+    explain: "Hệ quả của việc không mặc áo khoác."
+  },
+  {
+    q: "The road was under construction. _____ , we had to take a detour.",
+    options: ["Moreover", "Hence", "However", "Nevertheless"],
+    correct: 1,
+    explain: "'Hence' (Vì thế) chỉ kết quả."
+  },
+  {
+    q: "You should keep quiet in the library. _____ , you will be asked to leave.",
+    options: ["Otherwise", "Moreover", "Therefore", "However"],
+    correct: 0,
+    explain: "Hậu quả của việc gây ồn."
+  },
+  {
+    q: "She is very busy with her work. _____ , she takes care of her old mother.",
+    options: ["Therefore", "Still", "Otherwise", "Consequently"],
+    correct: 1,
+    explain: "'Still' trong trường hợp này dùng như 'Nevertheless' (Tuy nhiên/Vẫn cứ)."
+  },
+  {
+    q: "They have a lot of problems; _____ , they are very optimistic.",
+    options: ["therefore", "consequently", "nevertheless", "moreover"],
+    correct: 2,
+    explain: "Mặc dù có vấn đề nhưng vẫn lạc quan."
+  },
+  {
+    q: "He failed the test. _____ , he has to take it again.",
+    options: ["However", "Accordingly", "Moreover", "Nevertheless"],
+    correct: 1,
+    explain: "Hành động phải làm theo kết quả của việc trượt."
+  },
+  {
+    q: "The house is very beautiful. _____ , it is near a noisy factory.",
+    options: ["Moreover", "However", "Therefore", "Consequently"],
+    correct: 1,
+    explain: "Mặt hạn chế của ngôi nhà."
+  },
+  {
+    q: "We need to save energy; _____ , we can save money.",
+    options: ["however", "moreover", "thus", "otherwise"],
+    correct: 2,
+    explain: "Kết quả của việc tiết kiệm năng lượng."
+  },
+  {
+    q: "He is a great leader. _____ , he is a very humble person.",
+    options: ["In addition", "However", "Otherwise", "Consequently"],
+    correct: 0,
+    explain: "Bổ sung phẩm chất tốt."
+  }
+  ],
+
+/*⭐⭐ Topic: Câu điều kiện và mong ước ⭐⭐*/
+
+  12: [
+  {
+    q: "If I _____ enough money, I will buy a new laptop.",
+    options: ["have", "had", "will have", "am having"],
+    correct: 0,
+    explain: "Câu điều kiện loại 1 (có thể xảy ra ở hiện tại/tương lai): If + S + V(hiện tại đơn), S + will + V."
+  },
+  {
+    q: "If I _____ you, I would tell the truth.",
+    options: ["am", "was", "were", "be"],
+    correct: 2,
+    explain: "Câu điều kiện loại 2 (giả định không có thật ở hiện tại): If + S + V2/ed, S + would + V. Với 'be', luôn dùng 'were' cho mọi ngôi."
+  },
+  {
+    q: "I wish I _____ a millionaire now.",
+    options: ["am", "was", "were", "will be"],
+    correct: 2,
+    explain: "Câu ước ở hiện tại (trái thực tế): S + wish + S + V2/ed. Dùng 'were' cho câu trang trọng và bài thi."
+  },
+  {
+    q: "If the weather _____ fine tomorrow, we will go on a picnic.",
+    options: ["is", "was", "will be", "were"],
+    correct: 0,
+    explain: "Điều kiện loại 1: Vế If chia hiện tại đơn."
+  },
+  {
+    q: "I wish it _____ raining so we could go out.",
+    options: ["stops", "stopped", "will stop", "would stop"],
+    correct: 1,
+    explain: "Ước một điều trái ngược hiện tại: lùi thì về quá khứ đơn (stopped)."
+  },
+  {
+    q: "If she _____ hard, she will pass the entrance exam.",
+    options: ["study", "studies", "studied", "will study"],
+    correct: 1,
+    explain: "Điều kiện loại 1, chủ ngữ 'she' nên động từ 'studies' thêm -es."
+  },
+  {
+    q: "What _____ you do if you won the lottery?",
+    options: ["will", "would", "shall", "do"],
+    correct: 1,
+    explain: "Điều kiện loại 2 (giả định khó xảy ra): Vế If chia quá khứ (won) nên vế chính dùng 'would'."
+  },
+  {
+    q: "If you don't hurry, you _____ late for school.",
+    options: ["are", "will be", "would be", "were"],
+    correct: 1,
+    explain: "Điều kiện loại 1: cảnh báo một kết quả có thật."
+  },
+  {
+    q: "I wish my parents _____ here with me now.",
+    options: ["are", "be", "were", "will be"],
+    correct: 2,
+    explain: "Ước ở hiện tại dùng thì Quá khứ đơn."
+  },
+  {
+    q: "If I _____ his address, I would give it to you.",
+    options: ["know", "knows", "knew", "will know"],
+    correct: 2,
+    explain: "Điều kiện loại 2: Vế chính có 'would give' nên vế If dùng quá khứ đơn."
+  },
+  {
+    q: "She wishes she _____ speak French fluently.",
+    options: ["can", "could", "will", "would"],
+    correct: 1,
+    explain: "Ước về khả năng ở hiện tại: Can -> Could."
+  },
+  {
+    q: "Unless you _____ study hard, you will fail the exam.",
+    options: ["don't", "study", "not study", "studied"],
+    correct: 1,
+    explain: "Unless = If ... not. 'Unless you study' = 'If you don't study'."
+  },
+  {
+    q: "If I were a bird, I _____ fly everywhere.",
+    options: ["will", "would", "can", "shall"],
+    correct: 1,
+    explain: "Điều kiện loại 2 (giả định không tưởng)."
+  },
+  {
+    q: "I wish I _____ to the party tonight, but I'm busy.",
+    options: ["go", "can go", "could go", "went"],
+    correct: 2,
+    explain: "Ước về một khả năng trái thực tế ở hiện tại/tương lai."
+  },
+  {
+    q: "If water _____ to 100 degrees Celsius, it boils.",
+    options: ["heat", "is heated", "heated", "will heat"],
+    correct: 1,
+    explain: "Câu điều kiện loại 0 (sự thật hiển nhiên): If + HTĐ, HTĐ. Ở đây dùng bị động 'is heated'."
+  },
+  {
+    q: "They would be very happy if we _____ them.",
+    options: ["visit", "visited", "will visit", "would visit"],
+    correct: 1,
+    explain: "Điều kiện loại 2: Vế If lùi về quá khứ."
+  },
+  {
+    q: "If she _____ more carefully, she wouldn't make so many mistakes.",
+    options: ["write", "writes", "wrote", "will write"],
+    correct: 2,
+    explain: "Điều kiện loại 2."
+  },
+  {
+    q: "I wish I _____ a lot of money to help the poor.",
+    options: ["have", "had", "will have", "am having"],
+    correct: 1,
+    explain: "Ước ở hiện tại."
+  },
+  {
+    q: "If you _____ ice, it turns into water.",
+    options: ["heat", "heated", "will heat", "heats"],
+    correct: 0,
+    explain: "Điều kiện loại 0 (chân lý)."
+  },
+  {
+    q: "If he _____ taller, he could play basketball better.",
+    options: ["is", "was", "were", "be"],
+    correct: 2,
+    explain: "Điều kiện loại 2."
+  },
+  {
+    q: "I wish today _____ Sunday.",
+    options: ["is", "was", "were", "be"],
+    correct: 2,
+    explain: "Ước trái thực tế hiện tại."
+  },
+  {
+    q: "She will miss the bus if she _____ leave now.",
+    options: ["doesn't", "don't", "didn't", "won't"],
+    correct: 0,
+    explain: "Điều kiện loại 1."
+  },
+  {
+    q: "If I _____ you, I _____ buy that old car.",
+    options: ["am/won't", "were/wouldn't", "was/don't", "be/wouldn't"],
+    correct: 1,
+    explain: "Lời khuyên với điều kiện loại 2: 'If I were you, I would(n't)...'"
+  },
+  {
+    q: "I wish I _____ how to solve this puzzle.",
+    options: ["know", "knew", "will know", "knowing"],
+    correct: 1,
+    explain: "Ước ở hiện tại."
+  },
+  {
+    q: "If we _____ trees, we will have more fresh air.",
+    options: ["plant", "planted", "will plant", "planting"],
+    correct: 0,
+    explain: "Điều kiện loại 1."
+  },
+  {
+    q: "If I _____ wings, I wouldn't have to take the bus.",
+    options: ["have", "had", "will have", "has"],
+    correct: 1,
+    explain: "Điều kiện loại 2."
+  },
+  {
+    q: "I wish my house _____ in the countryside.",
+    options: ["is", "was", "were", "be"],
+    correct: 2,
+    explain: "Ước ở hiện tại."
+  },
+  {
+    q: "You will get wet if you _____ bring an umbrella.",
+    options: ["don't", "doesn't", "didn't", "won't"],
+    correct: 0,
+    explain: "Điều kiện loại 1."
+  },
+  {
+    q: "If he _____ his car, he would get much money.",
+    options: ["sell", "sells", "sold", "will sell"],
+    correct: 2,
+    explain: "Điều kiện loại 2."
+  },
+  {
+    q: "I wish I _____ the answer to this question.",
+    options: ["know", "knew", "will know", "known"],
+    correct: 1,
+    explain: "Ước ở hiện tại."
+  },
+  {
+    q: "If you _____ hard, you will pass the exam.",
+    options: ["study", "studied", "will study", "studies"],
+    correct: 0,
+    explain: "Điều kiện loại 1."
+  },
+  {
+    q: "If he _____ a lot of money, he would travel around the world.",
+    options: ["has", "had", "will have", "have"],
+    correct: 1,
+    explain: "Điều kiện loại 2."
+  },
+  {
+    q: "I wish I _____ stay at home today.",
+    options: ["can", "could", "will", "would"],
+    correct: 1,
+    explain: "Ước về khả năng ở hiện tại."
+  },
+  {
+    q: "If the sun _____ , we will go swimming.",
+    options: ["shine", "shines", "shone", "will shine"],
+    correct: 1,
+    explain: "Điều kiện loại 1."
+  },
+  {
+    q: "If I _____ her name, I would tell you.",
+    options: ["know", "knew", "will know", "known"],
+    correct: 1,
+    explain: "Điều kiện loại 2."
+  },
+  {
+    q: "I wish I _____ so much homework.",
+    options: ["don't have", "doesn't have", "didn't have", "won't have"],
+    correct: 2,
+    explain: "Ước trái thực tế (thực tế là đang có nhiều bài tập)."
+  },
+  {
+    q: "If you _____ more vegetables, you will be healthier.",
+    options: ["eat", "ate", "will eat", "eats"],
+    correct: 0,
+    explain: "Điều kiện loại 1."
+  },
+  {
+    q: "If they _____ time, they would help us.",
+    options: ["have", "had", "will have", "has"],
+    correct: 1,
+    explain: "Điều kiện loại 2."
+  },
+  {
+    q: "I wish I _____ a pilot in the future.",
+    options: ["am", "will be", "would be", "be"],
+    correct: 2,
+    explain: "Ước về tương lai: S + wish + S + would + V."
+  },
+  {
+    q: "If it _____ rain, we will go to the cinema.",
+    options: ["don't", "doesn't", "didn't", "won't"],
+    correct: 1,
+    explain: "Điều kiện loại 1."
+  },
+  {
+    q: "If I _____ a lot of money, I would buy a big house.",
+    options: ["have", "had", "will have", "has"],
+    correct: 1,
+    explain: "Điều kiện loại 2."
+  },
+  {
+    q: "I wish I _____ go to the beach with you now.",
+    options: ["can", "could", "will", "shall"],
+    correct: 1,
+    explain: "Ước ở hiện tại."
+  },
+  {
+    q: "If the food _____ good, I will eat more.",
+    options: ["is", "was", "were", "be"],
+    correct: 0,
+    explain: "Điều kiện loại 1."
+  },
+  {
+    q: "If he _____ the truth, his parents would be very angry.",
+    options: ["know", "knew", "will know", "knows"],
+    correct: 1,
+    explain: "Điều kiện loại 2."
+  },
+  {
+    q: "I wish the weather _____ better today.",
+    options: ["is", "was", "were", "be"],
+    correct: 2,
+    explain: "Ước ở hiện tại."
+  },
+  {
+    q: "If you _____ early, you will see the sunrise.",
+    options: ["get up", "got up", "will get up", "gets up"],
+    correct: 0,
+    explain: "Điều kiện loại 1."
+  },
+  {
+    q: "If I _____ his number, I would call him.",
+    options: ["have", "had", "will have", "has"],
+    correct: 1,
+    explain: "Điều kiện loại 2."
+  },
+  {
+    q: "I wish I _____ her phone number.",
+    options: ["have", "has", "had", "will have"],
+    correct: 2,
+    explain: "Ước ở hiện tại."
+  },
+  {
+    q: "If it _____ sunny, we will go for a walk.",
+    options: ["is", "was", "were", "be"],
+    correct: 0,
+    explain: "Điều kiện loại 1."
+  },
+  {
+    q: "If she _____ here now, she would help us.",
+    options: ["is", "was", "were", "be"],
+    correct: 2,
+    explain: "Điều kiện loại 2."
+  }
+],
+
+/*⭐⭐ Topic: Câu bị động ⭐⭐*/
+
+  13: [
+  {
+    q: "The cake _____ by my mother yesterday.",
+    options: ["made", "was made", "is made", "was making"],
+    correct: 1,
+    explain: "Dựa vào 'yesterday' (quá khứ đơn) và 'by my mother' (bị động). Cấu trúc: was/were + V3/ed."
+  },
+  {
+    q: "Rice _____ in many tropical countries.",
+    options: ["is grown", "are grown", "grows", "is growing"],
+    correct: 0,
+    explain: "Sự thật hiển nhiên dùng Hiện tại đơn, Rice là danh từ không đếm được nên dùng 'is grown'."
+  },
+  {
+    q: "The students _____ the classroom at the moment.",
+    options: ["clean", "are cleaned", "are cleaning", "is cleaning"],
+    correct: 2,
+    explain: "'At the moment' dùng Hiện tại tiếp diễn. Học sinh chủ động dọn dẹp nên chọn 'are cleaning'."
+  },
+  {
+    q: "The window _____ by the boy two hours ago.",
+    options: ["is broken", "was broken", "broke", "was breaking"],
+    correct: 1,
+    explain: "Quá khứ đơn, dạng bị động của 'break' là 'was broken'."
+  },
+  {
+    q: "A new school _____ in this area next year.",
+    options: ["will build", "will be built", "is built", "was built"],
+    correct: 1,
+    explain: "'Next year' dùng Tương lai đơn. Ngôi trường không thể tự xây nên dùng bị động: 'will be + V3/ed'."
+  },
+  {
+    q: "My car _____ yesterday, so I had to take a taxi.",
+    options: ["repaired", "was repairing", "was repaired", "is repaired"],
+    correct: 2,
+    explain: "Xe được sửa (bị động) trong quá khứ."
+  },
+  {
+    q: "They _____ this house for 10 years.",
+    options: ["have built", "have been built", "has built", "was built"],
+    correct: 0,
+    explain: "'For 10 years' dùng Hiện tại hoàn thành. Chủ ngữ 'They' chủ động xây nhà."
+  },
+  {
+    q: "English _____ all over the world.",
+    options: ["speaks", "is speaking", "is spoken", "are spoken"],
+    correct: 2,
+    explain: "Tiếng Anh được nói (bị động), sự thật hiển nhiên dùng Hiện tại đơn."
+  },
+  {
+    q: "The letter _____ by her an hour ago.",
+    options: ["wrote", "was written", "was writing", "is written"],
+    correct: 1,
+    explain: "Lá thư được viết (bị động) trong quá khứ."
+  },
+  {
+    q: "We _____ our homework before 9 PM yesterday.",
+    options: ["finished", "were finished", "have finished", "had finished"],
+    correct: 0,
+    explain: "Chủ động hoàn thành bài tập trong quá khứ."
+  },
+  {
+    q: "Many trees _____ along the streets recently.",
+    options: ["have planted", "have been planted", "were planted", "are planted"],
+    correct: 1,
+    explain: "'Recently' dùng Hiện tại hoàn thành. Cây được trồng nên dùng bị động: 'have been + V3/ed'."
+  },
+  {
+    q: "I _____ a beautiful present on my last birthday.",
+    options: ["gave", "was given", "was giving", "am given"],
+    correct: 1,
+    explain: "Tôi được tặng (bị động) vào sinh nhật trước."
+  },
+  {
+    q: "The thief _____ by the police last night.",
+    options: ["caught", "was caught", "is caught", "was catching"],
+    correct: 1,
+    explain: "Tên trộm bị bắt (bị động) trong quá khứ."
+  },
+  {
+    q: "Thousands of people _____ the Eiffel Tower every day.",
+    options: ["visit", "are visited", "visits", "is visited"],
+    correct: 0,
+    explain: "Hành động chủ động của con người ở hiện tại đơn."
+  },
+  {
+    q: "The light bulb _____ by Thomas Edison.",
+    options: ["invented", "was invented", "is invented", "was inventing"],
+    correct: 1,
+    explain: "Bóng đèn được phát minh (bị động) trong quá khứ."
+  },
+  {
+    q: "My bicycle _____ last night.",
+    options: ["stole", "was stolen", "was stealing", "is stolen"],
+    correct: 1,
+    explain: "Xe đạp bị lấy trộm (bị động)."
+  },
+  {
+    q: "The report _____ by the secretary at the moment.",
+    options: ["is typing", "is being typed", "was typed", "types"],
+    correct: 1,
+    explain: "Bị động thì Hiện tại tiếp diễn: am/is/are + being + V3/ed."
+  },
+  {
+    q: "She _____ the flowers every morning.",
+    options: ["waters", "is watered", "is watering", "watered"],
+    correct: 0,
+    explain: "Hành động chủ động, thói quen hiện tại."
+  },
+  {
+    q: "The flowers _____ by her every morning.",
+    options: ["water", "are watered", "is watered", "watered"],
+    correct: 1,
+    explain: "Hoa được tưới (bị động hiện tại đơn)."
+  },
+  {
+    q: "The house _____ when we arrived.",
+    options: ["was painting", "was being painted", "painted", "is painted"],
+    correct: 1,
+    explain: "Bị động quá khứ tiếp diễn: Ngôi nhà đang được sơn khi chúng tôi đến."
+  },
+  {
+    q: "Shakespeare _____ many famous plays.",
+    options: ["wrote", "was written", "writes", "has written"],
+    correct: 0,
+    explain: "Shakespeare chủ động viết (quá khứ đơn vì ông đã mất)."
+  },
+  {
+    q: "These books _____ back to the library yesterday.",
+    options: ["took", "were taken", "was taken", "are taken"],
+    correct: 1,
+    explain: "Sách được mang trả (bị động quá khứ)."
+  },
+  {
+    q: "A lot of coffee _____ in Brazil.",
+    options: ["grows", "is grown", "are grown", "grow"],
+    correct: 1,
+    explain: "Coffee không đếm được, dùng 'is grown'."
+  },
+  {
+    q: "I _____ the email yesterday.",
+    options: ["sent", "was sent", "send", "have sent"],
+    correct: 0,
+    explain: "Tôi chủ động gửi email."
+  },
+  {
+    q: "The email _____ to him yesterday.",
+    options: ["sent", "was sent", "is sent", "were sent"],
+    correct: 1,
+    explain: "Email được gửi (bị động quá khứ)."
+  },
+  {
+    q: "Dinner _____ when the power went out.",
+    options: ["was cooking", "was being cooked", "cooked", "is cooked"],
+    correct: 1,
+    explain: "Bữa tối đang được nấu (bị động quá khứ tiếp diễn)."
+  },
+  {
+    q: "The bridge _____ by the end of this year.",
+    options: ["will finish", "will be finished", "finishes", "is finished"],
+    correct: 1,
+    explain: "Cây cầu sẽ được hoàn thành (bị động tương lai)."
+  },
+  {
+    q: "They _____ the new hospital now.",
+    options: ["are building", "are being built", "is building", "built"],
+    correct: 0,
+    explain: "Họ chủ động xây bệnh viện (hiện tại tiếp diễn)."
+  },
+  {
+    q: "The project _____ yet.",
+    options: ["hasn't finished", "hasn't been finished", "didn't finish", "wasn't finished"],
+    correct: 1,
+    explain: "Dự án chưa được hoàn thành (bị động hiện tại hoàn thành)."
+  },
+  {
+    q: "Bread _____ from flour.",
+    options: ["makes", "is making", "is made", "are made"],
+    correct: 2,
+    explain: "Bánh mì được làm từ bột (bị động hiện tại đơn)."
+  },
+  {
+    q: "He _____ to the party by his friend.",
+    options: ["invited", "was invited", "is inviting", "was inviting"],
+    correct: 1,
+    explain: "Anh ấy được mời (bị động quá khứ)."
+  },
+  {
+    q: "We _____ a lot of photos on our holiday last summer.",
+    options: ["took", "were taken", "were taking", "take"],
+    correct: 0,
+    explain: "Chúng tôi chủ động chụp ảnh."
+  },
+  {
+    q: "Many photos _____ on our holiday last summer.",
+    options: ["took", "were taken", "was taken", "are taken"],
+    correct: 1,
+    explain: "Ảnh được chụp (bị động quá khứ số nhiều)."
+  },
+  {
+    q: "The car _____ every week by my father.",
+    options: ["washes", "is washing", "is washed", "are washed"],
+    correct: 2,
+    explain: "Xe được rửa mỗi tuần (bị động hiện tại đơn)."
+  },
+  {
+    q: "Lunch _____ at 12 o'clock every day.",
+    options: ["serves", "is served", "is serving", "was served"],
+    correct: 1,
+    explain: "Bữa trưa được phục vụ."
+  },
+  {
+    q: "Somebody _____ my wallet on the bus.",
+    options: ["stole", "was stolen", "stolen", "is stolen"],
+    correct: 0,
+    explain: "Ai đó đã lấy trộm (chủ động)."
+  },
+  {
+    q: "My wallet _____ on the bus.",
+    options: ["stole", "was stolen", "is stolen", "was stealing"],
+    correct: 1,
+    explain: "Ví bị mất trộm (bị động)."
+  },
+  {
+    q: "They _____ the museum in 1990.",
+    options: ["opened", "was opened", "were opened", "opening"],
+    correct: 0,
+    explain: "Họ chủ động mở bảo tàng."
+  },
+  {
+    q: "The museum _____ in 1990.",
+    options: ["opened", "was opened", "is opened", "were opened"],
+    correct: 1,
+    explain: "Bảo tàng được mở (bị động quá khứ)."
+  },
+  {
+    q: "The children _____ care of by the babysitter.",
+    options: ["are taking", "are being taken", "is being taken", "took"],
+    correct: 1,
+    explain: "Trẻ em được chăm sóc (bị động hiện tại tiếp diễn)."
+  },
+  {
+    q: "I _____ the floor yesterday morning.",
+    options: ["swept", "was swept", "sweep", "am swept"],
+    correct: 0,
+    explain: "Tôi chủ động quét sàn."
+  },
+  {
+    q: "The floor _____ yesterday morning.",
+    options: ["swept", "was swept", "is swept", "sweeps"],
+    correct: 1,
+    explain: "Sàn được quét (bị động quá khứ)."
+  },
+  {
+    q: "She _____ her hair every day.",
+    options: ["combs", "is combed", "is combing", "combed"],
+    correct: 0,
+    explain: "Chủ động hiện tại đơn."
+  },
+  {
+    q: "Millions of messages _____ every minute.",
+    options: ["send", "are sent", "is sent", "are sending"],
+    correct: 1,
+    explain: "Tin nhắn được gửi (bị động hiện tại đơn số nhiều)."
+  },
+  {
+    q: "The gate _____ every night.",
+    options: ["locks", "is locked", "is locking", "locked"],
+    correct: 1,
+    explain: "Cổng được khóa."
+  },
+  {
+    q: "The dinner _____ by the time we got home.",
+    options: ["had prepared", "had been prepared", "was preparing", "prepared"],
+    correct: 1,
+    explain: "Bị động Quá khứ hoàn thành: had been + V3/ed (đã được chuẩn bị xong trước khi...)."
+  },
+  {
+    q: "They _____ the truth.",
+    options: ["told", "were told", "telling", "is told"],
+    correct: 0,
+    explain: "Họ chủ động nói sự thật."
+  },
+  {
+    q: "They _____ the truth by the witness.",
+    options: ["told", "were told", "was told", "are telling"],
+    correct: 1,
+    explain: "Họ được kể sự thật bởi nhân chứng (bị động)."
+  },
+  {
+    q: "The trees _____ down by the storm last night.",
+    options: ["blew", "were blown", "was blown", "are blown"],
+    correct: 1,
+    explain: "Cây bị thổi đổ (bị động quá khứ số nhiều)."
+  },
+  {
+    q: "A lot of money _____ in the bank yesterday.",
+    options: ["kept", "was kept", "were kept", "is kept"],
+    correct: 1,
+    explain: "Money là danh từ không đếm được, dùng 'was kept'."
+  }
+],
+
+
+/*⭐⭐ Topic: Câu so sánh⭐⭐*/
+
+  14: [
+  {
+    q: "My house is _____ than yours.",
+    options: ["big", "bigger", "biggest", "the biggest"],
+    correct: 1,
+    explain: "Dùng so sánh hơn (bigger) vì có 'than' và 'big' là tính từ ngắn."
+  },
+  {
+    q: "She is _____ student in my class.",
+    options: ["the goodest", "the best", "better", "goodest"],
+    correct: 1,
+    explain: "So sánh nhất của 'good' là 'the best'."
+  },
+  {
+    q: "This dress is _____ as that one.",
+    options: ["expensive", "as expensive", "more expensive", "the most expensive"],
+    correct: 1,
+    explain: "Cấu trúc so sánh bằng: as + adj + as."
+  },
+  {
+    q: "Learning English is _____ than I thought.",
+    options: ["easy", "easier", "more easy", "easiest"],
+    correct: 1,
+    explain: "Tính từ 2 âm tiết kết thúc bằng 'y' (easy) coi như tính từ ngắn, chuyển thành 'easier'."
+  },
+  {
+    q: "Gold is _____ than silver.",
+    options: ["valuable", "more valuable", "most valuable", "the most valuable"],
+    correct: 1,
+    explain: "Valuable là tính từ dài, dùng 'more + adj + than'."
+  },
+  {
+    q: "This is _____ film I've ever seen.",
+    options: ["the most interesting", "more interesting", "interesting", "the more interesting"],
+    correct: 0,
+    explain: "So sánh nhất với tính từ dài: the most + adj."
+  },
+  {
+    q: "He runs _____ than his brother.",
+    options: ["faster", "fastly", "more fast", "fastest"],
+    correct: 0,
+    explain: "Fast là trạng từ đặc biệt, so sánh hơn là 'faster'."
+  },
+  {
+    q: "Your car is not as _____ as mine.",
+    options: ["modern", "more modern", "most modern", "modernly"],
+    correct: 0,
+    explain: "Trong so sánh bằng (hoặc không bằng), tính từ để ở dạng nguyên mẫu."
+  },
+  {
+    q: "Mount Everest is _____ mountain in the world.",
+    options: ["high", "higher", "the highest", "highest"],
+    correct: 2,
+    explain: "So sánh nhất tính từ ngắn: the + adj-est."
+  },
+  {
+    q: "Health is _____ than money.",
+    options: ["important", "more important", "the most important", "importanter"],
+    correct: 1,
+    explain: "So sánh hơn tính từ dài."
+  },
+  {
+    q: "He is _____ person I know.",
+    options: ["happier", "happiest", "the happiest", "the most happy"],
+    correct: 2,
+    explain: "So sánh nhất của happy (tính từ ngắn đặc biệt)."
+  },
+  {
+    q: "The weather today is _____ than yesterday.",
+    options: ["badder", "worse", "worst", "the worst"],
+    correct: 1,
+    explain: "So sánh hơn của 'bad' là 'worse'."
+  },
+  {
+    q: "She speaks English _____ than her sister.",
+    options: ["more fluently", "fluently", "most fluently", "more fluent"],
+    correct: 0,
+    explain: "So sánh hơn với trạng từ dài (fluently)."
+  },
+  {
+    q: "A plane is _____ than a car.",
+    options: ["fast", "faster", "more fast", "fastest"],
+    correct: 1,
+    explain: "So sánh hơn tính từ ngắn."
+  },
+  {
+    q: "This is _____ problem in the book.",
+    options: ["the difficultest", "the most difficult", "more difficult", "difficult"],
+    correct: 1,
+    explain: "So sánh nhất tính từ dài."
+  },
+  {
+    q: "He is not _____ as his father.",
+    options: ["as tall", "tall", "taller", "the tallest"],
+    correct: 0,
+    explain: "Cấu trúc (not) as + adj + as."
+  },
+  {
+    q: "That was _____ day of my life.",
+    options: ["the badder", "the baddest", "the worst", "worse"],
+    correct: 2,
+    explain: "So sánh nhất của 'bad' là 'the worst'."
+  },
+  {
+    q: "My result is _____ than yours.",
+    options: ["good", "better", "best", "the best"],
+    correct: 1,
+    explain: "So sánh hơn của 'good' là 'better'."
+  },
+  {
+    q: "Russia is _____ country in the world.",
+    options: ["large", "larger", "the largest", "largest"],
+    correct: 2,
+    explain: "So sánh nhất tính từ ngắn."
+  },
+  {
+    q: "She is _____ girl in the class.",
+    options: ["the more beautiful", "the most beautiful", "more beautiful", "beautifulest"],
+    correct: 1,
+    explain: "So sánh nhất tính từ dài."
+  },
+  {
+    q: "An elephant is _____ than a tiger.",
+    options: ["heavy", "heavier", "more heavy", "the heaviest"],
+    correct: 1,
+    explain: "Heavy -> heavier (tính từ ngắn đặc biệt)."
+  },
+  {
+    q: "Who is _____ runner in the team?",
+    options: ["the fastest", "fastest", "faster", "the most fast"],
+    correct: 0,
+    explain: "So sánh nhất tính từ ngắn."
+  },
+  {
+    q: "The North of Vietnam is _____ than the South in winter.",
+    options: ["cold", "colder", "more cold", "the coldest"],
+    correct: 1,
+    explain: "So sánh hơn tính từ ngắn."
+  },
+  {
+    q: "Laptop is _____ than a smartphone.",
+    options: ["useful", "more useful", "the most useful", "usefuler"],
+    correct: 1,
+    explain: "So sánh hơn tính từ dài."
+  },
+  {
+    q: "This exercise is _____ than that one.",
+    options: ["easy", "easier", "easiest", "more easier"],
+    correct: 1,
+    explain: "Easy -> easier."
+  },
+  {
+    q: "She is _____ singer I've ever heard.",
+    options: ["the worse", "the baddest", "the worst", "worse"],
+    correct: 2,
+    explain: "So sánh nhất của 'bad'."
+  },
+  {
+    q: "The city is _____ than the countryside.",
+    options: ["noisy", "noisier", "more noisy", "the noisiest"],
+    correct: 1,
+    explain: "Noisy -> noisier."
+  },
+  {
+    q: "This chair is _____ than the other one.",
+    options: ["comfortable", "more comfortable", "most comfortable", "comfortabler"],
+    correct: 1,
+    explain: "So sánh hơn tính từ dài."
+  },
+  {
+    q: "Which is _____ river in Vietnam?",
+    options: ["long", "longer", "the longest", "longest"],
+    correct: 2,
+    explain: "So sánh nhất tính từ ngắn."
+  },
+  {
+    q: "He plays tennis _____ than me.",
+    options: ["well", "better", "good", "best"],
+    correct: 1,
+    explain: "So sánh hơn của trạng từ 'well' là 'better'."
+  },
+  {
+    q: "The Nile is _____ than the Amazon.",
+    options: ["long", "longer", "the longest", "more long"],
+    correct: 1,
+    explain: "So sánh hơn tính từ ngắn."
+  },
+  {
+    q: "Traveling by train is _____ as traveling by bus.",
+    options: ["cheap", "as cheap", "cheaper", "the cheapest"],
+    correct: 1,
+    explain: "So sánh bằng: as + adj + as."
+  },
+  {
+    q: "Lan is _____ student in her class.",
+    options: ["the intelligentest", "the most intelligent", "more intelligent", "intelligentest"],
+    correct: 1,
+    explain: "So sánh nhất tính từ dài."
+  },
+  {
+    q: "The red shirt is _____ than the blue one.",
+    options: ["expensive", "more expensive", "expensiver", "most expensive"],
+    correct: 1,
+    explain: "So sánh hơn tính từ dài."
+  },
+  {
+    q: "It's _____ to go by car than by train.",
+    options: ["convenient", "more convenient", "convenienter", "the most convenient"],
+    correct: 1,
+    explain: "So sánh hơn tính từ dài."
+  },
+  {
+    q: "Nam is _____ at Maths than any other students.",
+    options: ["good", "better", "best", "gooder"],
+    correct: 1,
+    explain: "So sánh hơn của good."
+  },
+  {
+    q: "This is _____ story I have ever read.",
+    options: ["the funniest", "funnier", "more funny", "funnyest"],
+    correct: 0,
+    explain: "Funny -> funniest (tính từ ngắn đặc biệt)."
+  },
+  {
+    q: "A sofa is _____ than a stool.",
+    options: ["soft", "softer", "more soft", "softest"],
+    correct: 1,
+    explain: "So sánh hơn tính từ ngắn."
+  },
+  {
+    q: "His house is _____ from the city center than mine.",
+    options: ["far", "farther", "more far", "the farthest"],
+    correct: 1,
+    explain: "So sánh hơn của 'far' là 'farther' (về khoảng cách) hoặc 'further'."
+  },
+  {
+    q: "Living in the city is _____ than living in the country.",
+    options: ["expensive", "more expensive", "expensiver", "most expensive"],
+    correct: 1,
+    explain: "So sánh hơn tính từ dài."
+  },
+  {
+    q: "Who is _____ person in your family?",
+    options: ["the oldest", "older", "oldest", "the most old"],
+    correct: 0,
+    explain: "So sánh nhất tính từ ngắn."
+  },
+  {
+    q: "The test was _____ than I expected.",
+    options: ["difficult", "more difficult", "difficulter", "the most difficult"],
+    correct: 1,
+    explain: "So sánh hơn tính từ dài."
+  },
+  {
+    q: "He is _____ worker in the factory.",
+    options: ["the carefulest", "the most careful", "more careful", "carefuler"],
+    correct: 1,
+    explain: "So sánh nhất tính từ dài."
+  },
+  {
+    q: "Today is _____ than yesterday.",
+    options: ["hot", "hotter", "more hot", "hottest"],
+    correct: 1,
+    explain: "So sánh hơn tính từ ngắn (gấp đôi phụ âm cuối)."
+  },
+  {
+    q: "My English is _____ than it was last year.",
+    options: ["good", "better", "best", "gooder"],
+    correct: 1,
+    explain: "So sánh hơn của good."
+  },
+  {
+    q: "This building is _____ in the city.",
+    options: ["the highest", "higher", "high", "highest"],
+    correct: 0,
+    explain: "So sánh nhất tính từ ngắn."
+  },
+  {
+    q: "The moon is _____ than the stars.",
+    options: ["bright", "brighter", "more bright", "brightest"],
+    correct: 1,
+    explain: "So sánh hơn tính từ ngắn."
+  },
+  {
+    q: "She is _____ person I've ever met.",
+    options: ["the kindest", "kinder", "the most kind", "kindest"],
+    correct: 0,
+    explain: "So sánh nhất tính từ ngắn."
+  },
+  {
+    q: "Your bag is _____ than mine.",
+    options: ["heavy", "heavier", "more heavy", "heaviest"],
+    correct: 1,
+    explain: "Heavy -> heavier."
+  },
+  {
+    q: "This is _____ cake I've ever tasted.",
+    options: ["the deliciousest", "the most delicious", "more delicious", "deliciousest"],
+    correct: 1,
+    explain: "So sánh nhất tính từ dài."
+  }
+],
+
+
+
+/* ⭐⭐TỔNG HỢP⭐⭐*/
+  25: [
 {
     q: "101. Our ------ indicate that your company car is due for regular service next month.",
     options: ["records", "recording", "recorded", "recordable"],
@@ -703,16 +4591,6 @@ const exercises = {
   },
 
   ],
-/* TEST 3*/
-
-  3: [
-    { q: "101. Employees must arrive ------- time for meetings.",
-      options: ["in","at","on","to"], correct: 2 },
-  ],
-  4: [
-    { q: "101. The CEO ------- a new policy this week.",
-      options: ["announced","announcement","announce","announcing"], correct: 0 },
-  ]
 };
 
 

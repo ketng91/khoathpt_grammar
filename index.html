@@ -155,14 +155,13 @@ body, html { overflow-x: hidden; }
     <option value="2">Trắc nghiệm - Sự hoà hợp S & Vc</option>
     <option value="3">Trắc nghiệm - V, Ving, to V</option>
     <option value="4">Trắc nghiệm - Lượng từ</option>
-    <option value="5">Trắc nghiệm - MĐ Quan hệ</option>
-    <option value="6">Trắc nghiệm - MĐ Danh ngữ</option>
-    <option value="7">Trắc nghiệm - MĐ Trạng ngữ</option>
+    <option value="5">Trắc nghiệm - MĐ Quan hệ 1</option>
+    <option value="6">Trắc nghiệm - MĐ Quan hệ 2</option>
     <option value="8">Trắc nghiệm - Từ loại</option>
     <option value="9">Trắc nghiệm - Trật tự từ</option>
     <option value="10">Trắc nghiệm - Liên từ</option>
     <option value="11">Trắc nghiệm - Adv liên kết</option>
-    <option value="12">Trắc nghiệm - Câu điều kiện</option>
+    <option value="12">Trắc nghiệm - Câu If - Wish</option>
     <option value="13">Trắc nghiệm - Câu bị động</option>
     <option value="14">Trắc nghiệm - So sánh</option>
     <option value="15">Trắc nghiệm - Câu tường thuật</option>
@@ -1416,9 +1415,314 @@ const exercises = {
 
 ],
 
+/*⭐⭐ Topic: MĐQH 1 ⭐⭐*/
 
-/* ⭐⭐TEST 1⭐⭐*/
-  5: [
+ 5: [
+  // --- NHÓM 1: MỆNH ĐỀ QUAN HỆ CƠ BẢN & ĐẠI TỪ QUAN HỆ ---
+  {
+    q: "The scientist _____ discovered the new vaccine was awarded the Nobel Prize.",
+    options: ["who", "whom", "which", "whose"],
+    correct: 0,
+    explain: "Dùng 'who' làm chủ ngữ thay thế cho danh từ chỉ người 'The scientist'."
+  },
+  {
+    q: "The laptop _____ I bought last week has already stopped working.",
+    options: ["who", "which", "whose", "where"],
+    correct: 1,
+    explain: "Dùng 'which' làm tân ngữ thay thế cho danh từ chỉ vật 'The laptop'."
+  },
+  {
+    q: "Do you know the student _____ essay won first place in the competition?",
+    options: ["who", "whom", "whose", "which"],
+    correct: 2,
+    explain: "Dùng 'whose' để chỉ sở hữu cho danh từ 'essay' (bài văn của học sinh)."
+  },
+  {
+    q: "The teacher with _____ I discussed my exam results was very helpful.",
+    options: ["who", "whom", "that", "which"],
+    correct: 1,
+    explain: "Sau giới từ 'with' chỉ người, bắt buộc dùng 'whom'."
+  },
+  {
+    q: "This is the hospital in _____ my younger sister was born 15 years ago.",
+    options: ["which", "where", "that", "whom"],
+    correct: 0,
+    explain: "Sau giới từ 'in' chỉ vật/nơi chốn, dùng 'which' ('in which' = 'where')."
+  },
+  {
+    q: "That is the house _____ roof was damaged in the heavy storm last night.",
+    options: ["which", "whose", "where", "that"],
+    correct: 1,
+    explain: "Dùng 'whose' chỉ sở hữu cho bộ phận của vật ('roof' của 'the house')."
+  },
+  {
+    q: "Paris is a beautiful city _____ attracts millions of tourists every year.",
+    options: ["where", "which", "when", "whom"],
+    correct: 1,
+    explain: "Dùng 'which' làm chủ ngữ chỉ địa điểm/vật ('attracts' là động từ, không dùng 'where')."
+  },
+  {
+    q: "I will never forget the day _____ I first met my best friend.",
+    options: ["which", "on which", "where", "whose"],
+    correct: 1,
+    explain: "Dùng 'on which' (hoặc 'when') để chỉ thời gian (vào ngày đó)."
+  },
+  {
+    q: "The woman _____ spoke to you at the library yesterday is my aunt.",
+    options: ["who", "whom", "which", "whose"],
+    correct: 0,
+    explain: "Dùng 'who' làm chủ ngữ thay thế cho 'The woman'."
+  },
+  {
+    q: "All the books _____ were borrowed from the library must be returned by Friday.",
+    options: ["that", "who", "whom", "whose"],
+    correct: 0,
+    explain: "Dùng 'that' làm chủ ngữ thay thế cho danh từ chỉ vật 'All the books'."
+  },
+
+  // --- NHÓM 2: GIỚI TỪ + ĐẠI TỪ QUAN HỆ (PREPOSITION + WHOM/WHICH) ---
+  {
+    q: "The project on _____ we have been working for months was finally approved.",
+    options: ["that", "which", "what", "whom"],
+    correct: 1,
+    explain: "Sau giới từ 'on' chỉ sự vật/việc, bắt buộc dùng 'which' (không dùng 'that')."
+  },
+  {
+    q: "The manager to _____ you sent the email is currently out of the office.",
+    options: ["who", "whom", "which", "whose"],
+    correct: 1,
+    explain: "Sau giới từ 'to' chỉ người, bắt buộc dùng 'whom'."
+  },
+  {
+    q: "The company for _____ she works produces eco-friendly packaging.",
+    options: ["which", "where", "that", "whom"],
+    correct: 0,
+    explain: "Giới từ 'for' + 'which' bổ nghĩa cho danh từ chỉ vật 'The company'."
+  },
+  {
+    q: "The candidate about _____ we were talking has impressive qualifications.",
+    options: ["who", "whom", "whose", "which"],
+    correct: 1,
+    explain: "Sau giới từ 'about' chỉ người, chọn 'whom'."
+  },
+  {
+    q: "The agreement under _____ both parties operated was signed in 2020.",
+    options: ["which", "where", "that", "whom"],
+    correct: 0,
+    explain: "Giới từ 'under' đi với 'which' để thay cho 'The agreement'."
+  },
+  {
+    q: "The gentleman from _____ I received this letter is a lawyer.",
+    options: ["who", "whom", "that", "which"],
+    correct: 1,
+    explain: "Sau giới từ 'from' chỉ người, chọn 'whom'."
+  },
+  {
+    q: "The problem to _____ he referred during the meeting has been resolved.",
+    options: ["whom", "which", "where", "what"],
+    correct: 1,
+    explain: "Cụm 'refer to something' -> giới từ 'to' đứng trước 'which' chỉ problem."
+  },
+  {
+    q: "The reason for _____ he was late was completely unexpected.",
+    options: ["which", "why", "that", "where"],
+    correct: 0,
+    explain: "'for which' bằng với trạng từ quan hệ 'why' chỉ lý do."
+  },
+  {
+    q: "The hotel at _____ we stayed during our vacation was very comfortable.",
+    options: ["whom", "which", "that", "what"],
+    correct: 1,
+    explain: "Giới từ 'at' + 'which' chỉ địa điểm ('at which' = 'where')."
+  },
+
+  // --- NHÓM 3: RÚT GỌN MĐQH - V-ING (DẠNG CHỦ ĐỘNG) ---
+  {
+    q: "The boys _____ football in the yard are my neighbors.",
+    options: ["play", "played", "playing", "to play"],
+    correct: 2,
+    explain: "Rút gọn MĐQH chủ động (who are playing -> playing)."
+  },
+  {
+    q: "Anyone _____ to participate in the seminar must sign up by tomorrow.",
+    options: ["wished", "wishing", "wishes", "is wished"],
+    correct: 1,
+    explain: "Rút gọn MĐQH chủ động (who wishes -> wishing)."
+  },
+  {
+    q: "The train _____ at platform 3 is bound for London.",
+    options: ["arriving", "arrived", "arrives", "to arrive"],
+    correct: 0,
+    explain: "Rút gọn MĐQH chủ động (which is arriving -> arriving)."
+  },
+  {
+    q: "Passengers _____ to carry extra luggage will need to pay an additional fee.",
+    options: ["want", "wanted", "wanting", "to want"],
+    correct: 2,
+    explain: "Rút gọn MĐQH chủ động (who want -> wanting)."
+  },
+  {
+    q: "The road _____ the two villages is narrow and winding.",
+    options: ["connected", "connecting", "connects", "to connect"],
+    correct: 1,
+    explain: "Rút gọn MĐQH chủ động (which connects -> connecting)."
+  },
+  {
+    q: "Students _____ high scores on the entrance test will receive full scholarships.",
+    options: ["achieved", "achieving", "achieve", "to achieve"],
+    correct: 1,
+    explain: "Rút gọn MĐQH chủ động (who achieve -> achieving)."
+  },
+  {
+    q: "The building _____ next to the city park belongs to a famous architect.",
+    options: ["standing", "stood", "stands", "to stand"],
+    correct: 0,
+    explain: "Rút gọn MĐQH chủ động (which stands / is standing -> standing)."
+  },
+  {
+    q: "I noticed a man _____ suspiciously near the jewelry shop.",
+    options: ["behaved", "behaving", "behaves", "to behave"],
+    correct: 1,
+    explain: "Rút gọn MĐQH chủ động (who was behaving -> behaving)."
+  },
+  {
+    q: "The envelope _____ on the desk contains confidential documents.",
+    options: ["lying", "lain", "laid", "lies"],
+    correct: 0,
+    explain: "Rút gọn MĐQH chủ động của động từ 'lie' (which is lying -> lying)."
+  },
+
+  // --- NHÓM 4: RÚT GỌN MĐQH - V3/V-ED (DẠNG BỊ ĐỘNG) ---
+  {
+    q: "The articles _____ by the famous journalist caused a major public debate.",
+    options: ["writing", "written", "wrote", "were written"],
+    correct: 1,
+    explain: "Rút gọn MĐQH bị động (which were written -> written)."
+  },
+  {
+    q: "The cars _____ in this Japanese factory are exported all over the world.",
+    options: ["manufacturing", "manufactured", "manufacture", "are manufactured"],
+    correct: 1,
+    explain: "Rút gọn MĐQH bị động (which are manufactured -> manufactured)."
+  },
+  {
+    q: "The painting _____ on the wall was created in the 17th century.",
+    options: ["hung", "hanging", "hangs", "was hung"],
+    correct: 0,
+    explain: "Rút gọn MĐQH bị động (which was hung -> hung)."
+  },
+  {
+    q: "Documents _____ after the deadline will not be accepted under any circumstances.",
+    options: ["submitting", "submitted", "submit", "to submit"],
+    correct: 1,
+    explain: "Rút gọn MĐQH bị động (which are submitted -> submitted)."
+  },
+  {
+    q: "The bridge _____ by the engineering team last winter is now open to traffic.",
+    options: ["repairing", "repaired", "repairs", "was repaired"],
+    correct: 1,
+    explain: "Rút gọn MĐQH bị động (which was repaired -> repaired)."
+  },
+  {
+    q: "Most of the food _____ at the wedding party was prepared by a professional chef.",
+    options: ["serving", "served", "serves", "was served"],
+    correct: 1,
+    explain: "Rút gọn MĐQH bị động (which was served -> served)."
+  },
+  {
+    q: "The rules _____ by the board must be strictly followed by all employees.",
+    options: ["establishing", "established", "establishes", "were established"],
+    correct: 1,
+    explain: "Rút gọn MĐQH bị động (which were established -> established)."
+  },
+  {
+    q: "Any money _____ in the lost-and-found box will be donated to charity.",
+    options: ["finding", "found", "finds", "was found"],
+    correct: 1,
+    explain: "Rút gọn MĐQH bị động (which is found -> found)."
+  },
+  {
+    q: "The medicine _____ by the doctor should be taken three times a day after meals.",
+    options: ["prescribing", "prescribed", "prescribes", "was prescribed"],
+    correct: 1,
+    explain: "Rút gọn MĐQH bị động (which was prescribed -> prescribed)."
+  },
+  {
+    q: "Trees _____ down during the heavy storm caused a massive traffic jam.",
+    options: ["blowing", "blown", "blew", "were blown"],
+    correct: 1,
+    explain: "Rút gọn MĐQH bị động (which were blown down -> blown)."
+  },
+
+  // --- NHÓM 5: RÚT GỌN BẰNG 'TO V' (SỐ THỨ TỰ, SO SÁNH NHẤT, ONLY) ---
+  {
+    q: "Neil Armstrong was the first man _____ on the moon.",
+    options: ["walking", "walked", "to walk", "walks"],
+    correct: 2,
+    explain: "Dùng 'to V' rút gọn sau từ chỉ số thứ tự 'the first'."
+  },
+  {
+    q: "She was the only candidate _____ the difficult entrance interview.",
+    options: ["passing", "passed", "to pass", "passes"],
+    correct: 2,
+    explain: "Dùng 'to V' rút gọn sau từ chỉ sự duy nhất 'the only'."
+  },
+  {
+    q: "Yuri Gagarin was the first human _____ into outer space.",
+    options: ["traveling", "traveled", "to travel", "travels"],
+    correct: 2,
+    explain: "Dùng 'to V' rút gọn sau cấu trúc 'the first + N'."
+  },
+  {
+    q: "This is the best movie _____ at the local cinema this month.",
+    options: ["watching", "watched", "to watch", "watches"],
+    correct: 2,
+    explain: "Dùng 'to V' rút gọn sau hình thức so sánh nhất 'the best'."
+  },
+  {
+    q: "He was the last student _____ the exam room yesterday afternoon.",
+    options: ["leaving", "left", "to leave", "leaves"],
+    correct: 2,
+    explain: "Dùng 'to V' rút gọn sau từ chỉ thứ tự 'the last'."
+  },
+
+  // --- NHÓM 6: TỔNG HỢP & NÂNG CAO LỰA CHỌN TỪ BỐI CẢNH ---
+  {
+    q: "The house _____ windows were broken during the riot has been repaired.",
+    options: ["which", "whose", "where", "that"],
+    correct: 1,
+    explain: "Dùng 'whose' bổ nghĩa sở hữu cho 'windows' (những chiếc cửa sổ của ngôi nhà)."
+  },
+  {
+    q: "The museum _____ we visited last summer is famous for its modern art collection.",
+    options: ["where", "which", "in which", "whose"],
+    correct: 1,
+    explain: "Dùng 'which' vì 'visited' cần tân ngữ (chúng tôi đã ghé thăm nơi đó, không dùng 'where')."
+  },
+  {
+    q: "The climate conditions under _____ these rare plants grow are extremely specific.",
+    options: ["where", "which", "that", "whom"],
+    correct: 1,
+    explain: "Đi với cụm 'under these conditions' -> giới từ 'under' + 'which'."
+  },
+  {
+    q: "The emergency plan _____ by the committee proved to be highly effective.",
+    options: ["proposing", "proposed", "propose", "was proposed"],
+    correct: 1,
+    explain: "Rút gọn MĐQH bị động (which was proposed -> proposed)."
+  },
+  {
+    q: "Is there any student here _____ phone keeps ringing during the lecture?",
+    options: ["who", "whom", "whose", "which"],
+    correct: 2,
+    explain: "Dùng 'whose' chỉ sự sở hữu (điện thoại của học sinh)."
+  }
+
+  ],
+
+
+/* ⭐⭐MĐQH 2⭐⭐*/
+  6: [
   {
     q: "Ann, __________ for the safety of her child, ran to stop him playing with the electric socket.",
     options: ["concerning", "to concern", "concerned", "to be concerned"],
@@ -2255,7 +2559,7 @@ const exercises = {
   },
   {
     q: "The organisms _____ in extreme environments like deep-sea vents are of great interest to biologists.",
-    options: ["existing", "existed", "have existed", "to exist"],
+    options: ["existing", "existed", "existed", "to exist"],
     correct: 0,
     explain: "Dùng 'existing' (đang tồn tại) ở dạng chủ động."
   },
@@ -2572,7 +2876,6 @@ const exercises = {
     explain: "Dùng 'to V' sau 'the last person' (người cuối cùng rời khỏi - chủ động)."
   }
   ],
-
 
 /*⭐⭐ Topic: Từ loại ⭐⭐*/
 

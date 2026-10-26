@@ -492,7 +492,18 @@ const grammarQuestions = {
     { q: "At 8 p.m. yesterday, we _____ a football match on TV.", options: ["watched", "were watching", "have watched", "are watching"], correct: 1, explain: "Thời điểm xác định trong quá khứ dùng Quá khứ tiếp diễn." },
     { q: "Water _____ at 100 degrees Celsius.", options: ["boils", "boil", "is boiling", "boiled"], correct: 0, explain: "Sự thật hiển nhiên dùng Hiện tại đơn." },
     { q: "I _____ my key. Now I cannot open the door.", options: ["lost", "have lost", "was losing", "had lost"], correct: 1, explain: "Sự việc xảy ra trong quá khứ nhưng để lại kết quả ở hiện tại." },
-    { q: "The train _____ at 6 a.m. tomorrow morning.", options: ["leaves", "will leave", "is leaving", "left"], correct: 0, explain: "Lịch trình cố định dùng thì Hiện tại đơn." }
+    { q: "The train _____ at 6 a.m. tomorrow morning.", options: ["leaves", "will leave", "is leaving", "left"], correct: 0, explain: "Lịch trình cố định dùng thì Hiện tại đơn." },
+// --- BỔ SUNG SET 2 CHO CHUYÊN ĐỀ 1: CÁC THÌ CỦA ĐỘNG TỪ ---
+    { q: "I _____ this movie three times already, but I still enjoy watching it.", options: ["saw", "have seen", "am seeing", "see"], correct: 1, explain: "Dấu hiệu 'already' và số lần lặp lại trải nghiệm tính đến hiện tại dùng thì Hiện tại hoàn thành." },
+    { q: "Yesterday, she _____ home late because of the heavy traffic jam.", options: ["comes", "came", "has come", "was coming"], correct: 1, explain: "Dấu hiệu 'Yesterday' chỉ thời điểm xác định trong quá khứ, dùng thì Quá khứ đơn." },
+    { q: "They _____ in this seaside city for ten years now.", options: ["lived", "are living", "have lived", "will live"], correct: 2, explain: "Dấu hiệu 'for + khoảng thời gian + now' diễn tả hành động kéo dài từ quá khứ đến hiện tại -> Hiện tại hoàn thành." },
+    { q: "We _____ a picnic next Sunday. We have already bought all the food and drinks.", options: ["have", "will have", "are going to have", "had"], correct: 2, explain: "Kế hoạch cho tương lai đã được chuẩn bị trước (đã mua đồ ăn) dùng Tương lai gần (be going to V)." },
+    { q: "She _____ her room keys. She cannot find them anywhere right now.", options: ["lost", "has lost", "is losing", "had lost"], correct: 1, explain: "Sự việc xảy ra trong quá khứ nhưng để lại kết quả ở hiện tại (bây giờ không tìm thấy) -> Hiện tại hoàn thành." },
+    { q: "The sun _____ in the East and sets in the West.", options: ["rise", "rises", "rose", "is rising"], correct: 1, explain: "Diễn tả một sự thật hiển nhiên, chân lý khoa học dùng thì Hiện tại đơn với chủ ngữ số ít (rises)." },
+    { q: "My mother _____ the living room at the moment.", options: ["cleans", "is cleaning", "has cleaned", "cleaned"], correct: 1, explain: "Dấu hiệu 'at the moment' báo hiệu hành động đang diễn ra tại thời điểm nói -> Hiện tại tiếp diễn." },
+    { q: "We _____ each other since we were students at high school.", options: ["know", "knew", "have known", "are knowing"], correct: 2, explain: "Cấu trúc: S + have/has V3 + since + S + V2. Động từ 'know' không chia tiếp diễn." },
+    { q: "Last week, I _____ to the city zoo with my family.", options: ["go", "went", "have gone", "was going"], correct: 1, explain: "Dấu hiệu 'Last week' chỉ sự việc xảy ra và kết thúc trong quá khứ -> Quá khứ đơn." },
+    { q: "Hurry up! The school bus _____.", options: ["comes", "is coming", "come", "will come"], correct: 1, explain: "Mệnh lệnh 'Hurry up!' báo hiệu sự việc đang diễn ra tiến lại gần -> Hiện tại tiếp diễn." },
   ],
   2: [
     { q: "Each of the students _____ responsible for their own desk.", options: ["is", "are", "be", "were"], correct: 0, explain: "Cấu trúc 'Each of + N số nhiều' đi với động từ số ít." },
@@ -684,7 +695,19 @@ const grammarQuestions = {
     { q: "They go to _____ school by bus every day.", options: ["zero", "a", "an", "the"], correct: 0, explain: "Không dùng mạo từ khi nói về mục đích chính của trường học/bệnh viện." },
     { q: "I saw _____ cat outside. _____ cat was black.", options: ["a / The", "the / A", "an / The", "a / A"], correct: 0, explain: "Lần đầu nhắc đến dùng 'a', lần hai xác định dùng 'The'." },
     { q: "He comes from _____ United States.", options: ["the", "a", "an", "zero"], correct: 0, explain: "Dùng 'the' trước tên quốc gia có hình thức số nhiều hoặc chứa State/Kingdom/Republic." },
-    { q: "_____ water is essential for human life.", options: ["zero", "The", "A", "An"], correct: 0, explain: "Không dùng mạo từ trước danh từ không đếm được nói chung." }
+    { q: "_____ water is essential for human life.", options: ["zero", "The", "A", "An"], correct: 0, explain: "Không dùng mạo từ trước danh từ không đếm được nói chung." },
+
+// --- BỔ SUNG SET 2 CHO CHUYÊN ĐỀ 17: MẠO TỪ (A/AN/THE/ZERO) ---
+    { q: "My brother wants to become _____ engineer when he graduates.", options: ["an", "a", "the", "zero"], correct: 0, explain: "Dùng 'an' trước danh từ đếm được số ít chỉ nghề nghiệp bắt đầu bằng nguyên âm (/e/ engineer)." },
+    { q: "_____ Pacific Ocean is the largest ocean in the world.", options: ["The", "A", "An", "zero"], correct: 0, explain: "Dùng 'the' trước tên các đại dương (the Pacific Ocean)." },
+    { q: "She plays _____ piano very gracefully at the concert.", options: ["the", "a", "an", "zero"], correct: 0, explain: "Dùng 'the' trước tên các loại nhạc cụ khi đi sau động từ play (play the piano)." },
+    { q: "She had _____ wonderful dinner with her family on her birthday last week.", options: ["a", "an", "the", "zero"], correct: 0, explain: "Dùng 'a' trước danh từ chỉ bữa ăn (dinner) khi có tính từ mô tả đứng trước (wonderful dinner)." },
+    { q: "It is _____ honor to be invited to this important meeting.", options: ["an", "a", "the", "zero"], correct: 0, explain: "Danh từ 'honor' có âm 'h' câm, phát âm bắt đầu bằng nguyên âm /ɒ/ -> dùng 'an'." },
+    { q: "Ha Long Bay is recognized as _____ most beautiful natural wonder.", options: ["the", "a", "an", "zero"], correct: 0, explain: "Dùng 'the' trước cấu trúc so sánh nhất (the most beautiful)." },
+    { q: "Students should go to _____ bed early to stay healthy.", options: ["zero", "a", "an", "the"], correct: 0, explain: "Cố định: go to bed (đi ngủ), không dùng mạo từ trước bed khi dùng đúng chức năng chính." },
+    { q: "I bought _____ new laptop yesterday. _____ laptop works very well.", options: ["a / The", "the / A", "an / The", "a / A"], correct: 0, explain: "Lần đầu nhắc đến danh từ đếm được số ít dùng 'a', lần thứ hai xác định dùng 'The'." },
+    { q: "English people drink _____ lot of tea every day.", options: ["a", "the", "an", "zero"], correct: 0, explain: "Thành ngữ cố định: 'a lot of' (nhiều)." },
+    { q: "_____ honesty is considered one of the best virtues.", options: ["zero", "The", "A", "An"], correct: 0, explain: "Không dùng mạo từ trước danh từ trừu tượng (honesty) khi nói chung chung." },
   ],
   18: [
     { q: "I have _____ friends in this city, so I don't feel lonely.", options: ["a few", "few", "a little", "little"], correct: 0, explain: "'Friends' đếm được số nhiều. 'A few' nghĩa là có một vài (đủ dùng)." },
